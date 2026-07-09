@@ -41,7 +41,7 @@ size / material / code / price may be enabled later via PublicProduct.
 - `scripts/generate-placeholders.mjs`: for EVERY product in products.json missing
   its image file, generate a 1200×1200 placeholder .jpeg (sharp: `mist` #EFF1F0
   background, product name + series + finish as centered SVG text) so the full
-  site is browsable before real photos arrive. Also one `_series-cover.jpeg`
+  site is browsable before real photos arrive. Also one `_series-cover.png`
   per series. Idempotent: never overwrite an existing file.
 - When real photos arrive they replace placeholders at the same path — no code change
 - `scripts/optimize-images.mjs`: compress/resize any jpeg in public/products

@@ -82,3 +82,12 @@ Placeholders are part of the design until real photos arrive: mist #EFF1F0
 background, product name in Prata (navy), series + finish in the eyebrow style
 (steel), centered, generous margins — they should look intentional, not broken.
 
+## Hero background (Home)
+- Full-bleed image: /hero/hero-home.png (subject right, negative space left),
+  /hero/hero-home-mobile.png via <picture> for < 768px
+- Text zone: headline + CTA in the LEFT third, porcelain/navy per contrast
+- Overlay: gradient from LEFT (navy-deep at 45–55% opacity) → transparent
+  right, so text always passes contrast without hiding the product
+- Ken Burns: scale 1.06 → 1 over 8s on load, once; static if 
+  prefers-reduced-motion
+- LCP critical: priority load, explicit dimensions, no lazy-load

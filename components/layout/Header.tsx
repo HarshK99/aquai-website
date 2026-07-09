@@ -14,15 +14,8 @@ interface Props {
   seriesList: SeriesItem[];
 }
 
-const NAV_LINKS = [
-  { href: "/", label: "Home" },
-  { href: "/products/", label: "Products" },
-  { href: "/about/", label: "About" },
-  { href: "/contact/", label: "Contact" },
-];
-
 const dropdownVariants = {
-  hidden: { opacity: 0, y: -8, scaleY: 0.95 },
+  hidden: { opacity: 0, y: -6, scaleY: 0.96 },
   visible: {
     opacity: 1,
     y: 0,
@@ -32,7 +25,6 @@ const dropdownVariants = {
   exit: {
     opacity: 0,
     y: -4,
-    scaleY: 0.97,
     transition: { duration: 0.12, ease: "easeIn" },
   },
 };
@@ -47,7 +39,7 @@ const mobileMenuVariants = {
   exit: {
     opacity: 0,
     height: 0,
-    transition: { duration: 0.2, ease: "easeIn" },
+    transition: { duration: 0.18, ease: "easeIn" },
   },
 };
 
@@ -58,6 +50,8 @@ export default function Header({ seriesList }: Props) {
   const pathname = usePathname();
   const seriesRef = useRef<HTMLDivElement>(null);
 
+  const onHomePage = pathname === "/";
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
     onScroll();
@@ -65,7 +59,6 @@ export default function Header({ seriesList }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
       if (seriesRef.current && !seriesRef.current.contains(e.target as Node)) {
@@ -76,37 +69,63 @@ export default function Header({ seriesList }: Props) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
-  // Close everything on route change
   useEffect(() => {
     setMenuOpen(false);
     setSeriesOpen(false);
   }, [pathname]);
 
+  // Transparent mode: home page before first scroll
+  const transparent = onHomePage && !scrolled;
+
+  const headerBg = transparent
+    ? "bg-transparent"
+    : "bg-porcelain";
+
+  const headerBorder = scrolled
+    ? "border-b border-chrome"
+    : transparent
+    ? "border-b border-transparent"
+    : "border-b border-transparent";
+
+  const logoFilter = transparent ? "brightness-0 invert" : "";
+
+  const navBase = transparent
+    ? "text-porcelain/75 hover:text-porcelain"
+    : "text-steel hover:text-navy";
+
+  const navActive = transparent ? "text-porcelain" : "text-navy";
+
+  const ctaClass = transparent
+    ? "border border-porcelain/40 text-porcelain hover:border-porcelain/70 hover:bg-porcelain/10"
+    : "bg-navy text-porcelain hover:bg-navy-deep";
+
   const isActive = (href: string) =>
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
-  const navLinkClass = (href: string) =>
+  const linkClass = (href: string) =>
     `text-sm font-medium transition-colors duration-200 ${
-      isActive(href) ? "text-navy" : "text-steel hover:text-navy"
+      isActive(href) ? navActive : navBase
     }`;
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-porcelain border-b border-chrome"
-          : "bg-porcelain border-b border-transparent"
-      }`}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${headerBg} ${headerBorder}`}
     >
-      <nav className="mx-auto max-w-content px-6 lg:px-10 flex items-center justify-between h-20">
+      <nav
+        className="mx-auto flex h-20 max-w-content items-center justify-between px-6 lg:px-10"
+        aria-label="Main navigation"
+      >
         {/* ── Logo ──────────────────────────────────────────────── */}
-        <Link href="/" className="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy rounded-sm">
+        <Link
+          href="/"
+          className="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current rounded-sm"
+        >
           <Image
             src="/logo.jpg"
             alt="Aquai"
             width={120}
             height={40}
-            className="h-10 w-auto object-contain"
+            className={`h-10 w-auto object-contain transition-[filter] duration-300 ${logoFilter}`}
             priority
           />
         </Link>
@@ -114,12 +133,12 @@ export default function Header({ seriesList }: Props) {
         {/* ── Desktop nav ────────────────────────────────────────── */}
         <ul className="hidden lg:flex items-center gap-8" role="list">
           <li>
-            <Link href="/" className={navLinkClass("/")}>
+            <Link href="/" className={linkClass("/")}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/products/" className={navLinkClass("/products/")}>
+            <Link href="/products/" className={linkClass("/products/")}>
               Products
             </Link>
           </li>
@@ -130,11 +149,9 @@ export default function Header({ seriesList }: Props) {
               <button
                 onClick={() => setSeriesOpen((v) => !v)}
                 aria-expanded={seriesOpen}
-                aria-haspopup="true"
+                aria-haspopup="listbox"
                 className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 ${
-                  pathname.startsWith("/series/")
-                    ? "text-navy"
-                    : "text-steel hover:text-navy"
+                  pathname.startsWith("/series/") ? navActive : navBase
                 }`}
               >
                 Series
@@ -164,13 +181,16 @@ export default function Header({ seriesList }: Props) {
                     animate="visible"
                     exit="exit"
                     style={{ transformOrigin: "top center" }}
-                    className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-64 bg-porcelain border border-chrome rounded-sm shadow-lg py-2"
+                    role="listbox"
+                    aria-label="Series"
+                    className="absolute left-1/2 top-full mt-3 w-64 -translate-x-1/2 rounded-sm border border-chrome bg-porcelain py-2 shadow-lg"
                   >
                     {seriesList.map((s) => (
                       <Link
                         key={s.slug}
                         href={`/series/${s.slug}/`}
-                        className="block px-5 py-2.5 text-sm text-steel hover:text-navy hover:bg-mist transition-colors"
+                        role="option"
+                        className="block px-5 py-2.5 text-sm text-steel transition-colors hover:bg-mist hover:text-navy"
                       >
                         {s.name}
                       </Link>
@@ -182,12 +202,12 @@ export default function Header({ seriesList }: Props) {
           </li>
 
           <li>
-            <Link href="/about/" className={navLinkClass("/about/")}>
+            <Link href="/about/" className={linkClass("/about/")}>
               About
             </Link>
           </li>
           <li>
-            <Link href="/contact/" className={navLinkClass("/contact/")}>
+            <Link href="/contact/" className={linkClass("/contact/")}>
               Contact
             </Link>
           </li>
@@ -197,7 +217,7 @@ export default function Header({ seriesList }: Props) {
         <div className="hidden lg:flex">
           <Link
             href="/contact/"
-            className="inline-flex items-center px-5 py-2.5 bg-navy text-porcelain text-sm font-medium rounded-sm hover:bg-navy-deep transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
+            className={`inline-flex items-center rounded-sm px-5 py-2.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current focus-visible:ring-offset-2 ${ctaClass}`}
           >
             Enquire Now
           </Link>
@@ -205,26 +225,27 @@ export default function Header({ seriesList }: Props) {
 
         {/* ── Mobile hamburger ────────────────────────────────────── */}
         <button
-          className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy rounded-sm"
+          className={`lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current rounded-sm`}
           onClick={() => setMenuOpen((v) => !v)}
           aria-expanded={menuOpen}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
-          <span
-            className={`block h-px w-6 bg-navy-deep transition-all duration-200 ${
-              menuOpen ? "translate-y-[3.5px] rotate-45" : ""
-            }`}
-          />
-          <span
-            className={`block h-px w-6 bg-navy-deep transition-all duration-200 ${
-              menuOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block h-px w-6 bg-navy-deep transition-all duration-200 ${
-              menuOpen ? "-translate-y-[3.5px] -rotate-45" : ""
-            }`}
-          />
+          {["top", "mid", "bot"].map((id, i) => (
+            <span
+              key={id}
+              className={`block h-px w-6 transition-all duration-200 ${
+                transparent ? "bg-porcelain" : "bg-navy-deep"
+              } ${
+                i === 0 && menuOpen
+                  ? "translate-y-[3.5px] rotate-45"
+                  : i === 1 && menuOpen
+                  ? "opacity-0"
+                  : i === 2 && menuOpen
+                  ? "-translate-y-[3.5px] -rotate-45"
+                  : ""
+              }`}
+            />
+          ))}
         </button>
       </nav>
 
@@ -238,35 +259,31 @@ export default function Header({ seriesList }: Props) {
             exit="exit"
             className="lg:hidden overflow-hidden border-t border-chrome bg-porcelain"
           >
-            <ul className="px-6 py-4 flex flex-col gap-1" role="list">
-              <li>
-                <Link
-                  href="/"
-                  className="block py-3 text-base font-medium text-navy border-b border-chrome/50"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/products/"
-                  className="block py-3 text-base font-medium text-steel border-b border-chrome/50"
-                >
-                  Products
-                </Link>
-              </li>
+            <ul className="flex flex-col gap-1 px-6 py-4" role="list">
+              {[
+                { href: "/", label: "Home" },
+                { href: "/products/", label: "Products" },
+              ].map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="block border-b border-chrome/50 py-3 text-base font-medium text-navy"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
 
-              {/* Mobile: series expanded inline */}
               <li>
-                <p className="pt-3 pb-2 text-xs uppercase tracking-[0.14em] text-steel font-semibold">
+                <p className="pt-3 pb-2 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
                   Series
                 </p>
-                <ul className="flex flex-col gap-0.5 pb-3 border-b border-chrome/50">
+                <ul className="flex flex-col gap-0.5 border-b border-chrome/50 pb-3">
                   {seriesList.map((s) => (
                     <li key={s.slug}>
                       <Link
                         href={`/series/${s.slug}/`}
-                        className="block py-2 pl-3 text-sm text-steel hover:text-navy transition-colors"
+                        className="block py-2 pl-3 text-sm text-steel transition-colors hover:text-navy"
                       >
                         {s.name}
                       </Link>
@@ -275,27 +292,24 @@ export default function Header({ seriesList }: Props) {
                 </ul>
               </li>
 
-              <li>
-                <Link
-                  href="/about/"
-                  className="block py-3 text-base font-medium text-steel border-b border-chrome/50"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact/"
-                  className="block py-3 text-base font-medium text-steel"
-                >
-                  Contact
-                </Link>
-              </li>
+              {[
+                { href: "/about/", label: "About" },
+                { href: "/contact/", label: "Contact" },
+              ].map(({ href, label }) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className={`block py-3 text-base font-medium text-steel ${href !== "/contact/" ? "border-b border-chrome/50" : ""}`}
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
 
-              <li className="pt-4 pb-2">
+              <li className="pb-2 pt-4">
                 <Link
                   href="/contact/"
-                  className="block text-center py-3 bg-navy text-porcelain text-sm font-medium rounded-sm"
+                  className="block rounded-sm bg-navy py-3 text-center text-sm font-medium text-porcelain"
                 >
                   Enquire Now
                 </Link>

@@ -51,7 +51,7 @@ Do Phase 0 only:
 6. Verify data/catalog.ts imports products.json cleanly and typechecks.
 7. Write scripts/generate-placeholders.mjs per CLAUDE.md (sharp; 1200×1200
    mist-background .jpeg with product name / series / finish text per the
-   DESIGN.md placeholder spec; plus _series-cover.jpeg per series; idempotent)
+   DESIGN.md placeholder spec; plus _series-cover.png per series; idempotent)
    — then RUN it and confirm all 49 files exist under public/products/.
 8. Write scripts/list-images.mjs (prints every expected image path) and
    scripts/optimize-images.mjs (sharp, max 1200px, q80, in-place).

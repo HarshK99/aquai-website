@@ -43,6 +43,9 @@ const config: Config = {
       lineHeight: {
         body: "1.7",
       },
+      transitionTimingFunction: {
+        smooth: "cubic-bezier(0.22, 1, 0.36, 1)",
+      },
     },
   },
   plugins: [],

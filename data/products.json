@@ -5,35 +5,35 @@
       "name": "Ultra Slim Shower K Series",
       "tagline": "Ultra-slim overhead showers in mirror finish.",
       "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/ultra-slim-shower-k/_series-cover.jpeg"
+      "image": "/products/ultra-slim-shower-k/_series-cover.png"
     },
     {
       "slug": "daizy",
       "name": "Daizy Series",
       "tagline": "Everyday essentials in SS 304.",
       "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/daizy/_series-cover.jpeg"
+      "image": "/products/daizy/_series-cover.png"
     },
     {
       "slug": "elite",
       "name": "Elite Series",
       "tagline": "Available in Gold, Rose Gold and Chrome.",
       "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/elite/_series-cover.jpeg"
+      "image": "/products/elite/_series-cover.png"
     },
     {
       "slug": "brava",
       "name": "Brava Series",
       "tagline": "Matt black, modern lines.",
       "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/brava/_series-cover.jpeg"
+      "image": "/products/brava/_series-cover.png"
     },
     {
       "slug": "premium-sinks",
       "name": "Premium Series — SS304 Sinks",
       "tagline": "Handmade SS 304 kitchen sinks.",
       "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/premium-sinks/_series-cover.jpeg"
+      "image": "/products/premium-sinks/_series-cover.png"
     }
   ],
   "products": [
@@ -71,7 +71,7 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": true
     },
     {
       "slug": "daizy-towel-rod",
@@ -251,7 +251,7 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": true
     },
     {
       "slug": "elite-towel-rod-gold",
@@ -449,7 +449,7 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": true
     },
     {
       "slug": "elite-towel-ring-rose-gold",
@@ -683,7 +683,7 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": true
     },
     {
       "slug": "brava-glass-tumbler-holder",

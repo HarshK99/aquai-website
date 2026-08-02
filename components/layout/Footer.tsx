@@ -15,15 +15,15 @@ export default function Footer() {
           <div className="md:col-span-1">
             <Link href="/" aria-label="Aquai home">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Aquai"
-                width={100}
-                height={34}
-                className="h-8 w-auto object-contain brightness-0 invert mb-5"
+                width={120}
+                height={40}
+                className="h-20 w-auto object-contain brightness-0 invert mb-5"
               />
             </Link>
             <p className="text-sm text-porcelain/60 leading-relaxed max-w-xs">
-              Premium bath accessories and SS304 kitchen sinks. Crafted for lasting elegance.
+              Premium bath accessories and kitchen sinks. Crafted for lasting elegance.
             </p>
           </div>
 

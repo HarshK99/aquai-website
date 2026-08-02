@@ -16,7 +16,7 @@ export default function SeriesBand({ seriesList }: Props) {
             <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
               Collections
             </p>
-            <h2 className="font-display text-h2 text-navy">Five series.</h2>
+            <h2 className="font-display text-h2 text-navy">Our collections.</h2>
           </div>
           <Link
             href="/products/"
@@ -27,12 +27,12 @@ export default function SeriesBand({ seriesList }: Props) {
         </AnimateIn>
 
         {/* Horizontal scroll on mobile, 5-col grid on desktop */}
-        <div className="-mx-6 flex gap-4 overflow-x-auto px-6 pb-2 lg:mx-0 lg:grid lg:grid-cols-5 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0">
+        <div className="-mx-6 flex gap-4 overflow-x-auto px-6 pb-2 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0 xl:grid-cols-4">
           {seriesList.map((s, i) => (
             <Link
               key={s.slug}
               href={`/series/${s.slug}/`}
-              className="group relative min-w-[200px] flex-shrink-0 overflow-hidden rounded-sm bg-navy-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 lg:min-w-0"
+              className="group relative min-w-[200px] flex-shrink-0 overflow-hidden rounded-sm bg-mist focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 lg:min-w-0"
               aria-label={s.name}
             >
               {/* Series cover image */}
@@ -43,8 +43,12 @@ export default function SeriesBand({ seriesList }: Props) {
                   alt={s.name}
                   width={400}
                   height={533}
-                  className="h-full w-full object-cover transition-transform duration-[700ms] ease-smooth group-hover:scale-[1.04]"
+                  className="h-full w-full object-contain p-6 transition-transform duration-[700ms] ease-smooth group-hover:scale-[1.04]"
                   loading={i < 3 ? "eager" : "lazy"}
+                  style={{
+                    maskImage: "radial-gradient(ellipse 80% 80% at 50% 45%, black 45%, transparent 88%)",
+                    WebkitMaskImage: "radial-gradient(ellipse 80% 80% at 50% 45%, black 45%, transparent 88%)",
+                  }}
                 />
                 {/* Dark gradient overlay */}
                 <div

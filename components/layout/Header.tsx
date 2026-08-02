@@ -121,11 +121,11 @@ export default function Header({ seriesList }: Props) {
           className="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current rounded-sm"
         >
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="Aquai"
             width={120}
             height={40}
-            className={`h-10 w-auto object-contain transition-[filter] duration-300 ${logoFilter}`}
+            className={`h-20 w-auto object-contain transition-[filter] duration-300`}
             priority
           />
         </Link>

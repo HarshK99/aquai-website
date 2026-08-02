@@ -70,7 +70,7 @@ export default function Hero() {
 
       {/* ── Content — left third on desktop ─────────────────────────── */}
       <Container className="relative z-10 flex min-h-screen items-center">
-        <div className="w-full max-w-xl py-36 md:py-44 md:max-w-[48%] lg:max-w-[42%]">
+        <div className="w-full max-w-xl py-36 md:py-44 md:max-w-[60%] lg:max-w-[58%]">
 
           {/* Eyebrow */}
           <motion.p
@@ -79,7 +79,7 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            Premium Bath Accessories &amp; SS304 Sinks
+            Premium Bath Accessories
           </motion.p>
 
           {/* Headline — staggered lines */}
@@ -92,11 +92,8 @@ export default function Hero() {
             <motion.span className="block" variants={heroLine}>
               Crafted for
             </motion.span>
-            <motion.span className="block" variants={heroLine}>
-              Lasting
-            </motion.span>
-            <motion.span className="block" variants={heroLine}>
-              Elegance.
+            <motion.span className="block whitespace-nowrap" variants={heroLine}>
+              Lasting Elegance.
             </motion.span>
           </motion.h1>
 
@@ -138,8 +135,9 @@ export default function Hero() {
             initial="hidden"
             animate="visible"
           >
-            Solid stainless steel. Precision-finished. 44 products across five
-            series — from bath accessories to handmade SS304 kitchen sinks.
+            Your bathroom deserves more than ordinary. Aquai brings premium
+            bath accessories and handmade kitchen sinks to homes that
+            value quality built to last.
           </motion.p>
 
           {/* CTAs */}

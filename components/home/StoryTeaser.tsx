@@ -9,14 +9,14 @@ export default function StoryTeaser() {
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
 
           {/* Image */}
-          <AnimateIn className="relative overflow-hidden rounded-sm bg-chrome/20 aspect-[4/3]">
+          <AnimateIn className="relative overflow-hidden rounded-sm bg-mist aspect-[4/3]">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/products/elite/_series-cover.png"
-              alt="Aquai Elite Series accessories"
+              src="/products/elite/elite-towel-rack-gold.jpeg"
+              alt="Aquai Elite Series Gold Towel Rack"
               width={800}
               height={600}
-              className="h-full w-full object-cover"
+              className="h-full w-full object-contain p-10"
               loading="lazy"
             />
             {/* 1px navy accent at bottom — chrome hairline motif */}
@@ -32,12 +32,13 @@ export default function StoryTeaser() {
               Built from<br />the inside out.
             </h2>
             <p className="font-body text-base leading-relaxed text-steel mb-4">
-              Every Aquai product begins with a decision about material. SS304
-              stainless steel is chosen for its corrosion resistance, hygiene, and
-              longevity in the environments that demand the most.
+              Every Aquai product starts with a decision about material — steel
+              that does not rust, finishes that do not fade, and processes built
+              to hold up through decades of daily use.
             </p>
             <p className="font-body text-base leading-relaxed text-steel mb-8">
-              Five series. Forty-four products. One standard — yours.
+              Whether it is a towel rack, a soap dispenser or a kitchen sink —
+              every Aquai fixture is held to the same uncompromising standard.
             </p>
             {/* Chrome hairline before link */}
             <span aria-hidden="true" className="block h-px w-12 bg-chrome mb-6" />

@@ -22,11 +22,15 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: "Aquai — Premium Bath Accessories & SS304 Kitchen Sinks",
+    default: "Aquai — Premium Bath Accessories & Kitchen Sinks",
     template: "%s | Aquai",
   },
   description:
-    "Manufacturer of premium bath accessories and SS304 kitchen sinks. 44 products across 5 series.",
+    "Premium bath accessories and handmade kitchen sinks for homes that value lasting quality.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({

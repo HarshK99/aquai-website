@@ -6,7 +6,7 @@ import AnimateIn from "@/components/AnimateIn";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Aquai makes premium SS 304 bath accessories and kitchen sinks — products built for the life of a building, not the length of a warranty.",
+    "Aquai makes premium bath accessories and kitchen sinks — products built for the life of a building, not the length of a warranty.",
 };
 
 const principles = [
@@ -20,7 +20,7 @@ const principles = [
   },
   {
     title: "Functional permanence",
-    body: "Designed for the life of a building. SS 304 does not rust in standard residential and commercial environments — that is a factual property of the alloy, not a marketing claim.",
+    body: "Designed for the life of a building. Our stainless steel does not rust in standard residential and commercial environments — that is a factual property of the alloy, not a marketing claim.",
   },
   {
     title: "Curated distribution",
@@ -30,9 +30,9 @@ const principles = [
 
 const facts = [
   {
-    label: "SS 304 Grade",
+    label: "Premium Grade Steel",
     detail:
-      "The alloy standard used in food processing, surgical instruments, and marine applications. Non-reactive, non-corroding.",
+      "The same alloy standard used in food processing, surgical instruments, and marine applications. Non-reactive, non-corroding.",
   },
   {
     label: "PVD Coating",
@@ -85,10 +85,10 @@ export default function AboutPage() {
                 </p>
                 <p>
                   The solution was to start further upstream: with metallurgy.
-                  SS 304 grade stainless steel is the foundation of every
-                  Aquai product — the alloy trusted in surgical instruments
-                  and food-grade equipment because it does not corrode under
-                  normal conditions of moisture and cleaning agents.
+                  Premium-grade stainless steel is the foundation of every
+                  Aquai product — the same alloy trusted in surgical
+                  instruments and food-grade equipment because it does not
+                  corrode under normal conditions of moisture and cleaning agents.
                 </p>
                 <p>
                   From there, it is about process discipline: the right

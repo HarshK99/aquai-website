@@ -12,11 +12,12 @@ const FINISH_SWATCH: Record<string, string> = {
 };
 
 interface Props {
-  finish: string;
+  finish: string | null;
   className?: string;
 }
 
 export default function FinishBadge({ finish, className = "" }: Props) {
+  if (!finish) return null;
   const swatchClass = FINISH_SWATCH[finish] ?? "bg-chrome";
 
   return (

@@ -26,7 +26,9 @@ export function generateMetadata({ params }: Props): Metadata {
   if (!product) return {};
   return {
     title: product.product_name,
-    description: `${product.product_name} in ${product.finish} finish — ${product.type} from Aquai.`,
+    description: product.finish
+      ? `${product.product_name} in ${product.finish} finish — ${product.type} from Aquai.`
+      : `${product.product_name} — ${product.type} from Aquai.`,
   };
 }
 
@@ -41,7 +43,9 @@ export default function ProductDetailPage({ params }: Props) {
   const seriesNames = Object.fromEntries(series.map((s) => [s.slug, s.name]));
 
   const whatsappText = encodeURIComponent(
-    `Hi, I'd like to enquire about the Aquai ${product.product_name} (${product.finish}).`
+    product.finish
+      ? `Hi, I'd like to enquire about the Aquai ${product.product_name} (${product.finish}).`
+      : `Hi, I'd like to enquire about the Aquai ${product.product_name}.`
   );
   const whatsappUrl = `https://wa.me/919706041000?text=${whatsappText}`;
 
@@ -54,7 +58,7 @@ export default function ProductDetailPage({ params }: Props) {
           <div className="bg-mist aspect-square lg:aspect-[4/5] overflow-hidden">
             <img
               src={product.image}
-              alt={`${product.product_name} in ${product.finish} finish`}
+              alt={product.finish ? `${product.product_name} in ${product.finish} finish` : product.product_name}
               width={1200}
               height={1200}
               className="h-full w-full object-contain p-10 md:p-16"
@@ -113,7 +117,28 @@ export default function ProductDetailPage({ params }: Props) {
             <div className="mb-5 h-px bg-chrome/40" />
 
             {/* Type */}
-            <p className="mb-8 text-sm text-steel">{product.type}</p>
+            <p className="mb-4 text-sm text-steel">{product.type}</p>
+
+            {/* Variants (e.g. Floor Trap Drain — With Tiles Insert / Line Design) */}
+            {product.variants && product.variants.length > 0 && (
+              <div className="mb-8">
+                <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
+                  Available variants
+                </p>
+                <ul className="flex flex-wrap gap-2">
+                  {product.variants.map((v) => (
+                    <li
+                      key={v}
+                      className="rounded-sm border border-chrome px-3 py-1 text-xs text-steel"
+                    >
+                      {v}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {!product.variants?.length && <div className="mb-8" />}
 
             {/* CTA buttons */}
             <div className="space-y-3">

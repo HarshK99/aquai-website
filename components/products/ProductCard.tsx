@@ -20,14 +20,14 @@ export default function ProductCard({ product, seriesName, priority = false }: P
     <Link
       href={`/products/${slug}/`}
       className="group relative flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
-      aria-label={`${product_name} — ${finish}`}
+      aria-label={finish ? `${product_name} — ${finish}` : product_name}
     >
       {/* ── Image container ─────────────────────── */}
       <div className="relative overflow-hidden bg-mist aspect-square">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={image}
-          alt={`${product_name} in ${finish} finish`}
+          alt={finish ? `${product_name} in ${finish} finish` : product_name}
           width={600}
           height={600}
           className="h-full w-full object-contain p-8 transition-transform duration-[600ms] ease-smooth group-hover:scale-[1.04]"

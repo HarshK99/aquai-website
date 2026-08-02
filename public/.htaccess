@@ -1,0 +1,40 @@
+# ── Aquai — Apache config for Hostinger shared hosting ──────
+# Static Next.js export (trailingSlash: true → directories with index.html)
+
+# Custom 404
+ErrorDocument 404 /404.html
+
+# Canonical index file in every directory
+DirectoryIndex index.html
+
+# ── Cache headers ────────────────────────────────────────────
+<IfModule mod_headers.c>
+  # Next.js hashed bundles — content-addressed, safe to cache forever
+  <LocationMatch "^/_next/static/">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </LocationMatch>
+
+  # Images — 30 days
+  <FilesMatch "\.(jpe?g|png|gif|webp|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+
+  # HTML — 1 hour (short so re-deploys propagate quickly)
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600"
+  </FilesMatch>
+</IfModule>
+
+# ── MIME types ───────────────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType application/javascript .js .mjs
+  AddType text/css .css
+  AddType application/font-woff2 .woff2
+  AddType image/webp .webp
+  AddType image/svg+xml .svg
+</IfModule>
+
+# ── Gzip compression ─────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+</IfModule>

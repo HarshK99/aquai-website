@@ -25,10 +25,35 @@ Dealers & distributors, architects/interior designers, premium homeowners.
 3. **Elite Series** (24) — 8 accessories × 3 finishes: Gold, Rose Gold, Chrome
 4. **Brava Series** (6) — Matt Black accessories, SS 304
 5. **Premium Series — SS304 Sinks** (3) — Satin, Glossy, Double-Bowl
+6. **Shower & Bathroom Accessories** (25) — umbrella category, split into 4
+   sub-groups on the category page:
+   - Shower & Drainage (8): shower arms, floor trap drain, square line grating,
+     cockroach trap, one pic fix jali, long drain channel
+   - Fixing & Mounting Hardware (7): rack bolt kits, basin bolt kit, EWC kit,
+     urinal clamp, brass nipples, wall mixer legs
+   - Plumbing & Valves (6): waste couplings, pillar cock flange, CPVC ball valve,
+     CP angle valve, sink waste coupling SS304
+   - Sanitary & Cisterns (4): dual/single flush cisterns, smart seat cover,
+     urinal spreader
+   Products with variants (Floor Trap Drain, Long Drain Channel, Rack Bolt Kit,
+   SS Square Line Grating Heavy) have ONE product page each — variants are
+   listed on the page, not separate URLs.
+7. **Standard Series — SS Sinks** (1) — S.S. Sink Standard (Regular + Single
+   Bowl with Drain Board listed as variants on one product page). Separate from
+   Premium Sinks — different range.
+
+Total: 70 products, 7 series/categories.
+
 
 TODO in products.json: fill code_no / d_p / size / box_pkg per item from the
 catalogue (internal fields — never displayed), series descriptions, choose ~6
 `featured: true` products for the home page.
+
+## Navigation structure
+Header dropdown for "Series":
+  Daizy | Elite | Brava | Ultra Slim Shower K
+  Shower & Bathroom Accessories (links to category page with sub-group tabs/anchors)
+  Premium Sinks | Standard Sinks
 
 ## Display scope (current)
 Publicly shown per product: image, product_name, type, series, finish. Nothing else.

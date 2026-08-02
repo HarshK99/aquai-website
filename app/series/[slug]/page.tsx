@@ -5,9 +5,13 @@ import {
   series,
   getSeries,
   getProductsBySeries,
+  getProductsBySubgroup,
   toPublic,
 } from "@/data/catalog";
 import ProductGrid from "@/components/products/ProductGrid";
+import SubgroupNav from "@/components/products/SubgroupNav";
+import { toAnchor } from "@/lib/utils";
+import ProductCard from "@/components/products/ProductCard";
 import Container from "@/components/layout/Container";
 import AnimateIn from "@/components/AnimateIn";
 
@@ -37,6 +41,7 @@ export default function SeriesPage({ params }: Props) {
 
   const isBrava = s.slug === "brava";
   const isElite = s.slug === "elite";
+  const hasSubgroups = s.subgroups && s.subgroups.length > 0;
 
   return (
     <>
@@ -128,24 +133,54 @@ export default function SeriesPage({ params }: Props) {
         </Container>
       </div>
 
+      {/* ── Subgroup sticky nav (S&BA only) ──────────────── */}
+      {hasSubgroups && <SubgroupNav subgroups={s.subgroups!} />}
+
       {/* ── Products grid ──────────────────────────────────── */}
-      <section className="bg-porcelain py-12 md:py-16">
-        <Container>
-          {isElite && (
-            <AnimateIn className="mb-4">
-              <p className="text-sm text-steel">
-                Elite is available in three finishes — use the chips below to
-                filter.
-              </p>
-            </AnimateIn>
-          )}
-          <ProductGrid
-            products={seriesProducts}
-            seriesNames={seriesNames}
-            fixedSeries={s.slug}
-          />
-        </Container>
-      </section>
+      {hasSubgroups ? (
+        /* Subgroup-sectioned layout */
+        <div className="bg-porcelain py-12 md:py-16">
+          {s.subgroups!.map((sg) => {
+            const sgProducts = getProductsBySubgroup(s.slug, sg).map(toPublic);
+            if (!sgProducts.length) return null;
+            return (
+              <section key={sg} id={toAnchor(sg)} className="scroll-mt-32 mb-16 last:mb-0">
+                <Container>
+                  <AnimateIn>
+                    <h2 className="mb-8 font-display text-h2 text-navy">{sg}</h2>
+                  </AnimateIn>
+                  <div className="grid grid-cols-2 gap-x-5 gap-y-10 md:gap-x-6 md:gap-y-12 lg:grid-cols-3 xl:grid-cols-4">
+                    {sgProducts.map((p, i) => (
+                      <AnimateIn key={p.slug} delay={i * 0.05}>
+                        <ProductCard product={p} seriesName={seriesNames[p.series]} />
+                      </AnimateIn>
+                    ))}
+                  </div>
+                </Container>
+              </section>
+            );
+          })}
+        </div>
+      ) : (
+        /* Flat grid with filter (Elite / Daizy / Brava etc.) */
+        <section className="bg-porcelain py-12 md:py-16">
+          <Container>
+            {isElite && (
+              <AnimateIn className="mb-4">
+                <p className="text-sm text-steel">
+                  Elite is available in three finishes — use the chips below to
+                  filter.
+                </p>
+              </AnimateIn>
+            )}
+            <ProductGrid
+              products={seriesProducts}
+              seriesNames={seriesNames}
+              fixedSeries={s.slug}
+            />
+          </Container>
+        </section>
+      )}
 
       {/* ── Inquiry CTA ───────────────────────────────────── */}
       <section className="bg-navy-deep py-16 md:py-24">

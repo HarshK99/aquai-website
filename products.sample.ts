@@ -1,4 +1,4 @@
-// data/products.ts — the single source of truth for all catalog content.
+// data/products.ts - the single source of truth for all catalog content.
 // Adding/editing a product = editing this file and re-running the build.
 
 export type Series = {
@@ -10,7 +10,7 @@ export type Series = {
 };
 
 export type Product = {
-  slug: string;          // "aura-towel-bar-600" — used in URL, must be unique
+  slug: string;          // "aura-towel-bar-600" - used in URL, must be unique
   name: string;          // "Towel Bar 600mm"
   series: string;        // must match a Series.slug
   image: string;         // "/products/aura/aura-towel-bar-600.webp"
@@ -58,4 +58,4 @@ export const products: Product[] = [
 
 // Helpers the site should use (implement in same file):
 // getProductsBySeries(slug), getProduct(slug), getFeaturedProducts(),
-// getRelatedProducts(product, n) — same series, excluding itself.
+// getRelatedProducts(product, n) - same series, excluding itself.

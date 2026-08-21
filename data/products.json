@@ -50,7 +50,7 @@
     },
     {
       "slug": "standard-sinks",
-      "name": "Standard Series \u2014 SS Sinks",
+      "name": "Standard Series — SS Sinks",
       "tagline": "Reliable stainless steel sinks for everyday use.",
       "description": "TODO: 2-3 sentence intro.",
       "image": "/products/standard-sinks/_series-cover.jpeg"
@@ -74,7 +74,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": true,
-      "variants": []
+      "variants": [],
+      "category": "Bathing and Fittings"
     },
     {
       "slug": "daizy-towel-rack",
@@ -93,7 +94,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "daizy-towel-rod",
@@ -112,7 +114,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "daizy-robe-hook",
@@ -131,7 +134,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "daizy-towel-ring",
@@ -150,7 +154,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "daizy-soap-dish",
@@ -169,7 +174,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "daizy-toilet-paper-holder",
@@ -188,7 +194,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "daizy-glass-liquid-soap-dispenser",
@@ -207,7 +214,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "daizy-glass-tumbler-holder",
@@ -226,7 +234,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "daizy-glass-soap-dish",
@@ -245,7 +254,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "daizy-ss-grab-bar",
@@ -264,7 +274,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Safety and supports"
     },
     {
       "slug": "elite-towel-rack-gold",
@@ -283,7 +294,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-towel-rod-gold",
@@ -302,7 +314,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-robe-hook-gold",
@@ -321,7 +334,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-glass-tumbler-holder-gold",
@@ -340,7 +354,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-towel-ring-gold",
@@ -359,7 +374,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-toilet-paper-holder-gold",
@@ -378,7 +394,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-glass-liquid-soap-dispenser-gold",
@@ -397,7 +414,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-glass-soap-dish-gold",
@@ -416,7 +434,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-towel-rack-rose-gold",
@@ -435,7 +454,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-towel-rod-rose-gold",
@@ -454,7 +474,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-robe-hook-rose-gold",
@@ -473,7 +494,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-glass-tumbler-holder-rose-gold",
@@ -492,7 +514,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-towel-ring-rose-gold",
@@ -511,7 +534,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-toilet-paper-holder-rose-gold",
@@ -530,7 +554,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-glass-liquid-soap-dispenser-rose-gold",
@@ -549,7 +574,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-glass-soap-dish-rose-gold",
@@ -568,7 +594,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-towel-rack-chrome",
@@ -587,7 +614,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-towel-rod-chrome",
@@ -606,7 +634,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-robe-hook-chrome",
@@ -625,7 +654,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-glass-tumbler-holder-chrome",
@@ -644,7 +674,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-towel-ring-chrome",
@@ -663,7 +694,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-toilet-paper-holder-chrome",
@@ -682,7 +714,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-glass-liquid-soap-dispenser-chrome",
@@ -701,7 +734,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "elite-glass-soap-dish-chrome",
@@ -720,7 +754,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "brava-towel-rod",
@@ -739,7 +774,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "brava-glass-tumbler-holder",
@@ -758,7 +794,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "brava-towel-ring",
@@ -777,7 +814,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "brava-glass-soap-dish",
@@ -796,7 +834,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "brava-glass-liquid-soap-dispenser",
@@ -815,7 +854,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "brava-dual-liquid-soap-dispenser",
@@ -834,7 +874,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "Accessories and storage"
     },
     {
       "slug": "premium-sinks-s-s-sink-satin-satin",
@@ -853,7 +894,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "SS Sink"
     },
     {
       "slug": "premium-sinks-s-s-sink-glossy-glossy",
@@ -872,7 +914,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "variants": []
+      "variants": [],
+      "category": "SS Sink"
     },
     {
       "slug": "premium-sinks-s-s-sink-double-bowl-satin",
@@ -896,7 +939,8 @@
       "box_pkg": null,
       "capacity": null,
       "featured": true,
-      "variants": []
+      "variants": [],
+      "category": "SS Sink"
     },
     {
       "slug": "shower-bathroom-accessories-square-shower-arm",
@@ -917,7 +961,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Bathing and Fittings"
     },
     {
       "slug": "shower-bathroom-accessories-oval-shower-arm",
@@ -938,7 +983,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Bathing and Fittings"
     },
     {
       "slug": "shower-bathroom-accessories-round-shower-arm-heavy",
@@ -959,7 +1005,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Bathing and Fittings"
     },
     {
       "slug": "shower-bathroom-accessories-floor-trap-drain",
@@ -985,7 +1032,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Drainage water management"
     },
     {
       "slug": "shower-bathroom-accessories-ss-square-line-grating-heavy",
@@ -1009,7 +1057,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Drainage water management"
     },
     {
       "slug": "shower-bathroom-accessories-cockroach-trap-for-floor-trap",
@@ -1030,7 +1079,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Drainage water management"
     },
     {
       "slug": "shower-bathroom-accessories-one-pic-fix-jali",
@@ -1051,7 +1101,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Drainage water management"
     },
     {
       "slug": "shower-bathroom-accessories-long-drain-channel-for-shower",
@@ -1077,7 +1128,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Drainage water management"
     },
     {
       "slug": "shower-bathroom-accessories-rack-bolt-kit",
@@ -1101,7 +1153,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-wash-basin-bolt-kit",
@@ -1122,7 +1175,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-ewc-floor-mounting-kit",
@@ -1143,7 +1197,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-urinal-clamp-kit",
@@ -1164,7 +1219,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-brass-extension-nipple-heavy",
@@ -1185,7 +1241,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-brass-hex-nipple",
@@ -1206,7 +1263,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-brass-wall-mixer-legs",
@@ -1229,7 +1287,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-brass-waste-coupling-full-thread",
@@ -1250,7 +1309,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-sink-waste-coupling-pvc-body",
@@ -1271,7 +1331,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-pillar-cock-flange",
@@ -1292,7 +1353,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-cpvc-ball-valve",
@@ -1313,7 +1375,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-cp-angle-valve-turbo-cp",
@@ -1334,7 +1397,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-sink-waste-coupling-square-ss304-pvc-body",
@@ -1355,7 +1419,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Hardware and installations"
     },
     {
       "slug": "shower-bathroom-accessories-pvc-dual-flush-cistern",
@@ -1376,7 +1441,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": "3/7 Ltrs",
-      "featured": false
+      "featured": false,
+      "category": "Sanitary ware"
     },
     {
       "slug": "shower-bathroom-accessories-pvc-single-flush-push-cistern",
@@ -1397,7 +1463,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": "10 Ltrs",
-      "featured": false
+      "featured": false,
+      "category": "Sanitary ware"
     },
     {
       "slug": "shower-bathroom-accessories-pvc-smart-seat-cover",
@@ -1418,7 +1485,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Sanitary ware"
     },
     {
       "slug": "shower-bathroom-accessories-urinal-spreader-for-hindware",
@@ -1439,7 +1507,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "Sanitary ware"
     },
     {
       "slug": "standard-sinks-s-s-sink-standard",
@@ -1463,7 +1532,8 @@
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
-      "featured": false
+      "featured": false,
+      "category": "SS Sink"
     }
   ]
 }

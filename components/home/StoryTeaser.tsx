@@ -19,7 +19,7 @@ export default function StoryTeaser() {
               className="h-full w-full object-contain p-10"
               loading="lazy"
             />
-            {/* 1px navy accent at bottom — chrome hairline motif */}
+            {/* 1px navy accent at bottom - chrome hairline motif */}
             <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-px bg-navy" />
           </AnimateIn>
 
@@ -32,12 +32,12 @@ export default function StoryTeaser() {
               Built from<br />the inside out.
             </h2>
             <p className="font-body text-base leading-relaxed text-steel mb-4">
-              Every Aquai product starts with a decision about material — steel
+              Every Aquai product starts with a decision about material - steel
               that does not rust, finishes that do not fade, and processes built
               to hold up through decades of daily use.
             </p>
             <p className="font-body text-base leading-relaxed text-steel mb-8">
-              Whether it is a towel rack, a soap dispenser or a kitchen sink —
+              Whether it is a towel rack, a soap dispenser or a kitchen sink -
               every Aquai fixture is held to the same uncompromising standard.
             </p>
             {/* Chrome hairline before link */}

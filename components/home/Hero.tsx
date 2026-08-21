@@ -5,7 +5,7 @@ import { heroStagger, heroLine, fadeRise } from "@/lib/motion";
 import Container from "@/components/layout/Container";
 
 // Drop hero-home-mobile.jpeg (768×1024 portrait) into public/hero/ to enable
-// the <source> swap — the <img> fallback handles it until then.
+// the <source> swap - the <img> fallback handles it until then.
 const DESKTOP_SRC = "/hero/hero-home.png";
 const MOBILE_SRC = "/hero/hero-home-mobile.jpeg"; // swap in when file exists
 
@@ -25,7 +25,7 @@ export default function Hero() {
           transition={{ duration: 8, ease: "linear" }}
         >
           <picture className="contents">
-            {/* Mobile crop — add public/hero/hero-home-mobile.jpeg to activate */}
+            {/* Mobile crop - add public/hero/hero-home-mobile.jpeg to activate */}
             <source media="(max-width: 767px)" srcSet={MOBILE_SRC} type="image/jpeg" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -68,7 +68,7 @@ export default function Hero() {
         className="pointer-events-none absolute inset-x-0 bottom-0 h-px bg-chrome/20"
       />
 
-      {/* ── Content — left third on desktop ─────────────────────────── */}
+      {/* ── Content - left third on desktop ─────────────────────────── */}
       <Container className="relative z-10 flex min-h-screen items-center">
         <div className="w-full max-w-xl py-36 md:py-44 md:max-w-[60%] lg:max-w-[58%]">
 
@@ -82,7 +82,7 @@ export default function Hero() {
             Premium Bath Accessories
           </motion.p>
 
-          {/* Headline — staggered lines */}
+          {/* Headline - staggered lines */}
           <motion.h1
             className="font-display text-hero text-porcelain leading-[1.05]"
             variants={heroStagger}
@@ -97,7 +97,7 @@ export default function Hero() {
             </motion.span>
           </motion.h1>
 
-          {/* Chrome divider — draws in after headline */}
+          {/* Chrome divider - draws in after headline */}
           <motion.div
             className="my-10 h-px w-20 bg-chrome/40"
             variants={{

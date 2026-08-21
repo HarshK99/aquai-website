@@ -27,8 +27,8 @@ export function generateMetadata({ params }: Props): Metadata {
   return {
     title: product.product_name,
     description: product.finish
-      ? `${product.product_name} in ${product.finish} finish — ${product.type} from Aquai.`
-      : `${product.product_name} — ${product.type} from Aquai.`,
+      ? `${product.product_name} in ${product.finish} finish - ${product.type} from Aquai.`
+      : `${product.product_name} - ${product.type} from Aquai.`,
   };
 }
 
@@ -119,7 +119,7 @@ export default function ProductDetailPage({ params }: Props) {
             {/* Type */}
             <p className="mb-4 text-sm text-steel">{product.type}</p>
 
-            {/* Variants (e.g. Floor Trap Drain — With Tiles Insert / Line Design) */}
+            {/* Variants (e.g. Floor Trap Drain - With Tiles Insert / Line Design) */}
             {product.variants && product.variants.length > 0 && (
               <div className="mb-8">
                 <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">

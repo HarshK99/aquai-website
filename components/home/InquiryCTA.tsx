@@ -18,7 +18,7 @@ export default function InquiryCTA() {
           </h2>
           <p className="font-body text-base text-porcelain/55 leading-relaxed mb-10">
             Dealers, architects, and homeowners welcome. Reach out to our
-            authorised distributor — Core Entrade India Pvt. Ltd.
+            authorised distributor - Core Entrade India Pvt. Ltd.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">

@@ -1,4 +1,4 @@
-# ── Aquai — Apache config for Hostinger shared hosting ──────
+# ── Aquai - Apache config for Hostinger shared hosting ──────
 # Static Next.js export (trailingSlash: true → directories with index.html)
 
 # Custom 404
@@ -9,17 +9,17 @@ DirectoryIndex index.html
 
 # ── Cache headers ────────────────────────────────────────────
 <IfModule mod_headers.c>
-  # Next.js hashed bundles — content-addressed, safe to cache forever
+  # Next.js hashed bundles - content-addressed, safe to cache forever
   <LocationMatch "^/_next/static/">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </LocationMatch>
 
-  # Images — 30 days
+  # Images - 30 days
   <FilesMatch "\.(jpe?g|png|gif|webp|svg|ico)$">
     Header set Cache-Control "public, max-age=2592000"
   </FilesMatch>
 
-  # HTML — 1 hour (short so re-deploys propagate quickly)
+  # HTML - 1 hour (short so re-deploys propagate quickly)
   <FilesMatch "\.html$">
     Header set Cache-Control "public, max-age=3600"
   </FilesMatch>

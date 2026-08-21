@@ -22,7 +22,7 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: {
-    default: "Aquai — Premium Bath Accessories & Kitchen Sinks",
+    default: "Aquai - Premium Bath Accessories & Kitchen Sinks",
     template: "%s | Aquai",
   },
   description:

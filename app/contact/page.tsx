@@ -6,7 +6,7 @@ import AnimateIn from "@/components/AnimateIn";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Enquire about Aquai products — dealer partnerships, project specifications, or general information. Reach Core Entrade India Pvt. Ltd., authorised distributor.",
+    "Enquire about Aquai products - dealer partnerships, project specifications, or general information. Reach Core Entrade India Pvt. Ltd., authorised distributor.",
 };
 
 const PHONE = "+91 97060 41000";
@@ -135,7 +135,7 @@ export default function ContactPage() {
       <section className="bg-mist" aria-label="Office location map">
         <div className="h-[360px] md:h-[440px] w-full overflow-hidden">
           <iframe
-            title="Core Entrade India Pvt. Ltd. — Transport Nagar, Rajkot"
+            title="Core Entrade India Pvt. Ltd. - Transport Nagar, Rajkot"
             src="https://maps.google.com/maps?q=Transport+Nagar%2C+Navagram%2C+Rajkot%2C+Gujarat+360003%2C+India&t=&z=15&ie=UTF8&iwloc=&output=embed"
             width="100%"
             height="100%"

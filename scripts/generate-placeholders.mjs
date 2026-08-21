@@ -1,7 +1,7 @@
 /**
  * Generates 1200×1200 mist-background placeholder JPEGs for every product
  * image and series cover missing from public/products/.
- * Idempotent — never overwrites an existing file.
+ * Idempotent - never overwrites an existing file.
  * Usage: node scripts/generate-placeholders.mjs
  *
  * Text layout (DESIGN.md spec):
@@ -126,7 +126,7 @@ for (const p of data.products) {
     continue;
   }
 
-  const eyebrow = `${p.series.replace(/-/g, " ")} — ${p.finish}`;
+  const eyebrow = `${p.series.replace(/-/g, " ")} - ${p.finish}`;
   const svg = buildSvg({
     title: p.product_name,
     eyebrow,

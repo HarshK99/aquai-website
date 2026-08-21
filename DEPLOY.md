@@ -1,4 +1,4 @@
-# Deploy — Aquai Website
+# Deploy - Aquai Website
 
 Static Next.js export → Hostinger shared hosting via FTP.
 
@@ -49,7 +49,7 @@ npx serve out       # visit http://localhost:3000
 
 `npm run build` produces `out/` containing:
 - All HTML pages (44 product pages + 5 series pages + home/about/contact/products)
-- `_next/static/` — hashed JS/CSS bundles
+- `_next/static/` - hashed JS/CSS bundles
 - `public/` assets copied verbatim: images, logo, hero, `.htaccess`
 
 The `.htaccess` (from `public/.htaccess`) is automatically included and configures:
@@ -77,7 +77,7 @@ To push updates after the initial deploy:
 npm run build:deploy
 ```
 
-FTP upload replaces files in place — no database or server restart needed.
+FTP upload replaces files in place - no database or server restart needed.
 
 ---
 

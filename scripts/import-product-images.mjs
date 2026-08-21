@@ -30,7 +30,7 @@ const MAPPINGS = [
   ["AQUAI/Oval Shower Arm.png",                            "shower-bathroom-accessories/shower-bathroom-accessories-oval-shower-arm.jpeg"],
   ["AQUAI/Pillar Cock Flange.png",                         "shower-bathroom-accessories/shower-bathroom-accessories-pillar-cock-flange.jpeg"],
   ["AQUAI/Pvc Dual Flush Cistern.png",                     "shower-bathroom-accessories/shower-bathroom-accessories-pvc-dual-flush-cistern.jpeg"],
-  // Source has typo "Pish" — correct product slug uses "push"
+  // Source has typo "Pish" - correct product slug uses "push"
   ["AQUAI/Pvc Single Flush Pish Cistern.png",              "shower-bathroom-accessories/shower-bathroom-accessories-pvc-single-flush-push-cistern.jpeg"],
   ["AQUAI/Pvc Smart Seat Cover.png",                       "shower-bathroom-accessories/shower-bathroom-accessories-pvc-smart-seat-cover.jpeg"],
   // Rack Bolt Kit variants → using "L Type" as main (first variant: L-Key Type)
@@ -63,8 +63,8 @@ const MAPPINGS = [
   ["DAIZY SERIES/Towel Ring.png",                          "daizy/daizy-towel-ring.jpeg"],
   ["DAIZY SERIES/Towel Rod.png",                           "daizy/daizy-towel-rod.jpeg"],
 
-  // ── Elite Series — Gold finish only ──────────────────────────────────────
-  // (Chrome and Rose Gold have no source images — placeholders remain)
+  // ── Elite Series - Gold finish only ──────────────────────────────────────
+  // (Chrome and Rose Gold have no source images - placeholders remain)
   ["ELITE SERIES GOLD FINISH/Glass Liquid Soap Dispenser.png", "elite/elite-glass-liquid-soap-dispenser-gold.jpeg"],
   ["ELITE SERIES GOLD FINISH/Glass Soap Dish.png",             "elite/elite-glass-soap-dish-gold.jpeg"],
   ["ELITE SERIES GOLD FINISH/Glass Tumbler Holder.png",        "elite/elite-glass-tumbler-holder-gold.jpeg"],

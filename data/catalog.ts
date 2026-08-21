@@ -1,4 +1,4 @@
-// data/catalog.ts — typed access layer over data/products.json.
+// data/catalog.ts - typed access layer over data/products.json.
 // products.json is the single source of truth (full catalogue data incl. dealer
 // prices). This file controls WHAT is allowed to reach the browser.
 
@@ -25,12 +25,13 @@ export type CatalogProduct = {
   material_grade: string | null;
   image: string;
   gallery: string[];
-  code_no: string | null;         // model number — INTERNAL
-  d_p: number | null;             // dealer price ₹ — INTERNAL, never render
+  code_no: string | null;         // model number - INTERNAL
+  d_p: number | null;             // dealer price ₹ - INTERNAL, never render
   size: string | null;
   thickness: string | null;
   features: string[];
   variants: string[];             // listed on the product page (not separate slugs)
+  category: string | null;        // base category (one of 7 defined categories)
   bowl_dimensions: { bowl_a: string; bowl_b: string } | null;
   box_pkg: string | null;
   capacity: string | null;
@@ -39,7 +40,7 @@ export type CatalogProduct = {
 
 // ---------- Public view (safe to pass to client components) ----------
 // ONLY these fields may ever reach a "use client" component or be rendered.
-// To expose more later (size, code_no, price), add the field here — one place.
+// To expose more later (size, code_no, price), add the field here - one place.
 
 export type PublicProduct = Pick<
   CatalogProduct,
@@ -51,6 +52,7 @@ export type PublicProduct = Pick<
   | "finish"
   | "image"
   | "variants"
+  | "category"
   | "featured"
 >;
 
@@ -63,6 +65,7 @@ export const toPublic = (p: CatalogProduct): PublicProduct => ({
   finish:       p.finish,
   image:        p.image,
   variants:     p.variants,
+  category:     p.category,
   featured:     p.featured,
 });
 
@@ -101,7 +104,7 @@ export const getSubgroups = (slug: string): string[] =>
 
 /*
 RULES (enforced by CLAUDE.md):
-1. Server components may import `products` freely — build-time only.
+1. Server components may import `products` freely - build-time only.
 2. Client components ("use client") must receive PublicProduct[] via toPublic().
    Never pass raw CatalogProduct objects or import this module client-side.
 3. Never render d_p or code_no anywhere.

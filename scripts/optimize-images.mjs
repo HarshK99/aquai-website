@@ -13,7 +13,7 @@ const root = join(__dirname, "..");
 const productsDir = join(root, "public", "products");
 
 if (!existsSync(productsDir)) {
-  console.log("public/products/ not found — run generate-placeholders.mjs first.");
+  console.log("public/products/ not found - run generate-placeholders.mjs first.");
   process.exit(0);
 }
 

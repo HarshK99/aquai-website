@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand palette — DESIGN.md
+        // Brand palette - DESIGN.md
         porcelain: "#FAFAF7",
         mist: "#EFF1F0",
         navy: "#196db5",
@@ -17,7 +17,7 @@ const config: Config = {
         steel: "#5C6B7A",
         "accent-red": "#f21928",
         chrome: "#C9CED4",
-        // Finish swatches — DESIGN.md addendum
+        // Finish swatches - DESIGN.md addendum
         "finish-chrome": "#C9CED4",
         "finish-gold": "#C9A24B",
         "finish-rosegold": "#C08A7D",
@@ -32,7 +32,7 @@ const config: Config = {
         body: ["var(--font-manrope)", "system-ui", "sans-serif"],
       },
       fontSize: {
-        // Fluid type scale — DESIGN.md
+        // Fluid type scale - DESIGN.md
         hero: ["clamp(2.5rem, 4vw + 1.5rem, 4.5rem)", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
         h2: ["clamp(1.75rem, 2vw + 1rem, 2.75rem)", { lineHeight: "1.2" }],
         eyebrow: ["0.6875rem", { lineHeight: "1.4", letterSpacing: "0.14em", fontWeight: "600" }],

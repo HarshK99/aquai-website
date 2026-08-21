@@ -6,7 +6,7 @@ import AnimateIn from "@/components/AnimateIn";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Aquai makes premium bath accessories and kitchen sinks — products built for the life of a building, not the length of a warranty.",
+    "Aquai makes premium bath accessories and kitchen sinks - products built for the life of a building, not the length of a warranty.",
 };
 
 const principles = [
@@ -20,7 +20,7 @@ const principles = [
   },
   {
     title: "Functional permanence",
-    body: "Designed for the life of a building. Our stainless steel does not rust in standard residential and commercial environments — that is a factual property of the alloy, not a marketing claim.",
+    body: "Designed for the life of a building. Our stainless steel does not rust in standard residential and commercial environments - that is a factual property of the alloy, not a marketing claim.",
   },
   {
     title: "Curated distribution",
@@ -79,14 +79,14 @@ export default function AboutPage() {
               <div className="space-y-4 text-base leading-[1.75] text-steel">
                 <p>
                   Aquai was founded by people who had spent years watching
-                  well-designed products fail at the surface level — literally.
+                  well-designed products fail at the surface level - literally.
                   Finishes that faded, chrome that pitted, satin that lost its
                   sheen within two years of installation.
                 </p>
                 <p>
                   The solution was to start further upstream: with metallurgy.
                   Premium-grade stainless steel is the foundation of every
-                  Aquai product — the same alloy trusted in surgical
+                  Aquai product - the same alloy trusted in surgical
                   instruments and food-grade equipment because it does not
                   corrode under normal conditions of moisture and cleaning agents.
                 </p>

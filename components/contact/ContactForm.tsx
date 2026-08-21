@@ -26,7 +26,7 @@ export default function ContactForm() {
 
     const data = new FormData(e.currentTarget);
     data.append("access_key", WEB3FORMS_KEY);
-    data.append("subject", "New enquiry — Aquai website");
+    data.append("subject", "New enquiry - Aquai website");
     data.append("from_name", "Aquai Website");
 
     try {
@@ -70,7 +70,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate className="space-y-5">
-      {/* Honeypot — hidden from humans, catches bots */}
+      {/* Honeypot - hidden from humans, catches bots */}
       <input
         type="checkbox"
         name="botcheck"

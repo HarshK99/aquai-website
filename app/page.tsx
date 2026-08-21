@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      {/* ① Hero — full-screen, dark, animated */}
+      {/* ① Hero - full-screen, dark, animated */}
       <Hero />
 
       {/* ② Series band */}

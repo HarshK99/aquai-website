@@ -168,7 +168,7 @@ export default function SeriesPage({ params }: Props) {
             {isElite && (
               <AnimateIn className="mb-4">
                 <p className="text-sm text-steel">
-                  Elite is available in three finishes — use the chips below to
+                  Elite is available in three finishes - use the chips below to
                   filter.
                 </p>
               </AnimateIn>

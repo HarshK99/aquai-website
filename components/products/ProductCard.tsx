@@ -20,7 +20,7 @@ export default function ProductCard({ product, seriesName, priority = false }: P
     <Link
       href={`/products/${slug}/`}
       className="group relative flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
-      aria-label={finish ? `${product_name} — ${finish}` : product_name}
+      aria-label={finish ? `${product_name} - ${finish}` : product_name}
     >
       {/* ── Image container ─────────────────────── */}
       <div className="relative overflow-hidden bg-mist aspect-square">
@@ -46,7 +46,7 @@ export default function ProductCard({ product, seriesName, priority = false }: P
         <FinishBadge finish={finish} />
       </div>
 
-      {/* ── Chrome hairline — signature draw effect ─ */}
+      {/* ── Chrome hairline - signature draw effect ─ */}
       {/* navy line with red tip draws left→right on hover */}
       <span
         aria-hidden="true"

@@ -7,7 +7,7 @@ import AnimateIn from "@/components/AnimateIn";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Browse all 70 Aquai products across seven collections — bath accessories, kitchen sinks and bathroom fittings.",
+    "Browse all 70 Aquai products across seven collections - bath accessories, kitchen sinks and bathroom fittings.",
 };
 
 export default function ProductsPage() {

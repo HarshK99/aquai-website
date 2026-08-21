@@ -3,8 +3,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   products,
-  series,
+  SERIES_NAMES,
   getProduct,
+  getCategoryForProduct,
   getRelatedProducts,
   toPublic,
 } from "@/data/catalog";
@@ -36,11 +37,10 @@ export default function ProductDetailPage({ params }: Props) {
   const product = getProduct(params.slug);
   if (!product) notFound();
 
-  const seriesData = series.find((s) => s.slug === product.series);
-  const seriesName = seriesData?.name ?? product.series;
+  const seriesName = SERIES_NAMES[product.series] ?? product.series;
+  const cat = getCategoryForProduct(product);
 
   const related = getRelatedProducts(product, 4).map(toPublic);
-  const seriesNames = Object.fromEntries(series.map((s) => [s.slug, s.name]));
 
   const whatsappText = encodeURIComponent(
     product.finish
@@ -80,20 +80,20 @@ export default function ProductDetailPage({ params }: Props) {
                     Products
                   </Link>
                 </li>
-                <li aria-hidden="true" className="opacity-40">
-                  /
-                </li>
-                <li>
-                  <Link
-                    href={`/series/${product.series}/`}
-                    className="hover:text-navy transition-colors duration-150"
-                  >
-                    {seriesName}
-                  </Link>
-                </li>
-                <li aria-hidden="true" className="opacity-40">
-                  /
-                </li>
+                {cat && (
+                  <>
+                    <li aria-hidden="true" className="opacity-40">/</li>
+                    <li>
+                      <Link
+                        href={`/category/${cat.slug}/`}
+                        className="hover:text-navy transition-colors duration-150"
+                      >
+                        {cat.name}
+                      </Link>
+                    </li>
+                  </>
+                )}
+                <li aria-hidden="true" className="opacity-40">/</li>
                 <li className="text-navy">{product.product_name}</li>
               </ol>
             </nav>
@@ -178,7 +178,7 @@ export default function ProductDetailPage({ params }: Props) {
             <div className="grid grid-cols-2 gap-x-5 gap-y-10 md:gap-x-6 md:gap-y-12 lg:grid-cols-4">
               {related.map((p, i) => (
                 <AnimateIn key={p.slug} delay={i * 0.07}>
-                  <ProductCard product={p} seriesName={seriesNames[p.series]} />
+                  <ProductCard product={p} seriesName={SERIES_NAMES[p.series]} />
                 </AnimateIn>
               ))}
             </div>

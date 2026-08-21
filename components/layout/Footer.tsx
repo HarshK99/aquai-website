@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { series } from "@/data/catalog";
+import { categories } from "@/data/catalog";
 
 export default function Footer() {
   return (
@@ -27,19 +27,19 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* ── Series links ─────────────────────────── */}
+          {/* ── Category links ───────────────────────── */}
           <div>
             <p className="text-xs uppercase tracking-[0.14em] text-porcelain/40 font-semibold mb-5">
-              Series
+              Categories
             </p>
             <ul className="flex flex-col gap-3">
-              {series.map((s) => (
-                <li key={s.slug}>
+              {categories.map((cat) => (
+                <li key={cat.slug}>
                   <Link
-                    href={`/series/${s.slug}/`}
+                    href={`/category/${cat.slug}/`}
                     className="text-sm text-porcelain/70 hover:text-porcelain transition-colors duration-200"
                   >
-                    {s.name}
+                    {cat.name}
                   </Link>
                 </li>
               ))}

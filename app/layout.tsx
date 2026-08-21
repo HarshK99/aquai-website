@@ -4,7 +4,7 @@ import "./globals.css";
 import MotionProvider from "@/components/MotionProvider";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { series } from "@/data/catalog";
+import { categories } from "@/data/catalog";
 
 const prata = Prata({
   weight: "400",
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
-  const seriesList = series.map((s) => ({ slug: s.slug, name: s.name }));
+  const categoryList = categories.map((c) => ({ slug: c.slug, name: c.name }));
 
   return (
     <html lang="en" className={`${prata.variable} ${manrope.variable}`}>
       <body className="bg-porcelain text-navy-deep antialiased font-body">
         <MotionProvider>
-          <Header seriesList={seriesList} />
+          <Header categoryList={categoryList} />
           <main id="main-content">{children}</main>
           <Footer />
         </MotionProvider>

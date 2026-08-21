@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { products, series, toPublic } from "@/data/catalog";
+import { products, categories, SERIES_NAMES, toPublic } from "@/data/catalog";
 import ProductGrid from "@/components/products/ProductGrid";
 import Container from "@/components/layout/Container";
 import AnimateIn from "@/components/AnimateIn";
@@ -12,8 +12,7 @@ export const metadata: Metadata = {
 
 export default function ProductsPage() {
   const publicProducts = products.map(toPublic);
-  const seriesList = series.map((s) => ({ slug: s.slug, name: s.name }));
-  const seriesNames = Object.fromEntries(series.map((s) => [s.slug, s.name]));
+  const categoryList = categories.map((c) => ({ slug: c.slug, name: c.name }));
 
   return (
     <>
@@ -34,8 +33,8 @@ export default function ProductsPage() {
         <Container>
           <ProductGrid
             products={publicProducts}
-            seriesNames={seriesNames}
-            seriesList={seriesList}
+            seriesNames={SERIES_NAMES}
+            categoryList={categoryList}
           />
         </Container>
       </section>

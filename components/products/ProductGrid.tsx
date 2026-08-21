@@ -16,7 +16,9 @@ const ELITE_FINISHES = ["Gold", "Rose Gold", "Chrome"] as const;
 interface Props {
   products: PublicProduct[];
   seriesNames: Record<string, string>;
-  /** Pass the full series list to show the series filter bar */
+  /** Pass to show a category filter bar (all-products page) */
+  categoryList?: { slug: string; name: string }[];
+  /** Pass to show a series filter bar within a category page */
   seriesList?: { slug: string; name: string }[];
   /** Pre-select a series and hide the series filter (for series pages) */
   fixedSeries?: string;
@@ -32,14 +34,17 @@ const pill = (active: boolean) =>
 export default function ProductGrid({
   products,
   seriesNames,
+  categoryList,
   seriesList,
   fixedSeries,
 }: Props) {
+  const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedSeries, setSelectedSeries] = useState<string>(
     fixedSeries ?? "all"
   );
   const [selectedFinish, setSelectedFinish] = useState<string>("all");
 
+  const showCategoryFilter = !!categoryList;
   const showSeriesFilter = !fixedSeries && !!seriesList;
   const showFinishFilter =
     selectedSeries === "elite" || fixedSeries === "elite";
@@ -47,14 +52,24 @@ export default function ProductGrid({
   const filtered = useMemo(
     () =>
       products.filter((p) => {
+        if (selectedCategory !== "all") {
+          const catName = categoryList?.find(c => c.slug === selectedCategory)?.name;
+          if (catName && p.category !== catName) return false;
+        }
         if (selectedSeries !== "all" && p.series !== selectedSeries)
           return false;
         if (selectedFinish !== "all" && p.finish !== selectedFinish)
           return false;
         return true;
       }),
-    [products, selectedSeries, selectedFinish]
+    [products, selectedCategory, selectedSeries, selectedFinish, categoryList]
   );
+
+  const handleCategoryChange = (slug: string) => {
+    setSelectedCategory(slug);
+    setSelectedSeries("all");
+    setSelectedFinish("all");
+  };
 
   const handleSeriesChange = (slug: string) => {
     setSelectedSeries(slug);
@@ -63,6 +78,38 @@ export default function ProductGrid({
 
   return (
     <div>
+      {/* ── Category filter ───────────────────────────────── */}
+      {showCategoryFilter && (
+        <div
+          className="flex flex-wrap gap-2 mb-6"
+          role="group"
+          aria-label="Filter by category"
+        >
+          <button
+            className={pill(selectedCategory === "all")}
+            aria-pressed={selectedCategory === "all"}
+            onClick={() => handleCategoryChange("all")}
+          >
+            All
+            <span className="text-xs opacity-60">({products.length})</span>
+          </button>
+          {categoryList!.map((cat) => {
+            const count = products.filter((p) => p.category === cat.name).length;
+            return (
+              <button
+                key={cat.slug}
+                className={pill(selectedCategory === cat.slug)}
+                aria-pressed={selectedCategory === cat.slug}
+                onClick={() => handleCategoryChange(cat.slug)}
+              >
+                {cat.name}
+                <span className="text-xs opacity-60">({count})</span>
+              </button>
+            );
+          })}
+        </div>
+      )}
+
       {/* ── Series filter ─────────────────────────────────── */}
       {showSeriesFilter && (
         <div

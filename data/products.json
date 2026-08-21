@@ -1,61 +1,4 @@
 {
-  "series": [
-    {
-      "slug": "ultra-slim-shower-k",
-      "name": "Ultra Slim Shower K Series",
-      "tagline": "Ultra-slim overhead showers in mirror finish.",
-      "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/ultra-slim-shower-k/_series-cover.jpeg"
-    },
-    {
-      "slug": "daizy",
-      "name": "Daizy Series",
-      "tagline": "Everyday essentials in stainless steel.",
-      "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/daizy/_series-cover.jpeg"
-    },
-    {
-      "slug": "elite",
-      "name": "Elite Series",
-      "tagline": "Available in Gold, Rose Gold and Chrome.",
-      "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/elite/_series-cover.jpeg"
-    },
-    {
-      "slug": "brava",
-      "name": "Brava Series",
-      "tagline": "Matt black, modern lines.",
-      "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/brava/_series-cover.jpeg"
-    },
-    {
-      "slug": "premium-sinks",
-      "name": "Premium Sinks Series",
-      "tagline": "Handmade stainless steel kitchen sinks.",
-      "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/premium-sinks/_series-cover.jpeg"
-    },
-    {
-      "slug": "shower-bathroom-accessories",
-      "name": "Shower & Bathroom Accessories",
-      "tagline": "Fittings, drainage, hardware and plumbing essentials.",
-      "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/shower-bathroom-accessories/_series-cover.jpeg",
-      "subgroups": [
-        "Shower & Drainage",
-        "Fixing & Mounting Hardware",
-        "Plumbing & Valves",
-        "Sanitary & Cisterns"
-      ]
-    },
-    {
-      "slug": "standard-sinks",
-      "name": "Standard Series — SS Sinks",
-      "tagline": "Reliable stainless steel sinks for everyday use.",
-      "description": "TODO: 2-3 sentence intro.",
-      "image": "/products/standard-sinks/_series-cover.jpeg"
-    }
-  ],
   "products": [
     {
       "slug": "ultra-slim-shower-k-ultra-slim-shower",
@@ -1534,6 +1477,57 @@
       "capacity": null,
       "featured": false,
       "category": "SS Sink"
+    }
+  ],
+  "categories": [
+    {
+      "slug": "drainage-water-management",
+      "name": "Drainage water management",
+      "tagline": "Floor traps, channels, grating and drainage solutions.",
+      "description": "TODO",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-floor-trap-drain.jpeg"
+    },
+    {
+      "slug": "accessories-and-storage",
+      "name": "Accessories and storage",
+      "tagline": "Towel racks, hooks, dispensers and bathroom storage.",
+      "description": "TODO",
+      "image": "/products/elite/elite-towel-rack-gold.jpeg"
+    },
+    {
+      "slug": "bathing-and-fittings",
+      "name": "Bathing and Fittings",
+      "tagline": "Overhead showers, shower arms and bath fittings.",
+      "description": "TODO",
+      "image": "/products/ultra-slim-shower-k/ultra-slim-shower-k-ultra-slim-shower.jpeg"
+    },
+    {
+      "slug": "sanitary-ware",
+      "name": "Sanitary ware",
+      "tagline": "Cisterns, seat covers and sanitary fittings.",
+      "description": "TODO",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-dual-flush-cistern.jpeg"
+    },
+    {
+      "slug": "safety-and-supports",
+      "name": "Safety and supports",
+      "tagline": "Grab bars and safety support fixtures.",
+      "description": "TODO",
+      "image": "/products/daizy/daizy-ss-grab-bar.jpeg"
+    },
+    {
+      "slug": "hardware-and-installations",
+      "name": "Hardware and installations",
+      "tagline": "Mounting kits, valves and installation hardware.",
+      "description": "TODO",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-rack-bolt-kit.jpeg"
+    },
+    {
+      "slug": "ss-sink",
+      "name": "SS Sink",
+      "tagline": "Handmade stainless steel kitchen sinks.",
+      "description": "TODO",
+      "image": "/products/premium-sinks/premium-sinks-s-s-sink-double-bowl-satin.jpeg"
     }
   ]
 }

@@ -5,13 +5,13 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 
-interface SeriesItem {
+interface CategoryItem {
   slug: string;
   name: string;
 }
 
 interface Props {
-  seriesList: SeriesItem[];
+  categoryList: CategoryItem[];
 }
 
 const dropdownVariants = {
@@ -43,12 +43,12 @@ const mobileMenuVariants = {
   },
 };
 
-export default function Header({ seriesList }: Props) {
+export default function Header({ categoryList }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [seriesOpen, setSeriesOpen] = useState(false);
+  const [catOpen, setCatOpen] = useState(false);
   const pathname = usePathname();
-  const seriesRef = useRef<HTMLDivElement>(null);
+  const catRef = useRef<HTMLDivElement>(null);
 
   const onHomePage = pathname === "/";
 
@@ -61,8 +61,8 @@ export default function Header({ seriesList }: Props) {
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
-      if (seriesRef.current && !seriesRef.current.contains(e.target as Node)) {
-        setSeriesOpen(false);
+      if (catRef.current && !catRef.current.contains(e.target as Node)) {
+        setCatOpen(false);
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -71,30 +71,15 @@ export default function Header({ seriesList }: Props) {
 
   useEffect(() => {
     setMenuOpen(false);
-    setSeriesOpen(false);
+    setCatOpen(false);
   }, [pathname]);
 
-  // Transparent mode: home page before first scroll
   const transparent = onHomePage && !scrolled;
 
-  const headerBg = transparent
-    ? "bg-transparent"
-    : "bg-porcelain";
-
-  const headerBorder = scrolled
-    ? "border-b border-chrome"
-    : transparent
-    ? "border-b border-transparent"
-    : "border-b border-transparent";
-
-  const logoFilter = transparent ? "brightness-0 invert" : "";
-
-  const navBase = transparent
-    ? "text-porcelain/75 hover:text-porcelain"
-    : "text-steel hover:text-navy";
-
+  const headerBg = transparent ? "bg-transparent" : "bg-porcelain";
+  const headerBorder = scrolled ? "border-b border-chrome" : "border-b border-transparent";
+  const navBase = transparent ? "text-porcelain/75 hover:text-porcelain" : "text-steel hover:text-navy";
   const navActive = transparent ? "text-porcelain" : "text-navy";
-
   const ctaClass = transparent
     ? "border border-porcelain/40 text-porcelain hover:border-porcelain/70 hover:bg-porcelain/10"
     : "bg-navy text-porcelain hover:bg-navy-deep";
@@ -103,9 +88,7 @@ export default function Header({ seriesList }: Props) {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   const linkClass = (href: string) =>
-    `text-sm font-medium transition-colors duration-200 ${
-      isActive(href) ? navActive : navBase
-    }`;
+    `text-sm font-medium transition-colors duration-200 ${isActive(href) ? navActive : navBase}`;
 
   return (
     <header
@@ -115,7 +98,7 @@ export default function Header({ seriesList }: Props) {
         className="mx-auto flex h-20 max-w-content items-center justify-between px-6 lg:px-10"
         aria-label="Main navigation"
       >
-        {/* ── Logo ──────────────────────────────────────────────── */}
+        {/* ── Logo ─────────────────────────────────────────── */}
         <Link
           href="/"
           className="flex-shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current rounded-sm"
@@ -125,43 +108,39 @@ export default function Header({ seriesList }: Props) {
             alt="Aquai"
             width={120}
             height={40}
-            className={`h-20 w-auto object-contain transition-[filter] duration-300`}
+            className="h-20 w-auto object-contain transition-[filter] duration-300"
             priority
           />
         </Link>
 
-        {/* ── Desktop nav ────────────────────────────────────────── */}
+        {/* ── Desktop nav ──────────────────────────────────── */}
         <ul className="hidden lg:flex items-center gap-8" role="list">
           <li>
-            <Link href="/" className={linkClass("/")}>
-              Home
-            </Link>
+            <Link href="/" className={linkClass("/")}>Home</Link>
           </li>
           <li>
-            <Link href="/products/" className={linkClass("/products/")}>
-              Products
-            </Link>
+            <Link href="/products/" className={linkClass("/products/")}>Products</Link>
           </li>
 
-          {/* Series dropdown */}
+          {/* Categories dropdown */}
           <li>
-            <div ref={seriesRef} className="relative">
+            <div ref={catRef} className="relative">
               <button
-                onClick={() => setSeriesOpen((v) => !v)}
-                aria-expanded={seriesOpen}
+                onClick={() => setCatOpen((v) => !v)}
+                aria-expanded={catOpen}
                 aria-haspopup="listbox"
                 className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 ${
-                  pathname.startsWith("/series/") ? navActive : navBase
+                  pathname.startsWith("/category/") ? navActive : navBase
                 }`}
               >
-                Series
+                Categories
                 <svg
                   width="12"
                   height="12"
                   viewBox="0 0 12 12"
                   fill="none"
                   aria-hidden="true"
-                  className={`transition-transform duration-200 ${seriesOpen ? "rotate-180" : ""}`}
+                  className={`transition-transform duration-200 ${catOpen ? "rotate-180" : ""}`}
                 >
                   <path
                     d="M2 4l4 4 4-4"
@@ -174,7 +153,7 @@ export default function Header({ seriesList }: Props) {
               </button>
 
               <AnimatePresence>
-                {seriesOpen && (
+                {catOpen && (
                   <motion.div
                     variants={dropdownVariants}
                     initial="hidden"
@@ -182,17 +161,17 @@ export default function Header({ seriesList }: Props) {
                     exit="exit"
                     style={{ transformOrigin: "top center" }}
                     role="listbox"
-                    aria-label="Series"
-                    className="absolute left-1/2 top-full mt-3 w-64 -translate-x-1/2 rounded-sm border border-chrome bg-porcelain py-2 shadow-lg"
+                    aria-label="Categories"
+                    className="absolute left-1/2 top-full mt-3 w-72 -translate-x-1/2 rounded-sm border border-chrome bg-porcelain py-2 shadow-lg"
                   >
-                    {seriesList.map((s) => (
+                    {categoryList.map((cat) => (
                       <Link
-                        key={s.slug}
-                        href={`/series/${s.slug}/`}
+                        key={cat.slug}
+                        href={`/category/${cat.slug}/`}
                         role="option"
                         className="block px-5 py-2.5 text-sm text-steel transition-colors hover:bg-mist hover:text-navy"
                       >
-                        {s.name}
+                        {cat.name}
                       </Link>
                     ))}
                   </motion.div>
@@ -202,18 +181,14 @@ export default function Header({ seriesList }: Props) {
           </li>
 
           <li>
-            <Link href="/about/" className={linkClass("/about/")}>
-              About
-            </Link>
+            <Link href="/about/" className={linkClass("/about/")}>About</Link>
           </li>
           <li>
-            <Link href="/contact/" className={linkClass("/contact/")}>
-              Contact
-            </Link>
+            <Link href="/contact/" className={linkClass("/contact/")}>Contact</Link>
           </li>
         </ul>
 
-        {/* ── Desktop CTA ─────────────────────────────────────────── */}
+        {/* ── Desktop CTA ──────────────────────────────────── */}
         <div className="hidden lg:flex">
           <Link
             href="/contact/"
@@ -223,9 +198,9 @@ export default function Header({ seriesList }: Props) {
           </Link>
         </div>
 
-        {/* ── Mobile hamburger ────────────────────────────────────── */}
+        {/* ── Mobile hamburger ─────────────────────────────── */}
         <button
-          className={`lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current rounded-sm`}
+          className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current rounded-sm"
           onClick={() => setMenuOpen((v) => !v)}
           aria-expanded={menuOpen}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -249,7 +224,7 @@ export default function Header({ seriesList }: Props) {
         </button>
       </nav>
 
-      {/* ── Mobile menu ─────────────────────────────────────────────── */}
+      {/* ── Mobile menu ──────────────────────────────────────── */}
       <AnimatePresence>
         {menuOpen && (
           <motion.div
@@ -276,16 +251,16 @@ export default function Header({ seriesList }: Props) {
 
               <li>
                 <p className="pt-3 pb-2 text-xs font-semibold uppercase tracking-[0.14em] text-steel">
-                  Series
+                  Categories
                 </p>
                 <ul className="flex flex-col gap-0.5 border-b border-chrome/50 pb-3">
-                  {seriesList.map((s) => (
-                    <li key={s.slug}>
+                  {categoryList.map((cat) => (
+                    <li key={cat.slug}>
                       <Link
-                        href={`/series/${s.slug}/`}
+                        href={`/category/${cat.slug}/`}
                         className="block py-2 pl-3 text-sm text-steel transition-colors hover:text-navy"
                       >
-                        {s.name}
+                        {cat.name}
                       </Link>
                     </li>
                   ))}

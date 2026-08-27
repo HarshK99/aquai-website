@@ -93,52 +93,9 @@ export default function Hero() {
               Crafted for
             </motion.span>
             <motion.span className="block whitespace-nowrap" variants={heroLine}>
-              Lasting Elegance.
+              Lasting Elegance
             </motion.span>
           </motion.h1>
-
-          {/* Chrome divider - draws in after headline */}
-          <motion.div
-            className="my-10 h-px w-20 bg-chrome/40"
-            variants={{
-              hidden: { scaleX: 0, opacity: 0 },
-              visible: {
-                scaleX: 1,
-                opacity: 1,
-                transition: {
-                  ease: [0.22, 1, 0.36, 1],
-                  duration: 0.6,
-                  delay: 0.55,
-                },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-            style={{ transformOrigin: "left" }}
-          />
-
-          {/* Subtext */}
-          <motion.p
-            className="max-w-sm font-body text-base leading-relaxed text-porcelain/60 md:text-lg"
-            variants={{
-              hidden: { opacity: 0, y: 16 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: {
-                  ease: [0.22, 1, 0.36, 1],
-                  duration: 0.6,
-                  delay: 0.65,
-                },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
-          >
-            Your bathroom deserves more than ordinary. Aquai brings premium
-            bath accessories and handmade kitchen sinks to homes that
-            value quality built to last.
-          </motion.p>
 
           {/* CTAs */}
           <motion.div
@@ -178,12 +135,6 @@ export default function Hero() {
                   strokeLinejoin="round"
                 />
               </svg>
-            </Link>
-            <Link
-              href="/contact/"
-              className="inline-flex items-center rounded-sm border border-porcelain/35 px-6 py-3.5 font-body text-sm font-medium text-porcelain/85 transition-colors duration-200 hover:border-porcelain/65 hover:text-porcelain focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-porcelain/50 focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
-            >
-              Enquire Now
             </Link>
           </motion.div>
         </div>

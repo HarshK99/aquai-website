@@ -8,11 +8,13 @@
       "finish": "Mirror",
       "material_grade": "SS 202",
       "image": "/products/ultra-slim-shower-k/ultra-slim-shower-k-ultra-slim-shower.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-139-4",
+      "d_p": 430,
+      "size": "100×100 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Mirror Finish"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
@@ -28,17 +30,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/daizy/daizy-towel-rack.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "DC-201-24",
+      "d_p": 3230,
+      "size": "600 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Double rod rack"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "daizy-towel-rod",
@@ -48,17 +52,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/daizy/daizy-towel-rod.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "DC-202-18",
+      "d_p": 1110,
+      "size": "450 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Single towel rod"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "daizy-robe-hook",
@@ -68,17 +74,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/daizy/daizy-robe-hook.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "DC-203",
+      "d_p": 350,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Double robe peg"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "daizy-towel-ring",
@@ -88,17 +96,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/daizy/daizy-towel-ring.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "DC-206-F",
+      "d_p": 1000,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Premium wall ring"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "daizy-soap-dish",
@@ -108,17 +118,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/daizy/daizy-soap-dish.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "DC-208",
+      "d_p": 660,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Metal slotted dish"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "daizy-toilet-paper-holder",
@@ -128,17 +140,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/daizy/daizy-toilet-paper-holder.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "DC-209",
+      "d_p": 1360,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Wall-mounted with flap cover"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "daizy-glass-liquid-soap-dispenser",
@@ -146,19 +160,21 @@
       "type": "Glass Liquid Soap Dispenser",
       "series": "daizy",
       "finish": "Chrome",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/daizy/daizy-glass-liquid-soap-dispenser.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "DC-210",
+      "d_p": 1010,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Frosted glass container"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "daizy-glass-tumbler-holder",
@@ -166,19 +182,21 @@
       "type": "Glass Tumbler Holder",
       "series": "daizy",
       "finish": "Chrome",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/daizy/daizy-glass-tumbler-holder.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "DC-211",
+      "d_p": 930,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Frosted glass tumbler"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "daizy-glass-soap-dish",
@@ -186,19 +204,21 @@
       "type": "Glass Soap Dish",
       "series": "daizy",
       "finish": "Chrome",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/daizy/daizy-glass-soap-dish.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "DC-212",
+      "d_p": 930,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Frosted glass soap plate"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "daizy-ss-grab-bar",
@@ -208,17 +228,19 @@
       "finish": "CP Premium",
       "material_grade": "SS 202",
       "image": "/products/daizy/daizy-ss-grab-bar.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-127-12",
+      "d_p": 820,
+      "size": "300 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Anti-slip wall safety handle"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Safety and supports"
+      "category": "Safety and Supports"
     },
     {
       "slug": "elite-towel-rack-gold",
@@ -228,17 +250,19 @@
       "finish": "Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-towel-rack-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "EGD-1601-24",
+      "d_p": 5480,
+      "size": "600 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Gold plated luxury rack"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-towel-rod-gold",
@@ -248,17 +272,19 @@
       "finish": "Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-towel-rod-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "EGD-1602-18",
+      "d_p": 1790,
+      "size": "450 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Gold plated single rod"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-robe-hook-gold",
@@ -268,17 +294,19 @@
       "finish": "Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-robe-hook-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EGD-1603",
+      "d_p": 880,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Gold plated robe peg"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-glass-tumbler-holder-gold",
@@ -286,19 +314,21 @@
       "type": "Glass Tumbler Holder",
       "series": "elite",
       "finish": "Gold",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/elite/elite-glass-tumbler-holder-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EGD-1605",
+      "d_p": 1440,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Gold plated tumbler container"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-towel-ring-gold",
@@ -308,17 +338,19 @@
       "finish": "Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-towel-ring-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EGD-1606",
+      "d_p": 1440,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Gold plated wall ring"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-toilet-paper-holder-gold",
@@ -328,17 +360,19 @@
       "finish": "Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-toilet-paper-holder-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EGD-1609",
+      "d_p": 2080,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Gold plated paper stand with cover"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-glass-liquid-soap-dispenser-gold",
@@ -346,19 +380,21 @@
       "type": "Glass Liquid Soap Dispenser",
       "series": "elite",
       "finish": "Gold",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/elite/elite-glass-liquid-soap-dispenser-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EGD-1610",
+      "d_p": 1620,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Gold plated luxury pump dispenser"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-glass-soap-dish-gold",
@@ -366,19 +402,21 @@
       "type": "Glass Soap Dish",
       "series": "elite",
       "finish": "Gold",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/elite/elite-glass-soap-dish-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EGD-1612",
+      "d_p": 1210,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Gold plated wall dish"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-towel-rack-rose-gold",
@@ -388,17 +426,19 @@
       "finish": "Rose Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-towel-rack-rose-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "ERGD-1601-24",
+      "d_p": 5480,
+      "size": "600 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Rose Gold plated luxury rack"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-towel-rod-rose-gold",
@@ -408,17 +448,19 @@
       "finish": "Rose Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-towel-rod-rose-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "ERGD-1602-18",
+      "d_p": 1790,
+      "size": "450 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Rose Gold plated single rod"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-robe-hook-rose-gold",
@@ -428,17 +470,19 @@
       "finish": "Rose Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-robe-hook-rose-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "ERGD-1603",
+      "d_p": 880,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Rose Gold plated robe peg"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-glass-tumbler-holder-rose-gold",
@@ -446,19 +490,21 @@
       "type": "Glass Tumbler Holder",
       "series": "elite",
       "finish": "Rose Gold",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/elite/elite-glass-tumbler-holder-rose-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "ERGD-1605",
+      "d_p": 1440,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Rose Gold plated tumbler container"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-towel-ring-rose-gold",
@@ -468,17 +514,19 @@
       "finish": "Rose Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-towel-ring-rose-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "ERGD-1606",
+      "d_p": 1440,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Rose Gold plated wall ring"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-toilet-paper-holder-rose-gold",
@@ -488,17 +536,19 @@
       "finish": "Rose Gold",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-toilet-paper-holder-rose-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "ERGD-1609",
+      "d_p": 2080,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Rose Gold paper stand with cover"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-glass-liquid-soap-dispenser-rose-gold",
@@ -506,19 +556,21 @@
       "type": "Glass Liquid Soap Dispenser",
       "series": "elite",
       "finish": "Rose Gold",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/elite/elite-glass-liquid-soap-dispenser-rose-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "ERGD-1610",
+      "d_p": 1620,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Rose Gold luxury pump dispenser"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-glass-soap-dish-rose-gold",
@@ -526,19 +578,21 @@
       "type": "Glass Soap Dish",
       "series": "elite",
       "finish": "Rose Gold",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/elite/elite-glass-soap-dish-rose-gold.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "ERGD-1612",
+      "d_p": 1210,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Rose Gold plated wall dish"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-towel-rack-chrome",
@@ -548,17 +602,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-towel-rack-chrome.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "EC-1601-24",
+      "d_p": 3940,
+      "size": "600 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Premium chrome plated rack"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-towel-rod-chrome",
@@ -568,17 +624,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-towel-rod-chrome.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "EC-1602-18",
+      "d_p": 1170,
+      "size": "450 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Premium chrome plated single rod"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-robe-hook-chrome",
@@ -588,17 +646,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-robe-hook-chrome.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EC-1603",
+      "d_p": 570,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Chrome plated double hook"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-glass-tumbler-holder-chrome",
@@ -606,19 +666,21 @@
       "type": "Glass Tumbler Holder",
       "series": "elite",
       "finish": "Chrome",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/elite/elite-glass-tumbler-holder-chrome.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "ERGD-1605",
+      "d_p": 890,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Chrome plated holder"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-towel-ring-chrome",
@@ -628,17 +690,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-towel-ring-chrome.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EC-1606",
+      "d_p": 870,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Chrome plated wall ring"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-toilet-paper-holder-chrome",
@@ -648,17 +712,19 @@
       "finish": "Chrome",
       "material_grade": "SS 304",
       "image": "/products/elite/elite-toilet-paper-holder-chrome.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EC-1609",
+      "d_p": 1140,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Chrome toilet paper stand with cover"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-glass-liquid-soap-dispenser-chrome",
@@ -666,19 +732,21 @@
       "type": "Glass Liquid Soap Dispenser",
       "series": "elite",
       "finish": "Chrome",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/elite/elite-glass-liquid-soap-dispenser-chrome.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EC-1610",
+      "d_p": 1060,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Chrome luxury pump dispenser"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "elite-glass-soap-dish-chrome",
@@ -686,19 +754,21 @@
       "type": "Glass Soap Dish",
       "series": "elite",
       "finish": "Chrome",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/elite/elite-glass-soap-dish-chrome.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "EC-1612",
+      "d_p": 850,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Chrome plated wall dish"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "brava-towel-rod",
@@ -708,17 +778,19 @@
       "finish": "Matt Black",
       "material_grade": "SS 304",
       "image": "/products/brava/brava-towel-rod.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BMB-1602",
+      "d_p": 3300,
+      "size": "600 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Matt Black luxury single rod"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "brava-glass-tumbler-holder",
@@ -726,19 +798,21 @@
       "type": "Glass Tumbler Holder",
       "series": "brava",
       "finish": "Matt Black",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/brava/brava-glass-tumbler-holder.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "BMB-1605",
+      "d_p": 1400,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Matt Black tumbler holder with glass"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "brava-towel-ring",
@@ -748,17 +822,19 @@
       "finish": "Matt Black",
       "material_grade": "SS 304",
       "image": "/products/brava/brava-towel-ring.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "BMB-1606",
+      "d_p": 1470,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Matt Black wall towel ring"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "brava-glass-soap-dish",
@@ -766,19 +842,21 @@
       "type": "Glass Soap Dish",
       "series": "brava",
       "finish": "Matt Black",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/brava/brava-glass-soap-dish.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "BMB-1608",
+      "d_p": 1580,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Matt Black wall soap dish with glass"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "brava-glass-liquid-soap-dispenser",
@@ -786,19 +864,21 @@
       "type": "Glass Liquid Soap Dispenser",
       "series": "brava",
       "finish": "Matt Black",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/brava/brava-glass-liquid-soap-dispenser.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "BMB-1610",
+      "d_p": 1580,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Matt Black luxury glass soap pump"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "brava-dual-liquid-soap-dispenser",
@@ -806,19 +886,21 @@
       "type": "Dual Liquid Soap Dispenser",
       "series": "brava",
       "finish": "Matt Black",
-      "material_grade": "SS 304",
+      "material_grade": "SS 304/Glass",
       "image": "/products/brava/brava-dual-liquid-soap-dispenser.jpeg",
-      "code_no": null,
-      "d_p": null,
+      "code_no": "BMB-1616",
+      "d_p": 3150,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Double pump glass dispenser set"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
       "variants": [],
-      "category": "Accessories and storage"
+      "category": "Accessories and Storage"
     },
     {
       "slug": "premium-sinks-s-s-sink-satin-satin",
@@ -828,11 +910,16 @@
       "finish": "Satin",
       "material_grade": "SS 304",
       "image": "/products/premium-sinks/premium-sinks-s-s-sink-satin-satin.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "AI-SI-241809-1 HM",
+      "d_p": 14330,
+      "size": "24×18×9 in (610×455×230 mm)",
       "thickness": null,
-      "features": [],
+      "features": [
+        "1mm Thick",
+        "Handmade Clean Edges",
+        "Ceramic Noise Coating",
+        "Square Waste Coupling included"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
@@ -848,11 +935,16 @@
       "finish": "Glossy",
       "material_grade": "SS 304",
       "image": "/products/premium-sinks/premium-sinks-s-s-sink-glossy-glossy.jpeg",
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "AI-SI-241809-1 HY",
+      "d_p": 7640,
+      "size": "24×18×9 in (610×455×230 mm)",
       "thickness": null,
-      "features": [],
+      "features": [
+        "1mm Thick",
+        "Curve Corners",
+        "Ceramic Noise Coating",
+        "Heavy Round Waste Coupling included"
+      ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
@@ -870,10 +962,13 @@
       "image": "/products/premium-sinks/premium-sinks-s-s-sink-double-bowl-satin.jpeg",
       "code_no": "AI-SI-371809-8 HM",
       "d_p": 21680,
-      "size": "37 X 18 X 9 (940 X 455 X 230 MM)",
+      "size": "37×18×9 in (940×455×230 mm)",
       "thickness": ".8 mm Thick",
       "features": [
-        "Ceramic Coating"
+        "0.8mm Thick",
+        "Satin Finish",
+        "Ceramic Noise Coating",
+        "Double Bowl (17\"×16\" each)"
       ],
       "bowl_dimensions": {
         "bowl_a": "17\"x16\" inch (431x406mm)",
@@ -892,12 +987,12 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Shower & Drainage",
       "finish": null,
-      "material_grade": "SS 304",
+      "material_grade": "SS 202",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-square-shower-arm.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-129-9",
+      "d_p": 280,
+      "size": "225 mm",
       "thickness": null,
       "features": [],
       "variants": [],
@@ -914,12 +1009,12 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Shower & Drainage",
       "finish": null,
-      "material_grade": "SS 304",
+      "material_grade": "SS 202",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-oval-shower-arm.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-131-9",
+      "d_p": 270,
+      "size": "225 mm",
       "thickness": null,
       "features": [],
       "variants": [],
@@ -936,12 +1031,12 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Shower & Drainage",
       "finish": null,
-      "material_grade": "SS 304",
+      "material_grade": "SS 202",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-round-shower-arm-heavy.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-136-12",
+      "d_p": 410,
+      "size": "300 mm",
       "thickness": null,
       "features": [],
       "variants": [],
@@ -958,25 +1053,31 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Shower & Drainage",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS 304",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-floor-trap-drain.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-1001",
+      "d_p": 420,
+      "size": "125×125 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Plate: 1.5mm",
+        "Frame: 1mm"
+      ],
       "variants": [
         "With Tiles Insert",
         "Line Design",
         "Square Design Satin Silver",
-        "Gem Satin Silver"
+        "Gem Satin Silver",
+        "Black",
+        "Gold",
+        "Rose Gold"
       ],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "50 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Drainage water management"
+      "category": "Drainage Water Management"
     },
     {
       "slug": "shower-bathroom-accessories-ss-square-line-grating-heavy",
@@ -988,20 +1089,25 @@
       "material_grade": "SS 304",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-square-line-grating-heavy.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-2105A",
+      "d_p": 170,
+      "size": "75×75 mm",
       "thickness": "2mm Thick",
-      "features": [],
+      "features": [
+        "2mm Thick"
+      ],
       "variants": [
         "With Hole",
-        "Plain"
+        "Plain",
+        "Black",
+        "Gold",
+        "Rose Gold"
       ],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "12 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Drainage water management"
+      "category": "Drainage Water Management"
     },
     {
       "slug": "shower-bathroom-accessories-cockroach-trap-for-floor-trap",
@@ -1010,20 +1116,20 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Shower & Drainage",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS 304",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-cockroach-trap-for-floor-trap.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
+      "code_no": "BH-1115",
+      "d_p": 470,
       "size": null,
       "thickness": null,
       "features": [],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "50 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Drainage water management"
+      "category": "Drainage Water Management"
     },
     {
       "slug": "shower-bathroom-accessories-one-pic-fix-jali",
@@ -1032,20 +1138,22 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Shower & Drainage",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS 202",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-one-pic-fix-jali.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-1007",
+      "d_p": 150,
+      "size": "150×150 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "For 110mm dia drain"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "50 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Drainage water management"
+      "category": "Drainage Water Management"
     },
     {
       "slug": "shower-bathroom-accessories-long-drain-channel-for-shower",
@@ -1054,25 +1162,30 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Shower & Drainage",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS 304",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-long-drain-channel-for-shower.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-1013-B",
+      "d_p": 3550,
+      "size": "100×450 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Satin Silver"
+      ],
       "variants": [
         "Square Hole",
         "Line Design",
         "SS-304 Piano",
-        "With Tiles Insert"
+        "With Tiles Insert",
+        "Black",
+        "Gold",
+        "Rose Gold"
       ],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "category": "Drainage water management"
+      "category": "Drainage Water Management"
     },
     {
       "slug": "shower-bathroom-accessories-rack-bolt-kit",
@@ -1081,14 +1194,16 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Fixing & Mounting Hardware",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS 202",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-rack-bolt-kit.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-101",
+      "d_p": 490,
+      "size": "16×165 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Heavy anchor with cosmetic cap"
+      ],
       "variants": [
         "L-Key Type",
         "With CP ABS Cap"
@@ -1097,7 +1212,7 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-wash-basin-bolt-kit",
@@ -1106,12 +1221,12 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Fixing & Mounting Hardware",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS 202",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-wash-basin-bolt-kit.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "BH-105",
+      "d_p": 140,
+      "size": "10×120 mm",
       "thickness": null,
       "features": [],
       "variants": [],
@@ -1119,7 +1234,7 @@
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-ewc-floor-mounting-kit",
@@ -1128,20 +1243,20 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Fixing & Mounting Hardware",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS 202",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-ewc-floor-mounting-kit.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
+      "code_no": "BH-115",
+      "d_p": 49,
       "size": "NA",
       "thickness": null,
       "features": [],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "100 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-urinal-clamp-kit",
@@ -1150,20 +1265,22 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Fixing & Mounting Hardware",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS 202",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-urinal-clamp-kit.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
+      "code_no": "BH-114",
+      "d_p": 140,
       "size": "NA",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Standard urinal wall hanger"
+      ],
       "variants": [],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-brass-extension-nipple-heavy",
@@ -1172,20 +1289,22 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Fixing & Mounting Hardware",
       "finish": null,
-      "material_grade": "Brass",
+      "material_grade": "Heavy Brass",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-brass-extension-nipple-heavy.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "NB-001",
+      "d_p": 160,
+      "size": "25 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Chrome plated hex thread extender"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "54 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-brass-hex-nipple",
@@ -1194,20 +1313,20 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Fixing & Mounting Hardware",
       "finish": null,
-      "material_grade": "Brass",
+      "material_grade": "Heavy Brass",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-brass-hex-nipple.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "SBI-001",
+      "d_p": 160,
+      "size": "15 mm",
       "thickness": null,
       "features": [],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "35 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-brass-wall-mixer-legs",
@@ -1216,22 +1335,22 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Fixing & Mounting Hardware",
       "finish": null,
-      "material_grade": "Brass",
+      "material_grade": "Heavy Brass",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-brass-wall-mixer-legs.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
+      "code_no": "NBSP-101",
+      "d_p": 640,
       "size": null,
       "thickness": null,
       "features": [
-        "Pair"
+        "Pairs offset connection set"
       ],
       "variants": [],
       "bowl_dimensions": null,
       "box_pkg": null,
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-brass-waste-coupling-full-thread",
@@ -1240,20 +1359,22 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Plumbing & Valves",
       "finish": null,
-      "material_grade": "Brass",
+      "material_grade": "Forged Brass",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-brass-waste-coupling-full-thread.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "NB-021",
+      "d_p": 530,
+      "size": "32×80 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Premium chrome plating"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "56 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-sink-waste-coupling-pvc-body",
@@ -1262,20 +1383,20 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Plumbing & Valves",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS Top, PVC Body",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-sink-waste-coupling-pvc-body.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "AI-SI-ACC-100",
+      "d_p": 280,
+      "size": "100 mm",
       "thickness": null,
       "features": [],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "100 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-pillar-cock-flange",
@@ -1284,20 +1405,22 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Plumbing & Valves",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "SS 304",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pillar-cock-flange.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
+      "code_no": "BH-5000",
+      "d_p": 40,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Mirror finish"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "25 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-cpvc-ball-valve",
@@ -1309,17 +1432,19 @@
       "material_grade": "CPVC",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-cpvc-ball-valve.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "TB-BV-020",
+      "d_p": 170,
+      "size": "20 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Industrial grade turn valve"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "200 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-cp-angle-valve-turbo-cp",
@@ -1328,42 +1453,46 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Plumbing & Valves",
       "finish": "CP",
-      "material_grade": null,
+      "material_grade": "Brass/CP",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-cp-angle-valve-turbo-cp.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "ANB-001",
+      "d_p": 560,
+      "size": "15 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Turbo single piece packaging"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "250 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-sink-waste-coupling-square-ss304-pvc-body",
-      "product_name": "Sink Waste Coupling Square SS304 PVC Body",
-      "type": "Sink Waste Coupling Square SS304 PVC Body",
+      "product_name": "Sink Waste Coupling Heavy Square",
+      "type": "Sink Waste Coupling Heavy Square",
       "series": "shower-bathroom-accessories",
       "subgroup": "Plumbing & Valves",
       "finish": null,
-      "material_grade": "SS 304",
+      "material_grade": "SS 304, PVC Body",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-sink-waste-coupling-square-ss304-pvc-body.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "AI-SI-ACC-101SQ",
+      "d_p": 530,
+      "size": "100 mm",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Square grid pattern"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "50 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Hardware and installations"
+      "category": "Hardware and Installations"
     },
     {
       "slug": "shower-bathroom-accessories-pvc-dual-flush-cistern",
@@ -1372,20 +1501,22 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Sanitary & Cisterns",
       "finish": null,
-      "material_grade": "PVC",
+      "material_grade": "PVC/ABS",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-dual-flush-cistern.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "RP-7050",
+      "d_p": 1700,
+      "size": "3/7 Ltrs",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Water-saving dual activator"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "10 PCS",
       "capacity": "3/7 Ltrs",
       "featured": false,
-      "category": "Sanitary ware"
+      "category": "Sanitary Ware"
     },
     {
       "slug": "shower-bathroom-accessories-pvc-single-flush-push-cistern",
@@ -1394,20 +1525,22 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Sanitary & Cisterns",
       "finish": null,
-      "material_grade": "PVC",
+      "material_grade": "PVC/ABS",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-single-flush-push-cistern.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "RP-7030",
+      "d_p": 1050,
+      "size": "10 Ltrs",
       "thickness": null,
-      "features": [],
+      "features": [
+        "Side-push robust design"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "10 PCS",
       "capacity": "10 Ltrs",
       "featured": false,
-      "category": "Sanitary ware"
+      "category": "Sanitary Ware"
     },
     {
       "slug": "shower-bathroom-accessories-pvc-smart-seat-cover",
@@ -1419,17 +1552,19 @@
       "material_grade": "PVC",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-smart-seat-cover.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
+      "code_no": "RP-1001",
+      "d_p": 495,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Standard white soft seat"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "20 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Sanitary ware"
+      "category": "Sanitary Ware"
     },
     {
       "slug": "shower-bathroom-accessories-urinal-spreader-for-hindware",
@@ -1438,20 +1573,22 @@
       "series": "shower-bathroom-accessories",
       "subgroup": "Sanitary & Cisterns",
       "finish": null,
-      "material_grade": null,
+      "material_grade": "Brass/ABS",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-urinal-spreader-for-hindware.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
+      "code_no": "NBSP-201",
+      "d_p": 660,
       "size": null,
       "thickness": null,
-      "features": [],
+      "features": [
+        "Specialty spreader nozzle"
+      ],
       "variants": [],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "5 PCS",
       "capacity": null,
       "featured": false,
-      "category": "Sanitary ware"
+      "category": "Sanitary Ware"
     },
     {
       "slug": "standard-sinks-s-s-sink-standard",
@@ -1460,36 +1597,732 @@
       "series": "standard-sinks",
       "subgroup": null,
       "finish": null,
-      "material_grade": "SS 304",
+      "material_grade": "Stainless Steel",
       "image": "/products/standard-sinks/standard-sinks-s-s-sink-standard.jpeg",
       "gallery": [],
-      "code_no": null,
-      "d_p": null,
-      "size": null,
+      "code_no": "AI-SI-181608-8",
+      "d_p": 2400,
+      "size": "18×16×8 in",
       "thickness": null,
-      "features": [],
+      "features": [
+        "1mm Ceramic Coating"
+      ],
       "variants": [
         "Regular",
         "Single Bowl with Drain Board"
       ],
       "bowl_dimensions": null,
-      "box_pkg": null,
+      "box_pkg": "1 PC",
       "capacity": null,
       "featured": false,
       "category": "SS Sink"
+    },
+    {
+      "slug": "shower-bathroom-accessories-double-nail-clamp-upvc-pipe",
+      "product_name": "Double Nail Clamp for UPVC Pipe",
+      "type": "Double Nail Clamp for UPVC Pipe",
+      "series": "shower-bathroom-accessories",
+      "subgroup": "Fixing & Mounting Hardware",
+      "finish": null,
+      "material_grade": "Plastic/Steel",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-double-nail-clamp-upvc-pipe.jpeg",
+      "gallery": [],
+      "code_no": "BP-U015",
+      "d_p": 3.1,
+      "size": "15 mm",
+      "thickness": null,
+      "features": [],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "100 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-double-nail-clamp-cpvc-pipe",
+      "product_name": "Double Nail Clamp for CPVC Pipe",
+      "type": "Double Nail Clamp for CPVC Pipe",
+      "series": "shower-bathroom-accessories",
+      "subgroup": "Fixing & Mounting Hardware",
+      "finish": null,
+      "material_grade": "Plastic/Steel",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-double-nail-clamp-cpvc-pipe.jpeg",
+      "gallery": [],
+      "code_no": "BP-C020",
+      "d_p": 3.1,
+      "size": "20 mm",
+      "thickness": null,
+      "features": [],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "100 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-ss-mirror-cabinet",
+      "product_name": "SS Mirror Cabinet",
+      "type": "SS Mirror Cabinet",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "SS 202",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-mirror-cabinet.jpeg",
+      "gallery": [],
+      "code_no": "GI-MC2014",
+      "d_p": 7650,
+      "size": "350×500×140 mm",
+      "thickness": null,
+      "features": [
+        "Sleek Design",
+        "Rust Resistant",
+        "Concealed Fittings",
+        "Mirror Finish"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Accessories and Storage"
+    },
+    {
+      "slug": "shower-bathroom-accessories-long-drain-cover",
+      "product_name": "Long Drain Cover",
+      "type": "Long Drain Cover",
+      "series": "shower-bathroom-accessories",
+      "subgroup": "Shower & Drainage",
+      "finish": null,
+      "material_grade": "SS 304",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-long-drain-cover.jpeg",
+      "gallery": [],
+      "code_no": "BH-EXT150-4",
+      "d_p": 10880,
+      "size": "150×1000×4 mm",
+      "thickness": null,
+      "features": [
+        "Premium SS-304 drainage cover plate"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-triangle-floor-drain-plain-tiles",
+      "product_name": "Triangle Floor Drain Plain Tiles Insert",
+      "type": "Triangle Floor Drain Plain Tiles Insert",
+      "series": "shower-bathroom-accessories",
+      "subgroup": "Shower & Drainage",
+      "finish": null,
+      "material_grade": "SS 304",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-triangle-floor-drain-plain-tiles.jpeg",
+      "gallery": [],
+      "code_no": "BH-5104",
+      "d_p": 2550,
+      "size": "250×250×60 mm",
+      "thickness": null,
+      "features": [
+        "Triangle shape shower insert"
+      ],
+      "variants": [
+        "Black",
+        "Gold",
+        "Rose Gold"
+      ],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-floor-drain-locking-type",
+      "product_name": "Floor Drain Locking Type Round Hole",
+      "type": "Floor Drain Locking Type Round Hole",
+      "series": "shower-bathroom-accessories",
+      "subgroup": "Shower & Drainage",
+      "finish": null,
+      "material_grade": "SS 304",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-floor-drain-locking-type.jpeg",
+      "gallery": [],
+      "code_no": "BH-1101",
+      "d_p": 380,
+      "size": "125×125 mm",
+      "thickness": null,
+      "features": [
+        "Round hole secure design"
+      ],
+      "variants": [
+        "Black",
+        "Gold",
+        "Rose Gold"
+      ],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-corner-drain-l-type",
+      "product_name": "Corner Drain L Type",
+      "type": "Corner Drain L Type",
+      "series": "shower-bathroom-accessories",
+      "subgroup": "Shower & Drainage",
+      "finish": null,
+      "material_grade": "SS 304",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-corner-drain-l-type.jpeg",
+      "gallery": [],
+      "code_no": "BH-2107",
+      "d_p": 1800,
+      "size": "150×150 mm",
+      "thickness": null,
+      "features": [
+        "L-Type space saving"
+      ],
+      "variants": [
+        "Black",
+        "Gold",
+        "Rose Gold"
+      ],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-clean-out-locking-cover",
+      "product_name": "Clean-Out Locking Cover",
+      "type": "Clean-Out Locking Cover",
+      "series": "shower-bathroom-accessories",
+      "subgroup": "Shower & Drainage",
+      "finish": null,
+      "material_grade": "SS 304",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-clean-out-locking-cover.jpeg",
+      "gallery": [],
+      "code_no": "BH-2108",
+      "d_p": 660,
+      "size": "125×125 mm",
+      "thickness": null,
+      "features": [
+        "Locking mechanism"
+      ],
+      "variants": [
+        "Black",
+        "Gold",
+        "Rose Gold"
+      ],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-3-waste-coupling-k-type-long",
+      "product_name": "Waste Coupling K Type Long",
+      "type": "Waste Coupling K Type Long",
+      "series": "shower-bathroom-accessories",
+      "subgroup": "Plumbing & Valves",
+      "finish": null,
+      "material_grade": "SS/ABS",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-3-waste-coupling-k-type-long.jpeg",
+      "gallery": [],
+      "code_no": "BH-1116CP",
+      "d_p": 420,
+      "size": "32×150 mm",
+      "thickness": null,
+      "features": [
+        "Extending long neck"
+      ],
+      "variants": [
+        "Black",
+        "Gold",
+        "Rose Gold"
+      ],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Bathing and Fittings"
+    },
+    {
+      "slug": "shower-bathroom-accessories-pop-up-floor-drain",
+      "product_name": "Pop-Up Floor Drain",
+      "type": "Pop-Up Floor Drain",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "SS 304",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pop-up-floor-drain.jpeg",
+      "gallery": [],
+      "code_no": "BH-2103",
+      "d_p": 900,
+      "size": "125×125 mm",
+      "thickness": null,
+      "features": [
+        "Pop-Up Mechanism"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "50 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-anti-cockroach-trap-bowl-type",
+      "product_name": "Anti-Cockroach Trap Bowl Type",
+      "type": "Anti-Cockroach Trap Bowl Type",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "SS 304",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-anti-cockroach-trap-bowl-type.jpeg",
+      "gallery": [],
+      "code_no": "BH-1115-07",
+      "d_p": 450,
+      "size": "For 125mm Drain",
+      "thickness": null,
+      "features": [
+        "Premium bowl type cockroach blocker"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-ss-doom-floor-grating",
+      "product_name": "SS Doom Floor Grating",
+      "type": "SS Doom Floor Grating",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "Stainless Steel",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-doom-floor-grating.jpeg",
+      "gallery": [],
+      "code_no": "VI-ACC-03",
+      "d_p": 35,
+      "size": "80 mm",
+      "thickness": null,
+      "features": [
+        "Classic dome design"
+      ],
+      "variants": [
+        "Standard",
+        "With Hole"
+      ],
+      "bowl_dimensions": null,
+      "box_pkg": "72 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-ss-line-wall-grating",
+      "product_name": "SS Line Wall Grating",
+      "type": "SS Line Wall Grating",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "Stainless Steel",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-line-wall-grating.jpeg",
+      "gallery": [],
+      "code_no": "VI-ACC-09",
+      "d_p": 42,
+      "size": "100 mm",
+      "thickness": null,
+      "features": [
+        "Wall drain jali"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "72 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-long-drain-channel-slimline",
+      "product_name": "Long Drain Channel Slimline",
+      "type": "Long Drain Channel Slimline",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "SS 304",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-long-drain-channel-slimline.jpeg",
+      "gallery": [],
+      "code_no": "BH-4111",
+      "d_p": 3910,
+      "size": "30×600 mm",
+      "thickness": null,
+      "features": [
+        "Super slim profile drain"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Drainage Water Management"
+    },
+    {
+      "slug": "shower-bathroom-accessories-ss-waste-coupling",
+      "product_name": "SS Waste Coupling",
+      "type": "SS Waste Coupling",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "Stainless Steel",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-waste-coupling.jpeg",
+      "gallery": [],
+      "code_no": "VI-ACC-01",
+      "d_p": 250,
+      "size": "32×80 mm",
+      "thickness": null,
+      "features": [
+        "Corrosion resistant design"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "56 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-sink-waste-coupling-ss-body",
+      "product_name": "Sink Waste Coupling SS Body",
+      "type": "Sink Waste Coupling SS Body",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "SS Body & Strainer",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-sink-waste-coupling-ss-body.jpeg",
+      "gallery": [],
+      "code_no": "VI-ACC-12",
+      "d_p": 290,
+      "size": "100 mm",
+      "thickness": null,
+      "features": [
+        "All steel sink drain"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "50 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-sink-waste-coupling-heavy-round",
+      "product_name": "Sink Waste Coupling Heavy Round",
+      "type": "Sink Waste Coupling Heavy Round",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "SS 304, PVC Body",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-sink-waste-coupling-heavy-round.jpeg",
+      "gallery": [],
+      "code_no": "AI-SI-ACC-101R",
+      "d_p": 530,
+      "size": "100 mm",
+      "thickness": null,
+      "features": [
+        "Round grid pattern"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "50 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-round-flange",
+      "product_name": "Round Flange",
+      "type": "Round Flange",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "SS 202",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-round-flange.jpeg",
+      "gallery": [],
+      "code_no": "VI-ACC-02",
+      "d_p": 25,
+      "size": "70 mm",
+      "thickness": null,
+      "features": [
+        "Wall aesthetic ring"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "50 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-square-flange",
+      "product_name": "Square Flange",
+      "type": "Square Flange",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "SS 202",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-square-flange.jpeg",
+      "gallery": [],
+      "code_no": "NM-6099",
+      "d_p": 54,
+      "size": "50×50 mm",
+      "thickness": null,
+      "features": [
+        "Square cover collar"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "48 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-pvc-long-bend",
+      "product_name": "PVC Long Bend",
+      "type": "PVC Long Bend",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "PVC",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-long-bend.jpeg",
+      "gallery": [],
+      "code_no": "RP-SP-09",
+      "d_p": 60,
+      "size": null,
+      "thickness": null,
+      "features": [
+        "Extends toilet/flush bend pipes"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": null,
+      "capacity": null,
+      "featured": false,
+      "category": "Sanitary Ware"
+    },
+    {
+      "slug": "shower-bathroom-accessories-pvc-waste-pipe-corrugated",
+      "product_name": "PVC Waste Pipe Corrugated",
+      "type": "PVC Waste Pipe Corrugated",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "PVC",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-waste-pipe-corrugated.jpeg",
+      "gallery": [],
+      "code_no": "AP-ACC-02",
+      "d_p": 100,
+      "size": "32×875 mm",
+      "thickness": null,
+      "features": [
+        "Standard kitchen/washbasin drain pipe"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "100 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-pvc-waste-hose-pipe-heavy-white",
+      "product_name": "PVC Waste Hose Pipe Heavy White",
+      "type": "PVC Waste Hose Pipe Heavy White",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "PVC",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-waste-hose-pipe-heavy-white.jpeg",
+      "gallery": [],
+      "code_no": "AP-ACC-01",
+      "d_p": 190,
+      "size": "32×900 mm",
+      "thickness": null,
+      "features": [
+        "Thick walls heavy duty hose"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "100 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-pvc-urinal-waste-pipe-with-tail-white",
+      "product_name": "PVC Urinal Waste Pipe With Tail White",
+      "type": "PVC Urinal Waste Pipe With Tail White",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "PVC",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-urinal-waste-pipe-with-tail-white.jpeg",
+      "gallery": [],
+      "code_no": "AP-ACC-06",
+      "d_p": 190,
+      "size": "32×900 mm",
+      "thickness": null,
+      "features": [
+        "Corrugated bendable pipe with adapter tail"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "100 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-ss-hose-connection-pipe",
+      "product_name": "SS Hose Connection Pipe",
+      "type": "SS Hose Connection Pipe",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "SS 304 Braided",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-hose-connection-pipe.jpeg",
+      "gallery": [],
+      "code_no": "AP-ACC-08",
+      "d_p": 340,
+      "size": "15×300 mm",
+      "thickness": null,
+      "features": [
+        "Pairs connector hoses"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "150 pair",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-forged-brass-nozzle-bib-cock",
+      "product_name": "Forged Brass Nozzle Bib Cock",
+      "type": "Forged Brass Nozzle Bib Cock",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "Forged Brass",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-forged-brass-nozzle-bib-cock.jpeg",
+      "gallery": [],
+      "code_no": "ANB-501",
+      "d_p": 580,
+      "size": "15 mm",
+      "thickness": null,
+      "features": [
+        "Premium heavy duty faucet"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "2 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-cpvc-circuit-testing-plug",
+      "product_name": "CPVC Circuit Testing Plug",
+      "type": "CPVC Circuit Testing Plug",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "UPVC",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-cpvc-circuit-testing-plug.jpeg",
+      "gallery": [],
+      "code_no": "SE-C-001",
+      "d_p": 8,
+      "size": "15 mm",
+      "thickness": null,
+      "features": [
+        "Circuit testing plug"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "100 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-upvc-metal-clamp",
+      "product_name": "UPVC Metal Clamp",
+      "type": "UPVC Metal Clamp",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "UPVC Covered Metal",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-upvc-metal-clamp.jpeg",
+      "gallery": [],
+      "code_no": "SUMC15",
+      "d_p": 6.6,
+      "size": "15 mm",
+      "thickness": null,
+      "features": [
+        "Saijal brand clamp"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "200 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
+    },
+    {
+      "slug": "shower-bathroom-accessories-cpvc-metal-clamp",
+      "product_name": "CPVC Metal Clamp",
+      "type": "CPVC Metal Clamp",
+      "series": "shower-bathroom-accessories",
+      "subgroup": null,
+      "finish": null,
+      "material_grade": "CPVC Covered Metal",
+      "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-cpvc-metal-clamp.jpeg",
+      "gallery": [],
+      "code_no": "SCMC20",
+      "d_p": 6.1,
+      "size": "20 mm",
+      "thickness": null,
+      "features": [
+        "Saijal brand clamp"
+      ],
+      "variants": [],
+      "bowl_dimensions": null,
+      "box_pkg": "200 PCS",
+      "capacity": null,
+      "featured": false,
+      "category": "Hardware and Installations"
     }
   ],
   "categories": [
     {
       "slug": "drainage-water-management",
-      "name": "Drainage water management",
+      "name": "Drainage Water Management",
       "tagline": "Floor traps, channels, grating and drainage solutions.",
       "description": "TODO",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-floor-trap-drain.jpeg"
     },
     {
       "slug": "accessories-and-storage",
-      "name": "Accessories and storage",
+      "name": "Accessories and Storage",
       "tagline": "Towel racks, hooks, dispensers and bathroom storage.",
       "description": "TODO",
       "image": "/products/elite/elite-towel-rack-gold.jpeg"
@@ -1503,21 +2336,21 @@
     },
     {
       "slug": "sanitary-ware",
-      "name": "Sanitary ware",
+      "name": "Sanitary Ware",
       "tagline": "Cisterns, seat covers and sanitary fittings.",
       "description": "TODO",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-dual-flush-cistern.jpeg"
     },
     {
       "slug": "safety-and-supports",
-      "name": "Safety and supports",
+      "name": "Safety and Supports",
       "tagline": "Grab bars and safety support fixtures.",
       "description": "TODO",
       "image": "/products/daizy/daizy-ss-grab-bar.jpeg"
     },
     {
       "slug": "hardware-and-installations",
-      "name": "Hardware and installations",
+      "name": "Hardware and Installations",
       "tagline": "Mounting kits, valves and installation hardware.",
       "description": "TODO",
       "image": "/products/shower-bathroom-accessories/shower-bathroom-accessories-rack-bolt-kit.jpeg"

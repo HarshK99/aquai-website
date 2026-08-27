@@ -162,7 +162,7 @@ export default function ProductDetailPage({ params }: Props) {
 
       {/* ── Related products ──────────────────────────────── */}
       {related.length > 0 && (
-        <section className="bg-porcelain py-16 md:py-24">
+        <section className="bg-mist py-16 md:py-24">
           <Container>
             <AnimateIn>
               <h2 className="mb-10 font-display text-h2 text-navy">

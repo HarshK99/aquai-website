@@ -25,7 +25,7 @@ interface Props {
 }
 
 const pill = (active: boolean) =>
-  `inline-flex items-center gap-2 rounded-sm px-4 py-2 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1 ${
+  `inline-flex shrink-0 items-center gap-2 rounded-sm px-4 py-2 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1 ${
     active
       ? "bg-navy text-porcelain"
       : "border border-chrome bg-porcelain text-steel hover:border-navy/40 hover:text-navy"
@@ -78,105 +78,110 @@ export default function ProductGrid({
 
   return (
     <div>
-      {/* ── Category filter ───────────────────────────────── */}
-      {showCategoryFilter && (
-        <div
-          className="flex flex-wrap gap-2 mb-6"
-          role="group"
-          aria-label="Filter by category"
-        >
-          <button
-            className={pill(selectedCategory === "all")}
-            aria-pressed={selectedCategory === "all"}
-            onClick={() => handleCategoryChange("all")}
-          >
-            All
-            <span className="text-xs opacity-60">({products.length})</span>
-          </button>
-          {categoryList!.map((cat) => {
-            const count = products.filter((p) => p.category === cat.name).length;
-            return (
-              <button
-                key={cat.slug}
-                className={pill(selectedCategory === cat.slug)}
-                aria-pressed={selectedCategory === cat.slug}
-                onClick={() => handleCategoryChange(cat.slug)}
-              >
-                {cat.name}
-                <span className="text-xs opacity-60">({count})</span>
-              </button>
-            );
-          })}
-        </div>
-      )}
-
-      {/* ── Series filter ─────────────────────────────────── */}
-      {showSeriesFilter && (
-        <div
-          className="flex flex-wrap gap-2 mb-6"
-          role="group"
-          aria-label="Filter by series"
-        >
-          <button
-            className={pill(selectedSeries === "all")}
-            aria-pressed={selectedSeries === "all"}
-            onClick={() => handleSeriesChange("all")}
-          >
-            All
-            <span className="text-xs opacity-60">({products.length})</span>
-          </button>
-          {seriesList!.map((s) => {
-            const count = products.filter((p) => p.series === s.slug).length;
-            return (
-              <button
-                key={s.slug}
-                className={pill(selectedSeries === s.slug)}
-                aria-pressed={selectedSeries === s.slug}
-                onClick={() => handleSeriesChange(s.slug)}
-              >
-                {s.name}
-                <span className="text-xs opacity-60">({count})</span>
-              </button>
-            );
-          })}
-        </div>
-      )}
-
-      {/* ── Elite finish filter ───────────────────────────── */}
-      <AnimatePresence>
-        {showFinishFilter && (
-          <motion.div
-            className="flex flex-wrap gap-2 mb-8"
-            initial={{ opacity: 0, y: -8 }}
-            animate={{ opacity: 1, y: 0, transition: { duration: 0.2 } }}
-            exit={{ opacity: 0, y: -6, transition: { duration: 0.15 } }}
-            role="group"
-            aria-label="Filter by finish"
-          >
-            <button
-              className={pill(selectedFinish === "all")}
-              aria-pressed={selectedFinish === "all"}
-              onClick={() => setSelectedFinish("all")}
+      {/* ── Sticky filter bar ────────────────────────────── */}
+      {(showCategoryFilter || showSeriesFilter || showFinishFilter) && (
+        <div className="sticky top-20 z-10 bg-mist/95 backdrop-blur-sm border-b border-chrome/40 -mx-6 px-6 lg:-mx-10 lg:px-10 pt-3 pb-3 mb-6">
+          {/* Category filter */}
+          {showCategoryFilter && (
+            <div
+              className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              role="group"
+              aria-label="Filter by category"
             >
-              All finishes
-            </button>
-            {ELITE_FINISHES.map((finish) => (
               <button
-                key={finish}
-                className={pill(selectedFinish === finish)}
-                aria-pressed={selectedFinish === finish}
-                onClick={() => setSelectedFinish(finish)}
+                className={pill(selectedCategory === "all")}
+                aria-pressed={selectedCategory === "all"}
+                onClick={() => handleCategoryChange("all")}
               >
-                <span
-                  className={`h-2 w-2 rounded-full flex-shrink-0 ${FINISH_SWATCH[finish]}`}
-                  aria-hidden="true"
-                />
-                {finish}
+                All
+                <span className="text-xs opacity-60">({products.length})</span>
               </button>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
+              {categoryList!.map((cat) => {
+                const count = products.filter((p) => p.category === cat.name).length;
+                return (
+                  <button
+                    key={cat.slug}
+                    className={pill(selectedCategory === cat.slug)}
+                    aria-pressed={selectedCategory === cat.slug}
+                    onClick={() => handleCategoryChange(cat.slug)}
+                  >
+                    {cat.name}
+                    <span className="text-xs opacity-60">({count})</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Series filter */}
+          {showSeriesFilter && (
+            <div
+              className={`flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${showCategoryFilter ? "mt-2" : ""}`}
+              role="group"
+              aria-label="Filter by series"
+            >
+              <button
+                className={pill(selectedSeries === "all")}
+                aria-pressed={selectedSeries === "all"}
+                onClick={() => handleSeriesChange("all")}
+              >
+                All
+                <span className="text-xs opacity-60">({products.length})</span>
+              </button>
+              {seriesList!.map((s) => {
+                const count = products.filter((p) => p.series === s.slug).length;
+                return (
+                  <button
+                    key={s.slug}
+                    className={pill(selectedSeries === s.slug)}
+                    aria-pressed={selectedSeries === s.slug}
+                    onClick={() => handleSeriesChange(s.slug)}
+                  >
+                    {s.name}
+                    <span className="text-xs opacity-60">({count})</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Elite finish filter */}
+          <AnimatePresence>
+            {showFinishFilter && (
+              <motion.div
+                className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden mt-2"
+                initial={{ opacity: 0, y: -8 }}
+                animate={{ opacity: 1, y: 0, transition: { duration: 0.2 } }}
+                exit={{ opacity: 0, y: -6, transition: { duration: 0.15 } }}
+                role="group"
+                aria-label="Filter by finish"
+              >
+                <button
+                  className={pill(selectedFinish === "all")}
+                  aria-pressed={selectedFinish === "all"}
+                  onClick={() => setSelectedFinish("all")}
+                >
+                  All finishes
+                </button>
+                {ELITE_FINISHES.map((finish) => (
+                  <button
+                    key={finish}
+                    className={pill(selectedFinish === finish)}
+                    aria-pressed={selectedFinish === finish}
+                    onClick={() => setSelectedFinish(finish)}
+                  >
+                    <span
+                      className={`h-2 w-2 rounded-full flex-shrink-0 ${FINISH_SWATCH[finish]}`}
+                      aria-hidden="true"
+                    />
+                    {finish}
+                  </button>
+                ))}
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+      )}
 
       {/* ── Result count ─────────────────────────────────── */}
       <p className="mb-8 text-xs text-steel" aria-live="polite" aria-atomic="true">

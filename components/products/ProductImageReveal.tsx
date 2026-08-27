@@ -10,7 +10,7 @@ interface Props {
 export default function ProductImageReveal({ src, alt }: Props) {
   return (
     <motion.div
-      className="bg-mist aspect-square lg:aspect-[4/5] overflow-hidden"
+      className="bg-product-bg aspect-square lg:aspect-[4/5] overflow-hidden"
       variants={imageReveal}
       initial="hidden"
       animate="visible"

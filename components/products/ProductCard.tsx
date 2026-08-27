@@ -23,20 +23,20 @@ export default function ProductCard({ product, seriesName, priority = false }: P
       aria-label={finish ? `${product_name} - ${finish}` : product_name}
     >
       {/* ── Image container ─────────────────────── */}
-      <div className="relative overflow-hidden bg-mist aspect-square">
+      <div className="relative overflow-hidden bg-product-bg aspect-[5/4]">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={image}
           alt={finish ? `${product_name} in ${finish} finish` : product_name}
           width={600}
           height={600}
-          className="h-full w-full object-contain p-8 transition-transform duration-[600ms] ease-smooth group-hover:scale-[1.04]"
+          className="h-full w-full object-contain p-6 transition-transform duration-[600ms] ease-smooth group-hover:scale-[1.04]"
           loading={priority ? "eager" : "lazy"}
         />
       </div>
 
       {/* ── Card body ───────────────────────────── */}
-      <div className="flex flex-col gap-2 pt-4 pb-6">
+      <div className="flex flex-col gap-1.5 pt-3 pb-4">
         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
           {label}
         </p>

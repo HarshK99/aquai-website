@@ -17,6 +17,7 @@ const config: Config = {
         steel: "#5C6B7A",
         "accent-red": "#f21928",
         chrome: "#C9CED4",
+        "product-bg": "#f4f4f8",
         // Finish swatches - DESIGN.md addendum
         "finish-chrome": "#C9CED4",
         "finish-gold": "#C9A24B",

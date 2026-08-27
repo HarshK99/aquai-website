@@ -17,7 +17,7 @@ export default function ProductsPage() {
   return (
     <>
       {/* Page header */}
-      <div className="bg-mist pt-32 pb-12 md:pt-40 md:pb-16">
+      <div className="bg-mist pt-24 pb-8 md:pt-32 md:pb-10">
         <Container>
           <AnimateIn>
             <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
@@ -29,7 +29,7 @@ export default function ProductsPage() {
       </div>
 
       {/* Product grid */}
-      <section className="bg-porcelain py-12 md:py-16">
+      <section className="bg-mist pt-4 pb-12 md:pt-6 md:pb-16">
         <Container>
           <ProductGrid
             products={publicProducts}

@@ -41,22 +41,24 @@ export default function CategoryPage({ params }: Props) {
   return (
     <>
       {/* ── Category hero ─────────────────────────────────── */}
-      <div className="relative overflow-hidden pt-32 pb-20 bg-mist">
+      <div className="relative overflow-hidden pt-24 pb-6 md:pt-28 md:pb-8 bg-porcelain">
+        {/* Full background image */}
         <div className="absolute inset-0">
           <img
             src={cat.image}
             alt=""
             aria-hidden="true"
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover object-center"
             width={1200}
             height={1200}
           />
-          <div className="absolute inset-0 bg-mist/92" />
+          {/* Left scrim: solid under text, fades to transparent so image shows right */}
+          <div className="absolute inset-0 bg-gradient-to-r from-porcelain from-40% via-porcelain/85 via-65% to-porcelain/5" />
         </div>
 
         <Container className="relative z-10">
           <AnimateIn>
-            <nav aria-label="Breadcrumb" className="mb-8">
+            <nav aria-label="Breadcrumb" className="mb-6">
               <ol className="flex items-center gap-1.5 text-xs text-steel">
                 <li>
                   <Link href="/products/" className="hover:text-navy transition-colors duration-150">
@@ -68,11 +70,11 @@ export default function CategoryPage({ params }: Props) {
               </ol>
             </nav>
 
-            <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
+            <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
               Category
             </p>
 
-            <h1 className="mb-5 font-display text-[clamp(2.5rem,5vw,4.5rem)] leading-[1.05] text-navy">
+            <h1 className="mb-4 font-display text-[clamp(2rem,4vw,3.5rem)] leading-[1.05] text-navy">
               {cat.name}.
             </h1>
 
@@ -80,7 +82,7 @@ export default function CategoryPage({ params }: Props) {
               {cat.tagline}
             </p>
 
-            <p className="mt-3 text-sm text-steel/70">
+            <p className="mt-2 text-sm text-steel/70">
               {catProducts.length} products
             </p>
           </AnimateIn>
@@ -88,7 +90,7 @@ export default function CategoryPage({ params }: Props) {
       </div>
 
       {/* ── Products grid ─────────────────────────────────── */}
-      <section className="bg-porcelain py-12 md:py-16">
+      <section className="bg-mist py-12 md:py-16">
         <Container>
           <ProductGrid
             products={catProducts}

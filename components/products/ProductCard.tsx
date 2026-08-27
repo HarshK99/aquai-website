@@ -19,7 +19,7 @@ export default function ProductCard({ product, seriesName, priority = false }: P
   return (
     <Link
       href={`/products/${slug}/`}
-      className="group relative flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
+      className="group relative flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 transition-transform duration-[500ms] ease-smooth hover:-translate-y-[5px]"
       aria-label={finish ? `${product_name} - ${finish}` : product_name}
     >
       {/* ── Image container ─────────────────────── */}

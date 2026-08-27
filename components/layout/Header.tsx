@@ -76,7 +76,7 @@ export default function Header({ categoryList }: Props) {
 
   const transparent = onHomePage && !scrolled;
 
-  const headerBg = transparent ? "bg-transparent" : "bg-porcelain";
+  const headerBg = transparent ? "bg-transparent" : "bg-porcelain/95 backdrop-blur-md";
   const headerBorder = scrolled ? "border-b border-chrome" : "border-b border-transparent";
   const navBase = transparent ? "text-porcelain/75 hover:text-porcelain" : "text-steel hover:text-navy";
   const navActive = transparent ? "text-porcelain" : "text-navy";

@@ -83,6 +83,16 @@ export const gridReflow: Transition = {
   duration: 0.4,
 };
 
+// Product detail hero image - slow editorial scale-in on mount
+export const imageReveal: Variants = {
+  hidden: { opacity: 0, scale: 1.03 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: { ease, duration: 0.9, delay: 0.1 },
+  },
+};
+
 // Page fade - 0.3s cross-dissolve for template.tsx transitions
 export const pageFade: Variants = {
   hidden: { opacity: 0 },

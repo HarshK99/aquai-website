@@ -1,8 +1,12 @@
+"use client";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { hairlineDraw } from "@/lib/motion";
 import AnimateIn from "@/components/AnimateIn";
 import Container from "@/components/layout/Container";
 
 export default function StoryTeaser() {
+
   return (
     <section className="bg-mist py-16 md:py-24 lg:py-32" aria-label="About Aquai">
       <Container>
@@ -40,8 +44,15 @@ export default function StoryTeaser() {
               Whether it is a towel rack, a soap dispenser or a kitchen sink -
               every Aquai fixture is held to the same uncompromising standard.
             </p>
-            {/* Chrome hairline before link */}
-            <span aria-hidden="true" className="block h-px w-12 bg-chrome mb-6" />
+            {/* Chrome hairline before link — animates in on scroll */}
+            <motion.span
+              aria-hidden="true"
+              className="block h-px w-12 origin-left bg-chrome mb-6"
+              variants={hairlineDraw}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            />
             <Link
               href="/about/"
               className="inline-flex items-center gap-2 font-body text-sm font-medium text-navy underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy"

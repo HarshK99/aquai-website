@@ -11,6 +11,7 @@ import {
 } from "@/data/catalog";
 import FinishBadge from "@/components/products/FinishBadge";
 import ProductCard from "@/components/products/ProductCard";
+import ProductImageReveal from "@/components/products/ProductImageReveal";
 import Container from "@/components/layout/Container";
 import AnimateIn from "@/components/AnimateIn";
 
@@ -55,17 +56,10 @@ export default function ProductDetailPage({ params }: Props) {
       <div className="bg-porcelain pt-20">
         <div className="lg:grid lg:grid-cols-[55fr_45fr] lg:items-start">
           {/* Left: image */}
-          <div className="bg-mist aspect-square lg:aspect-[4/5] overflow-hidden">
-            <img
-              src={product.image}
-              alt={product.finish ? `${product.product_name} in ${product.finish} finish` : product.product_name}
-              width={1200}
-              height={1200}
-              className="h-full w-full object-contain p-10 md:p-16"
-              loading="eager"
-              fetchPriority="high"
-            />
-          </div>
+          <ProductImageReveal
+            src={product.image}
+            alt={product.finish ? `${product.product_name} in ${product.finish} finish` : product.product_name}
+          />
 
           {/* Right: info (sticky on desktop) */}
           <aside className="px-6 py-10 lg:px-12 lg:sticky lg:top-20 lg:max-h-[calc(100vh-80px)] lg:overflow-y-auto">

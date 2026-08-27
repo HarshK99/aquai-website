@@ -190,21 +190,25 @@ export default function ProductGrid({
         className="grid grid-cols-2 gap-x-5 gap-y-10 md:gap-x-6 md:gap-y-12 lg:grid-cols-3 xl:grid-cols-4"
       >
         <AnimatePresence mode="popLayout" initial={false}>
-          {filtered.map((product) => (
+          {filtered.map((product, i) => (
             <motion.div
               key={product.slug}
               layout
+              custom={i}
               transition={gridReflow}
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-                transition: { duration: 0.25, ease: [0.22, 1, 0.36, 1] },
-              }}
-              exit={{
-                opacity: 0,
-                scale: 0.96,
-                transition: { duration: 0.12 },
+              initial={{ opacity: 0, y: 16 }}
+              animate="visible"
+              exit={{ opacity: 0, transition: { duration: 0.12 } }}
+              variants={{
+                visible: (i: number) => ({
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                    duration: 0.4,
+                    ease: [0.22, 1, 0.36, 1],
+                    delay: Math.min(i * 0.05, 0.3),
+                  },
+                }),
               }}
             >
               <ProductCard

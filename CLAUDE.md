@@ -21,7 +21,8 @@ The site deploys as plain HTML/CSS/JS to a shared server. No Node.js runtime.
 - Verify every feature works after `next build` produces the `out/` folder
 
 ## DATA PRIVACY CONSTRAINT (critical)
-`products.json` contains internal fields: `d_p` (dealer price) and `code_no`.
+`products.json` contains internal fields: `d_p` (dealer price), `code_no`, and
+`config_options` (design/config variant names).
 These must NEVER ship to the browser or appear in rendered HTML:
 - Client components ("use client") may only receive `PublicProduct[]` created via
   `toPublic()` from catalog.ts - never raw product objects or the json import
@@ -30,10 +31,20 @@ These must NEVER ship to the browser or appear in rendered HTML:
   (21680 is a known dealer price used as a leak canary)
 
 ## Displayed product fields (current scope)
-Product cards/pages show ONLY: image, product_name, type, series, finish.
+Product cards/pages show ONLY: image, product_name, type, series, finish, and
+colour variants.
 Elite Series products exist in 3 finishes (Gold, Rose Gold, Chrome) - show finish
 as a small badge/label and offer a finish filter on the Elite series page.
 size / material / code / price may be enabled later via PublicProduct.
+
+**Variants = colour only.** A product's `variants` array holds ONLY colour tokens
+(Black / Gold / Rose Gold), rendered as an interactive colour selector on the
+detail page (selecting a colour tints the photo with a CSS `filter` from
+`lib/colorVariants.ts` and appends the colour to the enquiry text) and as swatch
+dots on cards. Design/config options ("Line Design", "Regular", …) live in
+`config_options` - internal, NEVER rendered. `lib/colorVariants.ts` is data-free
+so client components can import it; importing `data/catalog.ts` client-side would
+ship products.json.
 
 ## Images
 - Path convention: `public/products/<series-slug>/<product-slug>.jpeg`

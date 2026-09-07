@@ -3,6 +3,16 @@
 // prices). This file controls WHAT is allowed to reach the browser.
 
 import raw from "./products.json";
+import { isColorVariant } from "@/lib/colorVariants";
+
+// Re-export colour helpers so server code can pull them from the catalog layer.
+export {
+  COLOR_VARIANTS,
+  COLOR_SWATCH,
+  COLOR_FILTER,
+  isColorVariant,
+  type ColorVariant,
+} from "@/lib/colorVariants";
 
 // ---------- Category (routing + display) ----------
 
@@ -31,7 +41,8 @@ export type CatalogProduct = {
   size: string | null;
   thickness: string | null;
   features: string[];
-  variants: string[];
+  variants: string[];        // COLOUR variants only (Black / Gold / Rose Gold) — shown as a swatch
+  config_options?: string[]; // INTERNAL: design/config options (e.g. "Line Design") — stored, never rendered
   category: string | null; // one of the 7 category names
   bowl_dimensions: { bowl_a: string; bowl_b: string } | null;
   box_pkg: string | null;
@@ -64,7 +75,8 @@ export const toPublic = (p: CatalogProduct): PublicProduct => ({
   subgroup:     p.subgroup,
   finish:       p.finish,
   image:        p.image,
-  variants:     p.variants,
+  // defensive: only colour tokens ever reach the browser
+  variants:     p.variants.filter(isColorVariant),
   category:     p.category,
   featured:     p.featured,
 });

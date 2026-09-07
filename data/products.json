@@ -1065,13 +1065,15 @@
         "Frame: 1mm"
       ],
       "variants": [
-        "With Tiles Insert",
-        "Line Design",
-        "Square Design Satin Silver",
-        "Gem Satin Silver",
         "Black",
         "Gold",
         "Rose Gold"
+      ],
+      "config_options": [
+        "With Tiles Insert",
+        "Line Design",
+        "Square Design Satin Silver",
+        "Gem Satin Silver"
       ],
       "bowl_dimensions": null,
       "box_pkg": "50 PCS",
@@ -1097,11 +1099,13 @@
         "2mm Thick"
       ],
       "variants": [
-        "With Hole",
-        "Plain",
         "Black",
         "Gold",
         "Rose Gold"
+      ],
+      "config_options": [
+        "With Hole",
+        "Plain"
       ],
       "bowl_dimensions": null,
       "box_pkg": "12 PCS",
@@ -1173,13 +1177,15 @@
         "Satin Silver"
       ],
       "variants": [
-        "Square Hole",
-        "Line Design",
-        "SS-304 Piano",
-        "With Tiles Insert",
         "Black",
         "Gold",
         "Rose Gold"
+      ],
+      "config_options": [
+        "Square Hole",
+        "Line Design",
+        "SS-304 Piano",
+        "With Tiles Insert"
       ],
       "bowl_dimensions": null,
       "box_pkg": null,
@@ -1204,7 +1210,8 @@
       "features": [
         "Heavy anchor with cosmetic cap"
       ],
-      "variants": [
+      "variants": [],
+      "config_options": [
         "L-Key Type",
         "With CP ABS Cap"
       ],
@@ -1607,7 +1614,8 @@
       "features": [
         "1mm Ceramic Coating"
       ],
-      "variants": [
+      "variants": [],
+      "config_options": [
         "Regular",
         "Single Bowl with Drain Board"
       ],
@@ -1917,7 +1925,8 @@
       "features": [
         "Classic dome design"
       ],
-      "variants": [
+      "variants": [],
+      "config_options": [
         "Standard",
         "With Hole"
       ],

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FinishBadge from "./FinishBadge";
+import { COLOR_SWATCH, isColorVariant } from "@/lib/colorVariants";
 import type { PublicProduct } from "@/data/catalog";
 
 interface Props {
@@ -10,6 +11,7 @@ interface Props {
 
 export default function ProductCard({ product, seriesName, priority = false }: Props) {
   const { slug, product_name, series, finish, image } = product;
+  const colors = product.variants.filter(isColorVariant);
 
   const label = seriesName ?? series
     .split("-")
@@ -44,6 +46,20 @@ export default function ProductCard({ product, seriesName, priority = false }: P
           {product_name}
         </h3>
         <FinishBadge finish={finish} />
+        {colors.length > 0 && (
+          <span
+            className="mt-0.5 inline-flex items-center gap-1.5"
+            aria-label={`Also available in ${colors.join(", ")}`}
+          >
+            {colors.map((c) => (
+              <span
+                key={c}
+                className={`h-2 w-2 rounded-full ring-1 ring-chrome/60 ${COLOR_SWATCH[c]}`}
+                aria-hidden="true"
+              />
+            ))}
+          </span>
+        )}
       </div>
 
       {/* ── Chrome hairline - signature draw effect ─ */}

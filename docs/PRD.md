@@ -35,9 +35,12 @@ Dealers & distributors, architects/interior designers, premium homeowners.
      CP angle valve, sink waste coupling SS304
    - Sanitary & Cisterns (4): dual/single flush cisterns, smart seat cover,
      urinal spreader
-   Products with variants (Floor Trap Drain, Long Drain Channel, Rack Bolt Kit,
-   SS Square Line Grating Heavy) have ONE product page each - variants are
-   listed on the page, not separate URLs.
+   Products that come in multiple colours (Black / Gold / Rose Gold) have ONE
+   product page each with an interactive colour selector - not separate URLs.
+   Design/config options (e.g. "Line Design", "With Tiles Insert", sink
+   "Regular" vs "Single Bowl with Drain Board") are NOT shown on the site: they
+   live in `config_options` in products.json (internal, stored for reference
+   only). Only colour is a customer-facing variant.
 7. **Standard Series - SS Sinks** (1) - S.S. Sink Standard (Regular + Single
    Bowl with Drain Board listed as variants on one product page). Separate from
    Premium Sinks - different range.
@@ -56,9 +59,14 @@ Header dropdown for "Series":
   Premium Sinks | Standard Sinks
 
 ## Display scope (current)
-Publicly shown per product: image, product_name, type, series, finish. Nothing else.
+Publicly shown per product: image, product_name, type, series, finish, and
+colour variants. Nothing else.
 Elite pages get a finish filter (Gold / Rose Gold / Chrome) + finish badge on cards.
-Prices, codes, sizes exist in data but are internal - see CLAUDE.md privacy rules.
+Products with colour variants show a colour selector on the detail page (selecting
+a colour tints the photo via CSS filter - indicative, since there are no per-colour
+photos yet - and adds the colour to the enquiry message) plus swatch dots on cards.
+Prices, codes, sizes, and `config_options` exist in data but are internal - see
+CLAUDE.md privacy rules.
 
 ## Pages
 1. **Home** - hero, featured series band (5 series), featured products, story teaser, inquiry CTA

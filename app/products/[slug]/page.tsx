@@ -54,14 +54,14 @@ export default function ProductDetailPage({ params }: Props) {
 
       {/* ── Related products ──────────────────────────────── */}
       {related.length > 0 && (
-        <section className="bg-mist py-16 md:py-24">
+        <section className="bg-mist py-12 md:py-24">
           <Container>
             <AnimateIn>
               <h2 className="mb-10 font-display text-h2 text-navy">
                 Related products.
               </h2>
             </AnimateIn>
-            <div className="grid grid-cols-2 gap-x-5 gap-y-10 md:gap-x-6 md:gap-y-12 lg:grid-cols-4">
+            <div className="grid grid-cols-2 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-12 lg:grid-cols-4">
               {related.map((p, i) => (
                 <AnimateIn key={p.slug} delay={i * 0.07}>
                   <ProductCard product={p} seriesName={SERIES_NAMES[p.series]} />
@@ -73,12 +73,12 @@ export default function ProductDetailPage({ params }: Props) {
       )}
 
       {/* ── Inquiry CTA ───────────────────────────────────── */}
-      <section className="bg-navy-deep py-16 md:py-24">
+      <section className="bg-navy-deep py-12 md:py-24">
         <Container>
           <AnimateIn>
             <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="mb-2 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-porcelain/50">
+                <p className="mb-2 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-porcelain/80">
                   Get in touch
                 </p>
                 <h2 className="font-display text-h2 text-porcelain">
@@ -87,7 +87,7 @@ export default function ProductDetailPage({ params }: Props) {
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <Link
-                  href="/contact/"
+                  href={`/contact/?product=${encodeURIComponent(product.product_name)}`}
                   className="rounded-sm bg-porcelain px-8 py-3 text-sm font-semibold text-navy transition-colors duration-200 hover:bg-porcelain/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-porcelain focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
                 >
                   Enquire now

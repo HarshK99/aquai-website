@@ -24,7 +24,7 @@ export default function ContactPage() {
   return (
     <>
       {/* ── Page header ──────────────────────────────────── */}
-      <div className="bg-mist pt-32 pb-16 md:pt-40 md:pb-20">
+      <div className="bg-mist pt-24 pb-10 md:pt-40 md:pb-20">
         <Container>
           <AnimateIn>
             <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
@@ -37,12 +37,26 @@ export default function ContactPage() {
         </Container>
       </div>
 
+      <div className="bg-porcelain pt-8">
+        <Container className="flex flex-wrap gap-3">
+          <a href={PHONE_HREF} className="inline-flex min-h-11 items-center justify-center rounded-sm bg-navy px-6 py-3 text-sm font-medium text-porcelain">Call us</a>
+          <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-11 items-center justify-center rounded-sm border border-navy px-6 py-3 text-sm font-medium text-navy">WhatsApp</a>
+        </Container>
+      </div>
+
       {/* ── Main content ─────────────────────────────────── */}
-      <section className="bg-porcelain py-16 md:py-24">
+      <section className="bg-porcelain py-12 md:py-24">
         <Container>
-          <div className="grid gap-16 lg:grid-cols-[5fr_7fr] lg:gap-20 lg:items-start">
+          <div className="grid gap-10 lg:grid-cols-[5fr_7fr] lg:gap-20 lg:items-start">
+            {/* Right: form */}
+            <AnimateIn className="lg:col-start-2 lg:row-start-1">
+              <h2 className="mb-5 font-display text-h2 text-navy">
+                Send an enquiry.
+              </h2>
+              <ContactForm />
+            </AnimateIn>
             {/* Left: contact info */}
-            <AnimateIn>
+            <AnimateIn className="lg:col-start-1 lg:row-start-1">
               <div>
                 <p className="mb-8 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
                   Authorised distributor
@@ -62,7 +76,7 @@ export default function ContactPage() {
                 {/* Contact links */}
                 <div className="space-y-5">
                   <div>
-                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel/60">
+                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
                       Phone
                     </p>
                     <a
@@ -74,7 +88,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel/60">
+                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
                       WhatsApp
                     </p>
                     <a
@@ -96,7 +110,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel/60">
+                    <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
                       Email
                     </p>
                     <a
@@ -110,7 +124,7 @@ export default function ContactPage() {
 
                 {/* Hours */}
                 <div className="mt-10 border-t border-chrome pt-8">
-                  <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel/60">
+                  <p className="mb-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
                     Business hours
                   </p>
                   <p className="text-sm text-steel">
@@ -120,13 +134,6 @@ export default function ContactPage() {
               </div>
             </AnimateIn>
 
-            {/* Right: form */}
-            <AnimateIn delay={0.1}>
-              <h2 className="mb-8 font-display text-h2 text-navy">
-                Send an enquiry.
-              </h2>
-              <ContactForm />
-            </AnimateIn>
           </div>
         </Container>
       </section>

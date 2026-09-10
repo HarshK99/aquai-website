@@ -2,6 +2,8 @@ import Link from "next/link";
 import FinishBadge from "./FinishBadge";
 import { COLOR_SWATCH, isColorVariant } from "@/lib/colorVariants";
 import type { PublicProduct } from "@/data/catalog";
+import BlendedProductImage from "./BlendedProductImage";
+import productImageBackgrounds from "@/data/product-image-backgrounds.json";
 
 interface Props {
   product: PublicProduct;
@@ -12,6 +14,7 @@ interface Props {
 export default function ProductCard({ product, seriesName, priority = false }: Props) {
   const { slug, product_name, series, finish, image } = product;
   const colors = product.variants.filter(isColorVariant);
+  const profile = productImageBackgrounds[image as keyof typeof productImageBackgrounds];
 
   const label = seriesName ?? series
     .split("-")
@@ -21,28 +24,42 @@ export default function ProductCard({ product, seriesName, priority = false }: P
   return (
     <Link
       href={`/products/${slug}/`}
-      className="group relative flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 transition-transform duration-[500ms] ease-smooth hover:-translate-y-[5px]"
+      className="group relative flex min-w-0 flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 transition-transform duration-[500ms] ease-smooth "
       aria-label={finish ? `${product_name} - ${finish}` : product_name}
     >
       {/* ── Image container ─────────────────────── */}
       <div className="relative overflow-hidden bg-product-bg aspect-[5/4]">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
+        {profile ? (
+          <BlendedProductImage
+            src={image}
+            alt={finish ? `${product_name} in ${finish} finish` : product_name}
+            {...profile}
+            contain
+            spread="12px"
+            edgeFade={{ horizontal: "0.5%", vertical: "0.5%" }}
+            className="p-3 md:p-6 transition-transform duration-[600ms] ease-smooth group-hover:scale-[1.046]"
+            loading={priority ? "eager" : "lazy"}
+          />
+        ) : (
+        // Retain the original rendering for images without a measured profile.
+        // eslint-disable-next-line @next/next/no-img-element
         <img
           src={image}
           alt={finish ? `${product_name} in ${finish} finish` : product_name}
           width={600}
           height={600}
-          className="h-full w-full object-contain p-6 transition-transform duration-[600ms] ease-smooth group-hover:scale-[1.04]"
+          className="h-full w-full object-contain p-3 md:p-6 transition-transform duration-[600ms] ease-smooth group-hover:scale-[1.046]"
           loading={priority ? "eager" : "lazy"}
         />
+        )}
       </div>
 
       {/* ── Card body ───────────────────────────── */}
       <div className="flex flex-col gap-1.5 pt-3 pb-4">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.08em] md:tracking-[0.14em] text-steel [overflow-wrap:anywhere]">
           {label}
         </p>
-        <h3 className="font-body font-medium text-navy leading-snug">
+        <h3 className="font-body text-sm md:text-base font-medium text-navy leading-snug [overflow-wrap:anywhere]">
           {product_name}
         </h3>
         <FinishBadge finish={finish} />

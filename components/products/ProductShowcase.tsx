@@ -21,7 +21,7 @@ interface Props {
 }
 
 const chip = (active: boolean) =>
-  `inline-flex shrink-0 items-center gap-2 rounded-sm px-4 py-2 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1 ${
+  `inline-flex shrink-0 items-center gap-2 min-h-11 rounded-sm px-4 py-2 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1 ${
     active
       ? "bg-navy text-porcelain"
       : "border border-chrome bg-porcelain text-steel hover:border-navy/40 hover:text-navy"
@@ -49,11 +49,11 @@ export default function ProductShowcase({
     : product.product_name;
 
   return (
-    <div className="bg-porcelain pt-20">
+    <div className="bg-porcelain pt-[var(--header-height)]">
       <div className="lg:grid lg:grid-cols-[55fr_45fr] lg:items-start">
         {/* Left: image */}
         <motion.div
-          className="bg-product-bg aspect-square lg:aspect-[4/5] overflow-hidden"
+          className="bg-product-bg h-[280px] sm:h-[320px] lg:h-auto lg:aspect-[4/5] overflow-hidden"
           variants={imageReveal}
           initial="hidden"
           animate="visible"
@@ -64,7 +64,7 @@ export default function ProductShowcase({
             alt={imageAlt}
             width={1200}
             height={1200}
-            className="h-full w-full object-contain p-10 md:p-16"
+            className="h-full w-full object-contain p-6 md:p-16"
             style={{
               filter,
               transition: reduceMotion
@@ -77,9 +77,9 @@ export default function ProductShowcase({
         </motion.div>
 
         {/* Right: info (sticky on desktop) */}
-        <aside className="px-6 py-10 lg:px-12 lg:sticky lg:top-20 lg:max-h-[calc(100vh-80px)] lg:overflow-y-auto">
+        <aside className="px-4 sm:px-6 py-6 lg:py-10 lg:px-12 lg:sticky lg:top-[var(--header-height)] lg:max-h-[calc(100dvh-var(--header-height))] lg:overflow-y-auto">
           {/* Breadcrumb */}
-          <nav aria-label="Breadcrumb" className="mb-8">
+          <nav aria-label="Breadcrumb" className="mb-4 lg:mb-8">
             <ol className="flex flex-wrap items-center gap-1.5 text-xs text-steel">
               <li>
                 <Link
@@ -113,24 +113,24 @@ export default function ProductShowcase({
           </p>
 
           {/* Product name */}
-          <h1 className="mb-5 font-display text-[clamp(1.75rem,3.5vw,2.625rem)] leading-[1.1] text-navy">
+          <h1 className="mb-3 lg:mb-5 font-display text-[clamp(1.75rem,3.5vw,2.625rem)] leading-[1.1] text-navy">
             {product.product_name}
           </h1>
 
           {/* Finish badge */}
-          <div className="mb-6">
+          <div className="mb-3 lg:mb-6">
             <FinishBadge finish={product.finish} />
           </div>
 
           {/* Hairline divider */}
-          <div className="mb-5 h-px bg-chrome/40" />
+          <div className="mb-3 lg:mb-5 h-px bg-chrome/40" />
 
           {/* Type */}
           <p className="mb-4 text-sm text-steel">{type}</p>
 
           {/* Colour selector */}
           {colors.length > 0 && (
-            <div className="mb-8">
+            <div className="mb-4 lg:mb-8">
               <p className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
                 Colour
               </p>
@@ -166,12 +166,12 @@ export default function ProductShowcase({
             </div>
           )}
 
-          {colors.length === 0 && <div className="mb-8" />}
+
 
           {/* CTA buttons */}
           <div className="space-y-3">
             <Link
-              href="/contact/"
+              href={`/contact/?product=${encodeURIComponent(product.product_name)}${selected ? `&finish=${encodeURIComponent(selected)}` : ""}`}
               className="block w-full rounded-sm bg-navy py-3 text-center text-sm font-semibold text-porcelain transition-colors duration-200 hover:bg-navy-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
             >
               Enquire now
@@ -187,7 +187,7 @@ export default function ProductShowcase({
           </div>
 
           {/* Brand note */}
-          <p className="mt-8 text-[11px] text-steel/60">
+          <p className="mt-8 text-[11px] text-steel">
             Distributed by Core Entrade India Pvt. Ltd.
           </p>
         </aside>

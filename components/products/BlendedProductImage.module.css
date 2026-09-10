@@ -1,0 +1,60 @@
+.frame {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.photo {
+  position: relative;
+  width: 100%;
+  isolation: isolate;
+}
+
+.contain {
+  container-type: size;
+  justify-content: center;
+}
+
+.contain .photo {
+  /* Use the frame's content height, excluding padding, to fit tall photos. */
+  width: min(100%, calc(100cqh * var(--image-ratio)));
+  flex-shrink: 0;
+}
+
+.background {
+  --spread: var(--image-bg-spread);
+  position: absolute;
+  inset: calc(-1 * var(--spread));
+  pointer-events: none;
+  background: linear-gradient(
+    to bottom,
+    var(--image-bg-top) var(--spread),
+    var(--image-bg-middle) 50%,
+    var(--image-bg-bottom) calc(100% - var(--spread))
+  );
+  /* The extension is opaque at the photo boundary and fades outward. */
+  --fade-x: var(--spread);
+  --fade-y: var(--spread);
+}
+
+.image {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  --fade-x: var(--image-fade-x);
+  --fade-y: var(--image-fade-y);
+}
+
+.background,
+.image {
+  -webkit-mask-image:
+    linear-gradient(to right, transparent, #000 var(--fade-x), #000 calc(100% - var(--fade-x)), transparent),
+    linear-gradient(to bottom, transparent, #000 var(--fade-y), #000 calc(100% - var(--fade-y)), transparent);
+  mask-image:
+    linear-gradient(to right, transparent, #000 var(--fade-x), #000 calc(100% - var(--fade-x)), transparent),
+    linear-gradient(to bottom, transparent, #000 var(--fade-y), #000 calc(100% - var(--fade-y)), transparent);
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+}

@@ -50,7 +50,7 @@ export default function AboutPage() {
   return (
     <>
       {/* ── Page header ──────────────────────────────────── */}
-      <div className="bg-mist pt-32 pb-16 md:pt-40 md:pb-20">
+      <div className="bg-mist pt-24 pb-10 md:pt-40 md:pb-20">
         <Container>
           <AnimateIn>
             <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
@@ -66,9 +66,9 @@ export default function AboutPage() {
       </div>
 
       {/* ── Story ─────────────────────────────────────────── */}
-      <section className="bg-porcelain py-20 md:py-28">
+      <section className="bg-porcelain py-12 md:py-28">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-2 lg:gap-20 lg:items-center">
             <AnimateIn>
               <p className="mb-6 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
                 Our story
@@ -117,13 +117,13 @@ export default function AboutPage() {
       </section>
 
       {/* ── Manufacturing ────────────────────────────────── */}
-      <section className="bg-mist py-20 md:py-28">
+      <section className="bg-mist py-12 md:py-28">
         <Container>
           <AnimateIn>
             <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
               Manufacturing
             </p>
-            <h2 className="mb-14 font-display text-h2 text-navy">
+            <h2 className="mb-8 md:mb-14 font-display text-h2 text-navy">
               Process over promise.
             </h2>
           </AnimateIn>
@@ -143,13 +143,13 @@ export default function AboutPage() {
       </section>
 
       {/* ── Principles ───────────────────────────────────── */}
-      <section className="bg-porcelain py-20 md:py-28">
+      <section className="bg-porcelain py-12 md:py-28">
         <Container>
           <AnimateIn>
             <p className="mb-4 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
               Principles
             </p>
-            <h2 className="mb-14 font-display text-h2 text-navy">
+            <h2 className="mb-8 md:mb-14 font-display text-h2 text-navy">
               How we work.
             </h2>
           </AnimateIn>
@@ -169,12 +169,12 @@ export default function AboutPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────── */}
-      <section className="bg-navy-deep py-16 md:py-24">
+      <section className="bg-navy-deep py-12 md:py-24">
         <Container>
           <AnimateIn>
             <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="mb-2 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-porcelain/50">
+                <p className="mb-2 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-porcelain/80">
                   Catalogue & enquiries
                 </p>
                 <h2 className="font-display text-h2 text-porcelain">

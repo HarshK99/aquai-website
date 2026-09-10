@@ -1,11 +1,11 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
-// Sign up free at web3forms.com to get your access key, then replace this value.
-const WEB3FORMS_KEY = "YOUR_WEB3FORMS_ACCESS_KEY";
+const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
+const canSendOnline = Boolean(WEB3FORMS_KEY && WEB3FORMS_KEY !== "YOUR_WEB3FORMS_ACCESS_KEY");
 
 const inputBase =
-  "w-full rounded-sm border border-chrome bg-porcelain px-4 py-3 text-sm text-navy placeholder:text-steel/50 transition-colors duration-150 focus:border-navy/50 focus:outline-none focus:ring-2 focus:ring-navy/20";
+  "w-full rounded-sm border border-chrome bg-porcelain px-4 py-3 text-base text-navy placeholder:text-steel transition-colors duration-150 focus:border-navy/50 focus:outline-none focus:ring-2 focus:ring-navy/20";
 
 const subjects = [
   "General enquiry",
@@ -16,16 +16,46 @@ const subjects = [
 ];
 
 export default function ContactForm() {
+  const submitting = useRef(false);
+  const [message, setMessage] = useState("");
+  const [subject, setSubject] = useState("General enquiry");
+  const [emailOpened, setEmailOpened] = useState(false);
   const [status, setStatus] = useState<
     "idle" | "submitting" | "success" | "error"
   >("idle");
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const product = params.get("product");
+    const finish = params.get("finish");
+    if (product) {
+      setMessage(`I'd like to enquire about the Aquai ${product}${finish ? ` (${finish})` : ""}.`);
+      setSubject("Product information");
+    }
+  }, []);
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    if (submitting.current) return;
+    const form = e.currentTarget;
+    if (!form.reportValidity()) return;
+    const data = new FormData(form);
+    if (!canSendOnline) {
+      const body = [
+        `Name: ${data.get("name")}`,
+        `Email: ${data.get("email")}`,
+        `Phone: ${data.get("phone") || "Not provided"}`,
+        `Company: ${data.get("organization") || "Not provided"}`,
+        "", String(data.get("message") || ""),
+      ].join("\n");
+      window.location.href = `mailto:coregujarat@coreindia.co.in?subject=${encodeURIComponent(`Aquai enquiry: ${subject}`)}&body=${encodeURIComponent(body)}`;
+      setEmailOpened(true);
+      return;
+    }
+    submitting.current = true;
     setStatus("submitting");
 
-    const data = new FormData(e.currentTarget);
-    data.append("access_key", WEB3FORMS_KEY);
+    data.append("access_key", WEB3FORMS_KEY!);
     data.append("subject", "New enquiry - Aquai website");
     data.append("from_name", "Aquai Website");
 
@@ -35,20 +65,23 @@ export default function ContactForm() {
         body: data,
       });
       const json = await res.json();
-      if (json.success) {
+      if (res.ok && json.success) {
         setStatus("success");
-        (e.target as HTMLFormElement).reset();
+        form.reset();
+        setMessage("");
       } else {
         setStatus("error");
       }
     } catch {
       setStatus("error");
+    } finally {
+      submitting.current = false;
     }
   }
 
   if (status === "success") {
     return (
-      <div className="rounded-sm border border-chrome/40 bg-mist px-8 py-12 text-center">
+      <div role="status" className="rounded-sm border border-chrome/40 bg-mist px-6 py-10 text-center">
         <p className="mb-2 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
           Submitted
         </p>
@@ -56,7 +89,7 @@ export default function ContactForm() {
           Thank you for reaching out.
         </h3>
         <p className="text-sm text-steel">
-          Our team will respond within one business day.
+          Your enquiry has been sent to our team.
         </p>
         <button
           onClick={() => setStatus("idle")}
@@ -69,7 +102,12 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-5" aria-busy={status === "submitting"}>
+      {!canSendOnline && (
+        <p className="text-sm text-steel">
+          Fill in your enquiry, then send it from your email app. You can also call or WhatsApp us above.
+        </p>
+      )}
       {/* Honeypot - hidden from humans, catches bots */}
       <input
         type="checkbox"
@@ -131,7 +169,7 @@ export default function ContactForm() {
           </label>
           <input
             id="cf-company"
-            name="company"
+            name="organization"
             type="text"
             autoComplete="organization"
             placeholder="Optional"
@@ -144,7 +182,7 @@ export default function ContactForm() {
         <label htmlFor="cf-subject" className="mb-1.5 block text-xs font-medium text-steel">
           Subject
         </label>
-        <select id="cf-subject" name="enquiry_type" className={inputBase}>
+        <select id="cf-subject" name="enquiry_type" className={inputBase} value={subject} onChange={(event) => setSubject(event.target.value)}>
           {subjects.map((s) => (
             <option key={s} value={s}>
               {s}
@@ -162,6 +200,8 @@ export default function ContactForm() {
           name="message"
           required
           rows={5}
+          value={message}
+          onChange={(event) => setMessage(event.target.value)}
           placeholder="Tell us about your project or enquiry."
           className={`${inputBase} resize-none`}
         />
@@ -172,13 +212,18 @@ export default function ContactForm() {
           Something went wrong. Please try again or reach us by phone.
         </p>
       )}
+      {emailOpened && (
+        <p role="status" className="text-sm text-steel">
+          Finish sending in your email app. If it did not open, email coregujarat@coreindia.co.in or use WhatsApp above. Your details are still here.
+        </p>
+      )}
 
       <button
         type="submit"
         disabled={status === "submitting"}
         className="w-full rounded-sm bg-navy py-3.5 text-sm font-semibold text-porcelain transition-colors duration-200 hover:bg-navy-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === "submitting" ? "Sending…" : "Send enquiry"}
+        {status === "submitting" ? "Sending…" : canSendOnline ? "Send enquiry" : "Continue in email"}
       </button>
     </form>
   );

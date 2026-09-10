@@ -4,24 +4,25 @@ import { motion } from "framer-motion";
 import { hairlineDraw } from "@/lib/motion";
 import AnimateIn from "@/components/AnimateIn";
 import Container from "@/components/layout/Container";
+import BlendedProductImage from "@/components/products/BlendedProductImage";
 
 export default function StoryTeaser() {
 
   return (
-    <section className="bg-mist py-16 md:py-24 lg:py-32" aria-label="About Aquai">
+    <section className="bg-mist py-12 md:py-24 lg:py-32" aria-label="About Aquai">
       <Container>
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-20">
+        <div className="grid grid-cols-1 items-center gap-6 md:gap-12 lg:grid-cols-2 lg:gap-20">
 
           {/* Image */}
           <AnimateIn className="relative overflow-hidden rounded-sm bg-mist aspect-[4/3]">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <BlendedProductImage
               src="/products/elite/elite-towel-rack-gold.jpeg"
               alt="Aquai Elite Series Gold Towel Rack"
-              width={800}
-              height={600}
-              className="h-full w-full object-contain p-10"
-              loading="lazy"
+              width={1810}
+              height={869}
+              // Median colors sampled from this JPEG's empty edge strips.
+              background={{ top: "#f1f0f6", middle: "#f4f3f8", bottom: "#f9f9fb" }}
+              className="p-5 md:p-10"
             />
             {/* 1px navy accent at bottom - chrome hairline motif */}
             <span aria-hidden="true" className="absolute inset-x-0 bottom-0 h-px bg-navy" />

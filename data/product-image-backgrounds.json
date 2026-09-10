@@ -1,0 +1,857 @@
+{
+  "/products/ultra-slim-shower-k/ultra-slim-shower-k-ultra-slim-shower.jpeg": {
+    "width": 2011,
+    "height": 782,
+    "background": {
+      "top": "#eaebf0",
+      "middle": "#edeef3",
+      "bottom": "#e6e7ec"
+    }
+  },
+  "/products/daizy/daizy-towel-rack.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#eeeff3",
+      "middle": "#f4f5f7",
+      "bottom": "#fbfbfd"
+    }
+  },
+  "/products/daizy/daizy-towel-rod.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f2f2f2",
+      "middle": "#f2f2f2",
+      "bottom": "#f2f2f2"
+    }
+  },
+  "/products/daizy/daizy-robe-hook.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#efeff1",
+      "middle": "#ececee",
+      "bottom": "#f0f0f2"
+    }
+  },
+  "/products/daizy/daizy-towel-ring.jpeg": {
+    "width": 1498,
+    "height": 1050,
+    "background": {
+      "top": "#f1f0f6",
+      "middle": "#f1f0f6",
+      "bottom": "#f7f7f9"
+    }
+  },
+  "/products/daizy/daizy-soap-dish.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f6f6f8",
+      "middle": "#f6f6f8",
+      "bottom": "#f6f6f8"
+    }
+  },
+  "/products/daizy/daizy-toilet-paper-holder.jpeg": {
+    "width": 1240,
+    "height": 1268,
+    "background": {
+      "top": "#f0eff5",
+      "middle": "#f5f4f9",
+      "bottom": "#f8f8fa"
+    }
+  },
+  "/products/daizy/daizy-glass-liquid-soap-dispenser.jpeg": {
+    "width": 1415,
+    "height": 1112,
+    "background": {
+      "top": "#efeef4",
+      "middle": "#f3f2f7",
+      "bottom": "#f7f7f9"
+    }
+  },
+  "/products/daizy/daizy-glass-tumbler-holder.jpeg": {
+    "width": 1414,
+    "height": 1113,
+    "background": {
+      "top": "#f1f0f5",
+      "middle": "#f3f3f5",
+      "bottom": "#f6f5f8"
+    }
+  },
+  "/products/daizy/daizy-glass-soap-dish.jpeg": {
+    "width": 1602,
+    "height": 982,
+    "background": {
+      "top": "#f1f0f6",
+      "middle": "#f3f2f7",
+      "bottom": "#fafafc"
+    }
+  },
+  "/products/daizy/daizy-ss-grab-bar.jpeg": {
+    "width": 1728,
+    "height": 910,
+    "background": {
+      "top": "#f1f0f5",
+      "middle": "#f5f5f7",
+      "bottom": "#fafafc"
+    }
+  },
+  "/products/elite/elite-towel-rack-gold.jpeg": {
+    "width": 1810,
+    "height": 869,
+    "background": {
+      "top": "#f1f0f6",
+      "middle": "#f4f3f8",
+      "bottom": "#f9f9fb"
+    }
+  },
+  "/products/elite/elite-towel-rod-gold.jpeg": {
+    "width": 1876,
+    "height": 838,
+    "background": {
+      "top": "#f5f3f6",
+      "middle": "#f7f5f8",
+      "bottom": "#f8f6f9"
+    }
+  },
+  "/products/elite/elite-robe-hook-gold.jpeg": {
+    "width": 1397,
+    "height": 1126,
+    "background": {
+      "top": "#f3f1f4",
+      "middle": "#f5f3f6",
+      "bottom": "#f7f5f8"
+    }
+  },
+  "/products/elite/elite-glass-tumbler-holder-gold.jpeg": {
+    "width": 1187,
+    "height": 1326,
+    "background": {
+      "top": "#f2f0f4",
+      "middle": "#f3f1f4",
+      "bottom": "#f5f3f6"
+    }
+  },
+  "/products/elite/elite-towel-ring-gold.jpeg": {
+    "width": 1412,
+    "height": 1114,
+    "background": {
+      "top": "#f3f1f4",
+      "middle": "#f3f1f4",
+      "bottom": "#f5f3f6"
+    }
+  },
+  "/products/elite/elite-toilet-paper-holder-gold.jpeg": {
+    "width": 1408,
+    "height": 1117,
+    "background": {
+      "top": "#f2f0f3",
+      "middle": "#f2f0f3",
+      "bottom": "#f2f0f3"
+    }
+  },
+  "/products/elite/elite-glass-liquid-soap-dispenser-gold.jpeg": {
+    "width": 1174,
+    "height": 1339,
+    "background": {
+      "top": "#eeecef",
+      "middle": "#f0eef1",
+      "bottom": "#efedf0"
+    }
+  },
+  "/products/elite/elite-glass-soap-dish-gold.jpeg": {
+    "width": 1612,
+    "height": 975,
+    "background": {
+      "top": "#f2f0f3",
+      "middle": "#f2f0f3",
+      "bottom": "#f2f0f3"
+    }
+  },
+  "/products/elite/elite-towel-rack-rose-gold.jpeg": {
+    "width": 1810,
+    "height": 869,
+    "background": {
+      "top": "#f5f5f7",
+      "middle": "#f5f5f7",
+      "bottom": "#f5f5f7"
+    }
+  },
+  "/products/elite/elite-towel-rod-rose-gold.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/elite/elite-robe-hook-rose-gold.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/elite/elite-glass-tumbler-holder-rose-gold.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/elite/elite-towel-ring-rose-gold.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/elite/elite-toilet-paper-holder-rose-gold.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/elite/elite-glass-liquid-soap-dispenser-rose-gold.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/elite/elite-glass-soap-dish-rose-gold.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/elite/elite-towel-rack-chrome.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f2f1f7",
+      "middle": "#f2f1f7",
+      "bottom": "#f2f1f7"
+    }
+  },
+  "/products/elite/elite-towel-rod-chrome.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f2f1f7",
+      "middle": "#f2f1f7",
+      "bottom": "#f2f1f7"
+    }
+  },
+  "/products/elite/elite-robe-hook-chrome.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f2f1f7",
+      "middle": "#f2f1f7",
+      "bottom": "#f2f1f7"
+    }
+  },
+  "/products/elite/elite-glass-tumbler-holder-chrome.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f2f1f7",
+      "middle": "#f2f1f7",
+      "bottom": "#f2f1f7"
+    }
+  },
+  "/products/elite/elite-towel-ring-chrome.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f2f1f7",
+      "middle": "#f2f1f7",
+      "bottom": "#f2f1f7"
+    }
+  },
+  "/products/elite/elite-toilet-paper-holder-chrome.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f2f1f7",
+      "middle": "#f2f1f7",
+      "bottom": "#f2f1f7"
+    }
+  },
+  "/products/elite/elite-glass-liquid-soap-dispenser-chrome.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f2f1f7",
+      "middle": "#f2f1f7",
+      "bottom": "#f2f1f7"
+    }
+  },
+  "/products/elite/elite-glass-soap-dish-chrome.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f2f1f7",
+      "middle": "#f2f1f7",
+      "bottom": "#f2f1f7"
+    }
+  },
+  "/products/brava/brava-towel-rod.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f7f8fa",
+      "middle": "#f7f8fa",
+      "bottom": "#f7f8fa"
+    }
+  },
+  "/products/brava/brava-glass-tumbler-holder.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f7f8fa",
+      "middle": "#f7f8fa",
+      "bottom": "#f7f8fa"
+    }
+  },
+  "/products/brava/brava-towel-ring.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f7f8fa",
+      "middle": "#f7f8fa",
+      "bottom": "#f7f8fa"
+    }
+  },
+  "/products/brava/brava-glass-soap-dish.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f7f8fa",
+      "middle": "#f7f8fa",
+      "bottom": "#f7f8fa"
+    }
+  },
+  "/products/brava/brava-glass-liquid-soap-dispenser.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f7f8fa",
+      "middle": "#f7f8fa",
+      "bottom": "#f7f8fa"
+    }
+  },
+  "/products/brava/brava-dual-liquid-soap-dispenser.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#f7f8fa",
+      "middle": "#f7f8fa",
+      "bottom": "#f7f8fa"
+    }
+  },
+  "/products/premium-sinks/premium-sinks-s-s-sink-satin-satin.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/premium-sinks/premium-sinks-s-s-sink-glossy-glossy.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/premium-sinks/premium-sinks-s-s-sink-double-bowl-satin.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-square-shower-arm.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#edecf2",
+      "middle": "#f2f1f6",
+      "bottom": "#f9f9fb"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-oval-shower-arm.jpeg": {
+    "width": 1672,
+    "height": 941,
+    "background": {
+      "top": "#e8e8e8",
+      "middle": "#f2f2f2",
+      "bottom": "#e8e8e8"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-round-shower-arm-heavy.jpeg": {
+    "width": 1672,
+    "height": 941,
+    "background": {
+      "top": "#efeef3",
+      "middle": "#efeef3",
+      "bottom": "#eeedf2"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-floor-trap-drain.jpeg": {
+    "width": 1492,
+    "height": 1054,
+    "background": {
+      "top": "#eff0f5",
+      "middle": "#f3f4f8",
+      "bottom": "#fbfbfc"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-square-line-grating-heavy.jpeg": {
+    "width": 1456,
+    "height": 1080,
+    "background": {
+      "top": "#edeef3",
+      "middle": "#f3f4f8",
+      "bottom": "#fbfbfd"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-cockroach-trap-for-floor-trap.jpeg": {
+    "width": 1408,
+    "height": 1117,
+    "background": {
+      "top": "#eeeff4",
+      "middle": "#f2f3f7",
+      "bottom": "#f3f3f5"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-one-pic-fix-jali.jpeg": {
+    "width": 1462,
+    "height": 1076,
+    "background": {
+      "top": "#eeeff4",
+      "middle": "#f3f4f8",
+      "bottom": "#fbfbfb"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-long-drain-channel-for-shower.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#f8f8fa",
+      "middle": "#f9f9fb",
+      "bottom": "#fafafc"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-rack-bolt-kit.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#514c48",
+      "middle": "#464340",
+      "bottom": "#44403d"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-wash-basin-bolt-kit.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#59534f",
+      "middle": "#4b4642",
+      "bottom": "#46413d"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-ewc-floor-mounting-kit.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#57524d",
+      "middle": "#433f3b",
+      "bottom": "#3c3734"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-urinal-clamp-kit.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#534e4b",
+      "middle": "#43423f",
+      "bottom": "#3a3936"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-brass-extension-nipple-heavy.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-brass-hex-nipple.jpeg": {
+    "width": 1254,
+    "height": 1254,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-brass-wall-mixer-legs.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f5f5fd",
+      "middle": "#f5f5fd",
+      "bottom": "#f4f4fd"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-brass-waste-coupling-full-thread.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f2f2f4",
+      "middle": "#f2f2f4",
+      "bottom": "#f2f2f4"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-sink-waste-coupling-pvc-body.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f2f3f6",
+      "middle": "#f6f6f8",
+      "bottom": "#fafafc"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-pillar-cock-flange.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f7f7f7",
+      "middle": "#f7f7f7",
+      "bottom": "#f7f7f7"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-cpvc-ball-valve.jpeg": {
+    "width": 1514,
+    "height": 1039,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-cp-angle-valve-turbo-cp.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#ecedf2",
+      "middle": "#ecedf2",
+      "bottom": "#ecedf2"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-sink-waste-coupling-square-ss304-pvc-body.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#eff0f4",
+      "middle": "#edeef2",
+      "bottom": "#eeeef3"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-dual-flush-cistern.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#ecedf2",
+      "middle": "#f0f1f6",
+      "bottom": "#f4f5f9"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-single-flush-push-cistern.jpeg": {
+    "width": 1312,
+    "height": 1199,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-smart-seat-cover.jpeg": {
+    "width": 1322,
+    "height": 1190,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-urinal-spreader-for-hindware.jpeg": {
+    "width": 1254,
+    "height": 1254,
+    "background": {
+      "top": "#f0f1f5",
+      "middle": "#f3f4f8",
+      "bottom": "#fafafc"
+    }
+  },
+  "/products/standard-sinks/standard-sinks-s-s-sink-standard.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f8f8fa",
+      "middle": "#f8f8fa",
+      "bottom": "#f8f8fa"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-double-nail-clamp-upvc-pipe.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-double-nail-clamp-cpvc-pipe.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#ffffff",
+      "middle": "#ffffff",
+      "bottom": "#ffffff"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-mirror-cabinet.jpeg": {
+    "width": 574,
+    "height": 766,
+    "background": {
+      "top": "#000000",
+      "middle": "#010100",
+      "bottom": "#000000"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-long-drain-cover.jpeg": {
+    "width": 2000,
+    "height": 2000,
+    "background": {
+      "top": "#e4e4e4",
+      "middle": "#e5e5e5",
+      "bottom": "#e5e4e4"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-triangle-floor-drain-plain-tiles.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f3f3f5",
+      "middle": "#f3f3f5",
+      "bottom": "#f3f3f5"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-floor-drain-locking-type.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#edeef4",
+      "middle": "#f4f3f8",
+      "bottom": "#fbfbfd"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-corner-drain-l-type.jpeg": {
+    "width": 1254,
+    "height": 1254,
+    "background": {
+      "top": "#ebecf1",
+      "middle": "#ebecf1",
+      "bottom": "#ebecf1"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-clean-out-locking-cover.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f3f4f6",
+      "middle": "#f3f4f6",
+      "bottom": "#f3f4f6"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-3-waste-coupling-k-type-long.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-pop-up-floor-drain.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f5f4f9",
+      "middle": "#f6f5fa",
+      "bottom": "#fafafc"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-anti-cockroach-trap-bowl-type.jpeg": {
+    "width": 1323,
+    "height": 1189,
+    "background": {
+      "top": "#ececf4",
+      "middle": "#f4f3f8",
+      "bottom": "#fcfcfc"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-doom-floor-grating.jpeg": {
+    "width": 1254,
+    "height": 1254,
+    "background": {
+      "top": "#edeef3",
+      "middle": "#f5f4f7",
+      "bottom": "#fbfbfd"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-line-wall-grating.jpeg": {
+    "width": 1254,
+    "height": 1254,
+    "background": {
+      "top": "#f3f2f7",
+      "middle": "#f7f6fb",
+      "bottom": "#fbfbfd"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-long-drain-channel-slimline.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#f2f2f4",
+      "middle": "#f7f7f9",
+      "bottom": "#f7f7f9"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-waste-coupling.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#efeef4",
+      "middle": "#f5f4f9",
+      "bottom": "#fbfbfd"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-sink-waste-coupling-ss-body.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-sink-waste-coupling-heavy-round.jpeg": {
+    "width": 1254,
+    "height": 1254,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-round-flange.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-square-flange.jpeg": {
+    "width": 1536,
+    "height": 1024,
+    "background": {
+      "top": "#fefefe",
+      "middle": "#fefefe",
+      "bottom": "#fefefe"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-long-bend.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f9f9fb",
+      "middle": "#f9f9fb",
+      "bottom": "#f9f9fb"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-waste-pipe-corrugated.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#f8f8f8",
+      "middle": "#f8f8f8",
+      "bottom": "#f8f8f8"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-waste-hose-pipe-heavy-white.jpeg": {
+    "width": 1448,
+    "height": 1086,
+    "background": {
+      "top": "#efeef3",
+      "middle": "#efeef3",
+      "bottom": "#f0eef3"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-pvc-urinal-waste-pipe-with-tail-white.jpeg": {
+    "width": 1619,
+    "height": 971,
+    "background": {
+      "top": "#f8f8f8",
+      "middle": "#f8f8f8",
+      "bottom": "#f8f8f8"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-ss-hose-connection-pipe.jpeg": {
+    "width": 1555,
+    "height": 1012,
+    "background": {
+      "top": "#f8f8fa",
+      "middle": "#f8f8fa",
+      "bottom": "#f8f8fa"
+    }
+  },
+  "/products/shower-bathroom-accessories/shower-bathroom-accessories-forged-brass-nozzle-bib-cock.jpeg": {
+    "width": 795,
+    "height": 1168,
+    "background": {
+      "top": "#000000",
+      "middle": "#000000",
+      "bottom": "#000000"
+    }
+  }
+}

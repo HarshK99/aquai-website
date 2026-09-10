@@ -59,7 +59,7 @@ export default function CategoryPage({ params }: Props) {
         <Container className="relative z-10">
           <AnimateIn>
             <nav aria-label="Breadcrumb" className="mb-6">
-              <ol className="flex items-center gap-1.5 text-xs text-steel">
+              <ol className="flex flex-wrap items-center gap-1.5 text-xs text-steel">
                 <li>
                   <Link href="/products/" className="hover:text-navy transition-colors duration-150">
                     Products
@@ -82,9 +82,7 @@ export default function CategoryPage({ params }: Props) {
               {cat.tagline}
             </p>
 
-            <p className="mt-2 text-sm text-steel/70">
-              {catProducts.length} products
-            </p>
+
           </AnimateIn>
         </Container>
       </div>
@@ -101,12 +99,12 @@ export default function CategoryPage({ params }: Props) {
       </section>
 
       {/* ── Inquiry CTA ───────────────────────────────────── */}
-      <section className="bg-navy-deep py-16 md:py-24">
+      <section className="bg-navy-deep py-12 md:py-24">
         <Container>
           <AnimateIn>
             <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
               <div>
-                <p className="mb-2 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-porcelain/50">
+                <p className="mb-2 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-porcelain/80">
                   Get in touch
                 </p>
                 <h2 className="font-display text-h2 text-porcelain">

@@ -30,15 +30,15 @@ const dropdownVariants = {
 };
 
 const mobileMenuVariants = {
-  hidden: { opacity: 0, height: 0 },
+  hidden: { opacity: 0, y: -8 },
   visible: {
     opacity: 1,
-    height: "auto",
+    y: 0,
     transition: { duration: 0.25, ease: [0.22, 1, 0.36, 1] },
   },
   exit: {
     opacity: 0,
-    height: 0,
+    y: -8,
     transition: { duration: 0.18, ease: "easeIn" },
   },
 };
@@ -49,6 +49,8 @@ export default function Header({ categoryList }: Props) {
   const [catOpen, setCatOpen] = useState(false);
   const pathname = usePathname();
   const catRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   const onHomePage = pathname === "/";
 
@@ -74,7 +76,42 @@ export default function Header({ categoryList }: Props) {
     setCatOpen(false);
   }, [pathname]);
 
-  const transparent = onHomePage && !scrolled;
+  useEffect(() => {
+    if (!menuOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    const close = () => {
+      setMenuOpen(false);
+      menuButtonRef.current?.focus();
+    };
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") { event.preventDefault(); close(); }
+      if (event.key !== "Tab") return;
+      const targets = Array.from(headerRef.current?.querySelectorAll<HTMLElement>("a[href], button") ?? [])
+        .filter((element) => element.getClientRects().length > 0);
+      const first = targets[0];
+      const last = targets[targets.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault(); last?.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault(); first?.focus();
+      }
+    };
+    const wideScreen = window.matchMedia("(min-width: 1024px)");
+    const onResize = () => { if (wideScreen.matches) setMenuOpen(false); };
+    document.addEventListener("keydown", onKeyDown);
+    wideScreen.addEventListener("change", onResize);
+    const siblings = [document.querySelector("main"), document.querySelector("footer")];
+    siblings.forEach((element) => element?.setAttribute("inert", ""));
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+      wideScreen.removeEventListener("change", onResize);
+      siblings.forEach((element) => element?.removeAttribute("inert"));
+    };
+  }, [menuOpen]);
+
+  const transparent = onHomePage && !scrolled && !menuOpen;
 
   const headerBg = transparent ? "bg-transparent" : "bg-porcelain/95 backdrop-blur-md";
   const headerBorder = scrolled ? "border-b border-chrome" : "border-b border-transparent";
@@ -92,10 +129,17 @@ export default function Header({ categoryList }: Props) {
 
   return (
     <header
+      ref={headerRef}
+      role={menuOpen ? "dialog" : undefined}
+      aria-modal={menuOpen ? true : undefined}
+      aria-label={menuOpen ? "Site navigation" : undefined}
+      onClick={(event) => {
+        if ((event.target as HTMLElement).closest("a")) setMenuOpen(false);
+      }}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${headerBg} ${headerBorder}`}
     >
       <nav
-        className="mx-auto flex h-20 max-w-content items-center justify-between px-6 lg:px-10"
+        className="relative mx-auto flex h-[var(--header-height)] max-w-content items-center justify-between px-4 sm:px-6 lg:px-10"
         aria-label="Main navigation"
       >
         {/* ── Logo ─────────────────────────────────────────── */}
@@ -108,7 +152,7 @@ export default function Header({ categoryList }: Props) {
             alt="Aquai"
             width={120}
             height={40}
-            className="h-20 w-auto object-contain transition-[filter] duration-300"
+            className="h-[var(--header-height)] w-auto object-contain transition-[filter] duration-300"
             priority
           />
         </Link>
@@ -128,7 +172,8 @@ export default function Header({ categoryList }: Props) {
               <button
                 onClick={() => setCatOpen((v) => !v)}
                 aria-expanded={catOpen}
-                aria-haspopup="listbox"
+                aria-controls="desktop-categories"
+                onKeyDown={(event) => { if (event.key === "Escape") setCatOpen(false); }}
                 className={`flex items-center gap-1 text-sm font-medium transition-colors duration-200 ${
                   pathname.startsWith("/category/") ? navActive : navBase
                 }`}
@@ -160,7 +205,7 @@ export default function Header({ categoryList }: Props) {
                     animate="visible"
                     exit="exit"
                     style={{ transformOrigin: "top center" }}
-                    role="listbox"
+                    id="desktop-categories"
                     aria-label="Categories"
                     className="absolute left-1/2 top-full mt-3 w-72 -translate-x-1/2 rounded-sm border border-chrome bg-porcelain py-2 shadow-lg"
                   >
@@ -168,7 +213,6 @@ export default function Header({ categoryList }: Props) {
                       <Link
                         key={cat.slug}
                         href={`/category/${cat.slug}/`}
-                        role="option"
                         className="block px-5 py-2.5 text-sm text-steel transition-colors hover:bg-mist hover:text-navy"
                       >
                         {cat.name}
@@ -200,7 +244,9 @@ export default function Header({ categoryList }: Props) {
 
         {/* ── Mobile hamburger ─────────────────────────────── */}
         <button
-          className="lg:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current rounded-sm"
+          ref={menuButtonRef}
+          aria-controls="mobile-navigation"
+          className="lg:hidden flex shrink-0 flex-col justify-center items-center w-[44px] h-[44px] gap-[6px] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-current rounded-sm"
           onClick={() => setMenuOpen((v) => !v)}
           aria-expanded={menuOpen}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
@@ -208,15 +254,15 @@ export default function Header({ categoryList }: Props) {
           {["top", "mid", "bot"].map((id, i) => (
             <span
               key={id}
-              className={`block h-px w-6 transition-all duration-200 ${
+              className={`block h-px w-[24px] transition-all duration-200 ${
                 transparent ? "bg-porcelain" : "bg-navy-deep"
               } ${
                 i === 0 && menuOpen
-                  ? "translate-y-[3.5px] rotate-45"
+                  ? "translate-y-[7px] rotate-45"
                   : i === 1 && menuOpen
                   ? "opacity-0"
                   : i === 2 && menuOpen
-                  ? "-translate-y-[3.5px] -rotate-45"
+                  ? "-translate-y-[7px] -rotate-45"
                   : ""
               }`}
             />
@@ -228,13 +274,14 @@ export default function Header({ categoryList }: Props) {
       <AnimatePresence>
         {menuOpen && (
           <motion.div
+            id="mobile-navigation"
             variants={mobileMenuVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="lg:hidden overflow-hidden border-t border-chrome bg-porcelain"
+            className="lg:hidden max-h-[calc(100dvh-var(--header-height))] overflow-y-auto overscroll-contain border-t border-chrome bg-porcelain pb-[env(safe-area-inset-bottom)]"
           >
-            <ul className="flex flex-col gap-1 px-6 py-4" role="list">
+            <ul className="flex flex-col gap-1 px-4 sm:px-6 py-4" role="list">
               {[
                 { href: "/", label: "Home" },
                 { href: "/products/", label: "Products" },
@@ -258,7 +305,7 @@ export default function Header({ categoryList }: Props) {
                     <li key={cat.slug}>
                       <Link
                         href={`/category/${cat.slug}/`}
-                        className="block py-2 pl-3 text-sm text-steel transition-colors hover:text-navy"
+                        className="flex min-h-11 items-center py-2 pl-3 text-sm text-steel transition-colors hover:text-navy"
                       >
                         {cat.name}
                       </Link>

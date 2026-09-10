@@ -84,10 +84,34 @@ background, product name in Prata (navy), series + finish in the eyebrow style
 
 ## Hero background (Home)
 - Full-bleed image: /hero/hero-home.png (subject right, negative space left),
-  /hero/hero-home-mobile.png via <picture> for < 768px
+  /hero/hero-home-mobile.webp via <picture> for < 768px (PNG retained as source)
 - Text zone: headline + CTA in the LEFT third, porcelain/navy per contrast
 - Overlay: gradient from LEFT (navy-deep at 45–55% opacity) → transparent
   right, so text always passes contrast without hiding the product
-- Ken Burns: scale 1.06 → 1 over 8s on load, once; static if 
-  prefers-reduced-motion
+- Keep the hero photograph static so its product stays fully visible.
 - LCP critical: priority load, explicit dimensions, no lazy-load
+
+## Mobile layout (September 2026)
+- Header: 64px below 1024px and 80px above, shared through `--header-height`.
+  An open phone menu scrolls within the remaining screen height, keeps keyboard
+  focus inside navigation, closes on Escape, and restores background scrolling.
+- Hero: use `hero-home-mobile.webp`, a 156KB delivery copy of the supplied
+  `hero-home-mobile.png`, below 768px. Keep the original PNG as the source asset.
+  The photograph fills the background behind the header, lower-left heading,
+  and button. Use a navy bottom gradient and allow the heading to wrap.
+  Target up to 640px height on phones; content can grow for larger text.
+- Phone margins: 16px (24px from 640px); section spacing generally 48px.
+- Home collections: two columns, square image regions, 12px column gaps, 24px
+  row gaps, and names below images. All seven collections remain visible through
+  normal scrolling. Three columns from 768px and four from 1280px.
+- Product cards: two phone columns, 12px inner image padding, wrapping labels,
+  readable 14px product names. Keep existing wider-screen catalogue column counts.
+- Filters: labelled category/series selectors below 768px; wider-screen pills;
+  finish buttons wrap. Keep live product counts and reset dependent filters.
+- Product detail: 280px phone image region (320px from 640px), reduced spacing,
+  and enquiry links that carry the product and selected finish into Contact.
+- Contact: phone/WhatsApp actions first, followed by the form, then distributor
+  details on phones. Inputs use 16px text and native required-field validation.
+  Without `NEXT_PUBLIC_WEB3FORMS_KEY`, clearly offer Continue in email and retain
+  form entries; only report online success when the configured service confirms it.
+- Reduced motion also disables smooth scrolling and decorative CSS transitions.

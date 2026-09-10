@@ -3,8 +3,15 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --header-height: 64px;
+  }
+  @media (min-width: 1024px) {
+    :root { --header-height: 80px; }
+  }
   html {
     scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 16px);
   }
 
   body {
@@ -15,5 +22,13 @@
   /* Visible focus states */
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-navy;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

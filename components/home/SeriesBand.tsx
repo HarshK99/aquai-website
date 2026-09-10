@@ -5,7 +5,8 @@ import { hairlineDraw } from "@/lib/motion";
 import AnimateIn from "@/components/AnimateIn";
 import Container from "@/components/layout/Container";
 import type { Category } from "@/data/catalog";
-
+import BlendedProductImage from "@/components/products/BlendedProductImage";
+import collectionImageBackgrounds from "@/data/collection-image-backgrounds.json";
 interface Props {
   categoryList: Category[];
 }
@@ -25,11 +26,11 @@ const cardReveal = {
 
 export default function SeriesBand({ categoryList }: Props) {
   return (
-    <section className="bg-porcelain py-16 md:py-24" aria-label="Our categories">
+    <section className="bg-porcelain py-12 md:py-24" aria-label="Our categories">
       <Container>
         {/* Heading row */}
-        <div className="mb-10 flex items-end justify-between gap-6">
-          <div>
+        <div className="mb-6 md:mb-10 flex flex-wrap items-end justify-between gap-3">
+          <div className="min-w-0 max-w-full">
             <AnimateIn>
               <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
                 Collections
@@ -43,13 +44,13 @@ export default function SeriesBand({ categoryList }: Props) {
               viewport={{ once: true }}
             />
             <AnimateIn delay={0.15}>
-              <h2 className="font-display text-h2 text-navy">Our collections.</h2>
+              <h2 className="font-display text-h2 text-navy [overflow-wrap:anywhere]">Our collections.</h2>
             </AnimateIn>
           </div>
-          <AnimateIn delay={0.2} className="hidden sm:block flex-shrink-0">
+          <AnimateIn delay={0.2} className="flex-shrink-0">
             <Link
               href="/products/"
-              className="font-body text-sm font-medium text-steel underline-offset-4 hover:text-navy hover:underline"
+              className="inline-flex min-h-11 items-center font-body text-xs sm:text-sm font-medium text-steel underline-offset-4 hover:text-navy hover:underline"
             >
               View all products
             </Link>
@@ -57,8 +58,10 @@ export default function SeriesBand({ categoryList }: Props) {
         </div>
 
         {/* Cards */}
-        <div className="-mx-6 flex gap-4 overflow-x-auto px-6 pb-2 lg:mx-0 lg:grid lg:grid-cols-3 lg:gap-5 lg:overflow-visible lg:px-0 lg:pb-0 xl:grid-cols-4">
-          {categoryList.map((cat, i) => (
+        <div className="grid grid-cols-2 gap-x-3 gap-y-6 md:grid-cols-3 lg:gap-5 xl:grid-cols-4">
+          {categoryList.map((cat, i) => {
+            const profile = collectionImageBackgrounds[cat.image as keyof typeof collectionImageBackgrounds];
+            return (
             <motion.div
               key={cat.slug}
               custom={i}
@@ -66,57 +69,63 @@ export default function SeriesBand({ categoryList }: Props) {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, margin: "-60px" }}
-              className="min-w-[200px] flex-shrink-0 lg:min-w-0"
+              className="min-w-0"
             >
               <Link
                 href={`/category/${cat.slug}/`}
-                className="group relative block overflow-hidden rounded-sm bg-mist focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
+                className="group relative block overflow-hidden rounded-sm lg:bg-mist focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2"
                 aria-label={cat.name}
               >
                 {/* Category cover image */}
-                <div className="relative aspect-[3/4] overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                <div className="relative aspect-square lg:aspect-[3/4] overflow-hidden bg-mist">
+                  {profile ? (
+                    <BlendedProductImage
+                      src={cat.image}
+                      alt={cat.name}
+                      {...profile}
+                      spread="12px"
+                      edgeFade={cat.slug === "hardware-and-installations"
+                        ? { horizontal: "3%", vertical: "3%" }
+                        : { horizontal: "1%", vertical: "2%" }}
+                      className="p-3 lg:p-6 transition-transform duration-[700ms] ease-smooth group-hover:scale-[1.04]"
+                      loading={i < 3 ? "eager" : "lazy"}
+                    />
+                  ) : (
+                  // New covers retain their normal rendering until sampled.
+                  // eslint-disable-next-line @next/next/no-img-element
                   <img
                     src={cat.image}
                     alt={cat.name}
                     width={400}
                     height={533}
-                    className="h-full w-full object-contain p-6 transition-transform duration-[700ms] ease-smooth group-hover:scale-[1.04]"
-                    style={{
-                      maskImage: "radial-gradient(ellipse 80% 80% at 50% 45%, black 45%, transparent 88%)",
-                      WebkitMaskImage: "radial-gradient(ellipse 80% 80% at 50% 45%, black 45%, transparent 88%)",
-                    }}
+                    className="h-full w-full object-contain p-3 lg:p-6 transition-transform duration-[700ms] ease-smooth group-hover:scale-[1.04]"
+
                     loading={i < 3 ? "eager" : "lazy"}
                   />
+                  )}
                   {/* Dark gradient for text */}
                   <div
                     aria-hidden="true"
-                    className="absolute inset-0 bg-gradient-to-t from-navy-deep/80 via-navy-deep/20 to-transparent"
+                    className="absolute inset-0 hidden lg:block bg-gradient-to-t from-navy-deep/80 via-navy-deep/20 to-transparent"
                   />
                 </div>
 
                 {/* Text */}
-                <div className="absolute inset-x-0 bottom-0 p-4">
-                  <p className="font-display text-base text-porcelain leading-tight">
+                <div className="pt-3 lg:absolute lg:inset-x-0 lg:bottom-0 lg:p-4">
+                  <p className="font-body text-sm font-medium text-navy leading-snug [overflow-wrap:anywhere] lg:font-display lg:text-base lg:text-porcelain">
                     {cat.name}
                   </p>
-                  <p className="mt-1 font-body text-xs text-porcelain/60 leading-snug line-clamp-2">
+                  <p className="mt-1 hidden lg:line-clamp-2 font-body text-xs text-porcelain/90 leading-snug">
                     {cat.tagline}
                   </p>
                 </div>
               </Link>
             </motion.div>
-          ))}
+            );
+          })}
         </div>
 
-        <div className="mt-8 sm:hidden">
-          <Link
-            href="/products/"
-            className="font-body text-sm font-medium text-steel underline-offset-4 hover:text-navy hover:underline"
-          >
-            View all products
-          </Link>
-        </div>
+
       </Container>
     </section>
   );

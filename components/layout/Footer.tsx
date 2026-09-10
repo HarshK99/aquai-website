@@ -8,8 +8,8 @@ export default function Footer() {
       {/* Chrome hairline at top */}
       <div className="h-px bg-chrome/20" />
 
-      <div className="mx-auto max-w-content px-6 lg:px-10 py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+      <div className="mx-auto max-w-content px-4 sm:px-6 lg:px-10 py-12 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-16">
 
           {/* ── Brand column ─────────────────────────── */}
           <div className="md:col-span-1">
@@ -22,22 +22,22 @@ export default function Footer() {
                 className="h-20 w-auto object-contain brightness-0 invert mb-5"
               />
             </Link>
-            <p className="text-sm text-porcelain/60 leading-relaxed max-w-xs">
+            <p className="text-sm text-porcelain/80 leading-relaxed max-w-xs">
               Premium bath accessories and kitchen sinks. Crafted for lasting elegance.
             </p>
           </div>
 
           {/* ── Category links ───────────────────────── */}
           <div>
-            <p className="text-xs uppercase tracking-[0.14em] text-porcelain/40 font-semibold mb-5">
+            <p className="text-xs uppercase tracking-[0.14em] text-porcelain/75 font-semibold mb-5">
               Categories
             </p>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-1">
               {categories.map((cat) => (
                 <li key={cat.slug}>
                   <Link
                     href={`/category/${cat.slug}/`}
-                    className="text-sm text-porcelain/70 hover:text-porcelain transition-colors duration-200"
+                    className="inline-flex min-h-11 items-center text-sm text-porcelain/80 hover:text-porcelain transition-colors duration-200"
                   >
                     {cat.name}
                   </Link>
@@ -48,17 +48,17 @@ export default function Footer() {
 
           {/* ── Contact column ───────────────────────── */}
           <div>
-            <p className="text-xs uppercase tracking-[0.14em] text-porcelain/40 font-semibold mb-5">
+            <p className="text-xs uppercase tracking-[0.14em] text-porcelain/75 font-semibold mb-5">
               Authorised Distributor
             </p>
             <p className="text-sm font-medium text-porcelain/90 mb-4">
               Core Entrade India Pvt. Ltd.
             </p>
-            <ul className="flex flex-col gap-3">
+            <ul className="flex flex-col gap-1">
               <li>
                 <a
                   href="tel:+919706041000"
-                  className="text-sm text-porcelain/70 hover:text-porcelain transition-colors duration-200"
+                  className="inline-flex min-h-11 items-center text-sm text-porcelain/80 hover:text-porcelain transition-colors duration-200"
                 >
                   +91 97060 41000
                 </a>
@@ -66,7 +66,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:coregujarat@coreindia.co.in"
-                  className="text-sm text-porcelain/70 hover:text-porcelain transition-colors duration-200 break-all"
+                  className="inline-flex min-h-11 items-center text-sm text-porcelain/80 hover:text-porcelain transition-colors duration-200 break-all"
                 >
                   coregujarat@coreindia.co.in
                 </a>
@@ -76,7 +76,7 @@ export default function Footer() {
                   href="https://wa.me/919706041000?text=Hi%2C%20I%27d%20like%20to%20inquire%20about%20Aquai%20products"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-sm text-porcelain/70 hover:text-porcelain transition-colors duration-200"
+                  className="inline-flex min-h-11 items-center gap-2 text-sm text-porcelain/70 hover:text-porcelain transition-colors duration-200"
                 >
                   {/* WhatsApp icon */}
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -90,13 +90,23 @@ export default function Footer() {
         </div>
 
         {/* ── Bottom bar ─────────────────────────────── */}
-        <div className="mt-16 pt-8 border-t border-chrome/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="text-xs text-porcelain/40">
+        <div className="mt-10 md:mt-16 pt-6 border-t border-chrome/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <p className="text-xs text-porcelain/75">
             &copy; {new Date().getFullYear()} Aquai. All rights reserved.
           </p>
-          <p className="text-xs text-porcelain/40">
-            Distributed by Core Entrade India Pvt. Ltd.
-          </p>
+          <div className="space-y-2 sm:text-right">
+            <p className="text-xs text-porcelain/75">
+              Distributed by Core Entrade India Pvt. Ltd.
+            </p>
+            <a
+              href="https://db.harshkankaria.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block text-xs text-porcelain/60 transition-colors hover:text-porcelain focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-porcelain"
+            >
+              Developed by Dragun Labs
+            </a>
+          </div>
         </div>
       </div>
     </footer>

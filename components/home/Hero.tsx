@@ -4,48 +4,44 @@ import { motion } from "framer-motion";
 import { heroStagger, heroLine, fadeRise } from "@/lib/motion";
 import Container from "@/components/layout/Container";
 
-// Drop hero-home-mobile.jpeg (768×1024 portrait) into public/hero/ to enable
-// the <source> swap - the <img> fallback handles it until then.
+// Use the portrait composition on phones and the original scene on larger screens.
 const DESKTOP_SRC = "/hero/hero-home.png";
-const MOBILE_SRC = "/hero/hero-home-mobile.jpeg"; // swap in when file exists
+const MOBILE_SRC = "/hero/hero-home-mobile.webp";
 
 export default function Hero() {
   return (
     <section
-      className="relative min-h-screen overflow-hidden bg-navy-deep"
+      className="relative overflow-hidden bg-navy-deep"
       aria-label="Hero"
     >
       {/* ── Full-bleed background image + Ken Burns ─────────────────── */}
       <div className="absolute inset-0">
-        {/* Ken Burns: scale 1.06→1 over 8s; MotionConfig reducedMotion="user" makes it instant when reduced-motion is set */}
-        <motion.div
+        {/* Keep the complete fixture visible throughout loading. */}
+        <div
           className="absolute inset-0"
-          initial={{ scale: 1.06 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 8, ease: "linear" }}
         >
           <picture className="contents">
-            {/* Mobile crop - add public/hero/hero-home-mobile.jpeg to activate */}
-            <source media="(max-width: 767px)" srcSet={MOBILE_SRC} type="image/jpeg" />
+            {/* Portrait composition for phones */}
+            <source media="(max-width: 767px)" srcSet={MOBILE_SRC} type="image/webp" />
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={DESKTOP_SRC}
               alt=""
               aria-hidden="true"
-              width={1920}
-              height={1080}
-              className="h-full w-full object-cover object-center"
+              width={1672}
+              height={941}
+              className="h-full w-full object-cover object-right-top md:object-center"
               loading="eager"
               fetchPriority="high"
             />
           </picture>
-        </motion.div>
+        </div>
 
         {/* ── Gradient overlay: navy-deep 50% left → transparent right ── */}
         {/* Stronger on mobile where text is full-width; fades to right on desktop */}
         <div
           aria-hidden="true"
-          className="absolute inset-0"
+          className="absolute inset-0 hidden md:block"
           style={{
             background:
               "linear-gradient(105deg, rgba(10,24,48,0.80) 0%, rgba(10,24,48,0.72) 28%, rgba(10,24,48,0.45) 52%, rgba(10,24,48,0.10) 75%, transparent 100%)",
@@ -57,7 +53,7 @@ export default function Hero() {
           className="absolute inset-0 md:hidden"
           style={{
             background:
-              "linear-gradient(to top, rgba(10,24,48,0.70) 0%, transparent 55%)",
+              "linear-gradient(to top, rgba(10,24,48,0.94) 0%, rgba(10,24,48,0.72) 28%, rgba(10,24,48,0.08) 65%, rgba(10,24,48,0.25) 100%)",
           }}
         />
       </div>
@@ -69,12 +65,12 @@ export default function Hero() {
       />
 
       {/* ── Content - left third on desktop ─────────────────────────── */}
-      <Container className="relative z-10 flex min-h-screen items-center">
-        <div className="w-full max-w-xl py-36 md:py-44 md:max-w-[60%] lg:max-w-[58%]">
+      <Container className="relative z-10 flex min-h-[min(640px,95svh)] items-end md:min-h-screen md:items-center">
+        <div className="w-full max-w-xl px-1 pb-12 pt-64 md:px-0 md:py-44 md:max-w-[60%] lg:max-w-[58%]">
 
           {/* Eyebrow */}
           <motion.p
-            className="mb-8 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-porcelain/50"
+            className="mb-5 md:mb-8 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-porcelain/90"
             variants={fadeRise}
             initial="hidden"
             animate="visible"
@@ -84,7 +80,7 @@ export default function Hero() {
 
           {/* Headline - staggered lines */}
           <motion.h1
-            className="font-display text-hero text-porcelain leading-[1.05]"
+            className="font-display text-[clamp(2rem,8.5vw,2.5rem)] md:text-hero text-porcelain leading-[1.12]"
             variants={heroStagger}
             initial="hidden"
             animate="visible"
@@ -92,14 +88,14 @@ export default function Hero() {
             <motion.span className="block" variants={heroLine}>
               Crafted for
             </motion.span>
-            <motion.span className="block whitespace-nowrap" variants={heroLine}>
+            <motion.span className="block" variants={heroLine}>
               Lasting Elegance
             </motion.span>
           </motion.h1>
 
           {/* CTAs */}
           <motion.div
-            className="mt-10 flex flex-wrap gap-4"
+            className="mt-7 md:mt-10 flex flex-wrap gap-4"
             variants={{
               hidden: { opacity: 0, y: 12 },
               visible: {

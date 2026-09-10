@@ -25,7 +25,7 @@ interface Props {
 }
 
 const pill = (active: boolean) =>
-  `inline-flex shrink-0 items-center gap-2 rounded-sm px-4 py-2 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1 ${
+  `inline-flex min-h-11 shrink-0 items-center gap-2 rounded-sm px-4 py-2 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-1 ${
     active
       ? "bg-navy text-porcelain"
       : "border border-chrome bg-porcelain text-steel hover:border-navy/40 hover:text-navy"
@@ -80,11 +80,47 @@ export default function ProductGrid({
     <div>
       {/* ── Sticky filter bar ────────────────────────────── */}
       {(showCategoryFilter || showSeriesFilter || showFinishFilter) && (
-        <div className="sticky top-20 z-10 bg-mist/95 backdrop-blur-sm border-b border-chrome/40 -mx-6 px-6 lg:-mx-10 lg:px-10 pt-3 pb-3 mb-6">
+        <div className="sticky top-[var(--header-height)] z-10 bg-mist/95 backdrop-blur-sm border-b border-chrome/40 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-10 lg:px-10 py-3 mb-4 md:mb-6">
+          {showCategoryFilter && (
+            <label className="block md:hidden text-xs font-medium text-steel">
+              Category
+              <select
+                aria-label="Category"
+                className="mt-2 min-h-11 w-full min-w-0 rounded-sm border border-chrome bg-porcelain px-3 py-2 text-base text-navy"
+                value={selectedCategory}
+                onChange={(event) => handleCategoryChange(event.target.value)}
+              >
+                <option value="all">All categories ({products.length})</option>
+                {categoryList!.map((category) => (
+                  <option key={category.slug} value={category.slug}>
+                    {category.name} ({products.filter((product) => product.category === category.name).length})
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
+          {showSeriesFilter && (
+            <label className="block md:hidden text-xs font-medium text-steel">
+              Series
+              <select
+                aria-label="Series"
+                className="mt-2 min-h-11 w-full min-w-0 rounded-sm border border-chrome bg-porcelain px-3 py-2 text-base text-navy"
+                value={selectedSeries}
+                onChange={(event) => handleSeriesChange(event.target.value)}
+              >
+                <option value="all">All series ({products.length})</option>
+                {seriesList!.map((series) => (
+                  <option key={series.slug} value={series.slug}>
+                    {series.name} ({products.filter((product) => product.series === series.slug).length})
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
           {/* Category filter */}
           {showCategoryFilter && (
             <div
-              className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              className="hidden md:flex gap-2 overflow-x-auto"
               role="group"
               aria-label="Filter by category"
             >
@@ -116,7 +152,7 @@ export default function ProductGrid({
           {/* Series filter */}
           {showSeriesFilter && (
             <div
-              className={`flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${showCategoryFilter ? "mt-2" : ""}`}
+              className={`hidden md:flex gap-2 overflow-x-auto ${showCategoryFilter ? "mt-2" : ""}`}
               role="group"
               aria-label="Filter by series"
             >
@@ -149,7 +185,7 @@ export default function ProductGrid({
           <AnimatePresence>
             {showFinishFilter && (
               <motion.div
-                className="flex gap-2 overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden mt-2"
+                className="flex flex-wrap gap-2 mt-2"
                 initial={{ opacity: 0, y: -8 }}
                 animate={{ opacity: 1, y: 0, transition: { duration: 0.2 } }}
                 exit={{ opacity: 0, y: -6, transition: { duration: 0.15 } }}
@@ -184,7 +220,7 @@ export default function ProductGrid({
       )}
 
       {/* ── Result count ─────────────────────────────────── */}
-      <p className="mb-8 text-xs text-steel" aria-live="polite" aria-atomic="true">
+      <p className="mb-5 md:mb-8 text-xs text-steel" aria-live="polite" aria-atomic="true">
         {filtered.length === products.length
           ? `${products.length} products`
           : `${filtered.length} of ${products.length} products`}
@@ -192,11 +228,12 @@ export default function ProductGrid({
 
       {/* ── Grid ─────────────────────────────────────────── */}
       <div
-        className="grid grid-cols-2 gap-x-5 gap-y-10 md:gap-x-6 md:gap-y-12 lg:grid-cols-3 xl:grid-cols-4"
+        className="grid grid-cols-2 gap-x-3 gap-y-6 md:gap-x-6 md:gap-y-12 lg:grid-cols-3 xl:grid-cols-4"
       >
         <AnimatePresence mode="popLayout" initial={false}>
           {filtered.map((product, i) => (
             <motion.div
+              className="min-w-0"
               key={product.slug}
               layout
               custom={i}

@@ -7,9 +7,11 @@ interface Props {
   children: ReactNode;
   className?: string;
   delay?: number;
+  disabled?: boolean;
 }
 
-export default function AnimateIn({ children, className, delay = 0 }: Props) {
+export default function AnimateIn({ children, className, delay = 0, disabled = false }: Props) {
+  if (disabled) return <div className={className}>{children}</div>;
   return (
     <motion.div
       className={className}

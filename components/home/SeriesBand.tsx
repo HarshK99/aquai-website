@@ -9,6 +9,7 @@ import BlendedProductImage from "@/components/products/BlendedProductImage";
 import collectionImageBackgrounds from "@/data/collection-image-backgrounds.json";
 interface Props {
   categoryList: Category[];
+  scene?: boolean;
 }
 
 const cardReveal = {
@@ -24,14 +25,14 @@ const cardReveal = {
   }),
 };
 
-export default function SeriesBand({ categoryList }: Props) {
+export default function SeriesBand({ categoryList, scene = false }: Props) {
   return (
     <section className="bg-porcelain py-12 md:py-24" aria-label="Our categories">
       <Container>
         {/* Heading row */}
         <div className="mb-6 md:mb-10 flex flex-wrap items-end justify-between gap-3">
           <div className="min-w-0 max-w-full">
-            <AnimateIn>
+            <AnimateIn disabled={scene}>
               <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-steel">
                 Collections
               </p>
@@ -39,15 +40,16 @@ export default function SeriesBand({ categoryList }: Props) {
             <motion.div
               className="mb-4 h-px w-12 origin-left bg-chrome/70"
               variants={hairlineDraw}
-              initial="hidden"
-              whileInView="visible"
+              initial={scene ? false : "hidden"}
+              animate={scene ? "visible" : undefined}
+              whileInView={scene ? undefined : "visible"}
               viewport={{ once: true }}
             />
-            <AnimateIn delay={0.15}>
+            <AnimateIn disabled={scene} delay={0.15}>
               <h2 className="font-display text-h2 text-navy [overflow-wrap:anywhere]">Our collections.</h2>
             </AnimateIn>
           </div>
-          <AnimateIn delay={0.2} className="flex-shrink-0">
+          <AnimateIn disabled={scene} delay={0.2} className="flex-shrink-0">
             <Link
               href="/products/"
               className="inline-flex min-h-11 items-center font-body text-xs sm:text-sm font-medium text-steel underline-offset-4 hover:text-navy hover:underline"
@@ -66,8 +68,9 @@ export default function SeriesBand({ categoryList }: Props) {
               key={cat.slug}
               custom={i}
               variants={cardReveal}
-              initial="hidden"
-              whileInView="visible"
+              initial={scene ? false : "hidden"}
+              animate={scene ? "visible" : undefined}
+              whileInView={scene ? undefined : "visible"}
               viewport={{ once: true, margin: "-60px" }}
               className="min-w-0"
             >

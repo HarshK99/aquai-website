@@ -19,6 +19,10 @@
     line-height: 1.7;
   }
 
+  body:has([data-focus-active]) [data-site-header] {
+    transition: none;
+  }
+
   /* Visible focus states */
   :focus-visible {
     @apply outline-2 outline-offset-2 outline-navy;

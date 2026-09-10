@@ -15,8 +15,9 @@
     "deploy": "node scripts/deploy.js"
   },
   "dependencies": {
-    "ftp-deploy-static": "file:../packages_personal/deploy-package",
     "framer-motion": "^11.18.2",
+    "ftp-deploy-static": "file:../packages_personal/deploy-package",
+    "gsap": "^3.15.0",
     "next": "^14.2.29",
     "react": "^18",
     "react-dom": "^18"

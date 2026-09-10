@@ -1,7 +1,5 @@
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { heroStagger, heroLine, fadeRise } from "@/lib/motion";
 import Container from "@/components/layout/Container";
 
 // Use the portrait composition on phones and the original scene on larger screens.
@@ -14,7 +12,7 @@ export default function Hero() {
       className="relative overflow-hidden bg-navy-deep"
       aria-label="Hero"
     >
-      {/* ── Full-bleed background image + Ken Burns ─────────────────── */}
+      {/* ── Full-bleed background image ─────────────────── */}
       <div className="absolute inset-0">
         {/* Keep the complete fixture visible throughout loading. */}
         <div
@@ -69,47 +67,27 @@ export default function Hero() {
         <div className="w-full max-w-xl px-1 pb-12 pt-64 md:px-0 md:py-44 md:max-w-[60%] lg:max-w-[58%]">
 
           {/* Eyebrow */}
-          <motion.p
+          <p
             className="mb-5 md:mb-8 font-body text-[11px] font-semibold uppercase tracking-[0.14em] text-porcelain/90"
-            variants={fadeRise}
-            initial="hidden"
-            animate="visible"
           >
             Premium Bath Accessories
-          </motion.p>
+          </p>
 
-          {/* Headline - staggered lines */}
-          <motion.h1
+          {/* Headline */}
+          <h1
             className="font-display text-[clamp(2rem,8.5vw,2.5rem)] md:text-hero text-porcelain leading-[1.12]"
-            variants={heroStagger}
-            initial="hidden"
-            animate="visible"
           >
-            <motion.span className="block" variants={heroLine}>
+            <span className="block">
               Crafted for
-            </motion.span>
-            <motion.span className="block" variants={heroLine}>
+            </span>
+            <span className="block">
               Lasting Elegance
-            </motion.span>
-          </motion.h1>
+            </span>
+          </h1>
 
           {/* CTAs */}
-          <motion.div
+          <div
             className="mt-7 md:mt-10 flex flex-wrap gap-4"
-            variants={{
-              hidden: { opacity: 0, y: 12 },
-              visible: {
-                opacity: 1,
-                y: 0,
-                transition: {
-                  ease: [0.22, 1, 0.36, 1],
-                  duration: 0.5,
-                  delay: 0.8,
-                },
-              },
-            }}
-            initial="hidden"
-            animate="visible"
           >
             <Link
               href="/products/"
@@ -132,7 +110,7 @@ export default function Hero() {
                 />
               </svg>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </Container>
     </section>

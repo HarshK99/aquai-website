@@ -1,0 +1,54 @@
+.root {
+  position: relative;
+  isolation: isolate;
+}
+
+.root[data-focus-active] {
+  background: #fafaf7;
+  overflow: clip;
+}
+
+.root[data-focus-active] .hero {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 2;
+  height: 100svh;
+  min-height: 580px;
+  overflow: hidden;
+}
+
+.root[data-focus-active] .hero > section,
+.root[data-focus-active] .hero > section > div:last-child {
+  min-height: 100svh;
+}
+
+.defocus { display: none; }
+
+.root[data-focus-active] .defocus {
+  --focus-front: 125%;
+  display: block;
+  position: absolute;
+  inset: -2px;
+  z-index: 20;
+  pointer-events: none;
+  /* One masked glass layer blurs only the portion it has reached. */
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  background: linear-gradient(to bottom, rgb(10 24 48 / 20%), rgb(4 10 20 / 94%));
+  -webkit-mask-image: linear-gradient(to bottom, transparent calc(var(--focus-front) - 22%), #000 calc(var(--focus-front) + 22%));
+  mask-image: linear-gradient(to bottom, transparent calc(var(--focus-front) - 22%), #000 calc(var(--focus-front) + 22%));
+}
+
+.root[data-focus-active] .next {
+  position: relative;
+  min-height: 100svh;
+  padding-top: var(--header-height);
+}
+
+@media (max-width: 767px) {
+  .root[data-focus-active] .hero { min-height: 0; }
+  .root[data-focus-active] .defocus {
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+  }
+}

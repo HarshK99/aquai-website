@@ -55,11 +55,17 @@ export default function Header({ categoryList }: Props) {
   const onHomePage = pathname === "/";
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      const scene = document.querySelector<HTMLElement>("[data-focus-active]");
+      setScrolled(scene ? scene.dataset.focusPhase === "collections" : window.scrollY > 40);
+    };
+    const scene = document.querySelector("[data-focus-transition]");
+    const observer = new MutationObserver(onScroll);
+    if (scene) observer.observe(scene, { attributes: true, attributeFilter: ["data-focus-phase", "data-focus-active"] });
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+    return () => { observer.disconnect(); window.removeEventListener("scroll", onScroll); };
+  }, [pathname]);
 
   useEffect(() => {
     function handleClickOutside(e: MouseEvent) {
@@ -130,13 +136,14 @@ export default function Header({ categoryList }: Props) {
   return (
     <header
       ref={headerRef}
+      data-site-header
       role={menuOpen ? "dialog" : undefined}
       aria-modal={menuOpen ? true : undefined}
       aria-label={menuOpen ? "Site navigation" : undefined}
       onClick={(event) => {
         if ((event.target as HTMLElement).closest("a")) setMenuOpen(false);
       }}
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${headerBg} ${headerBorder}`}
+      className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${headerBg} ${headerBorder}`}
     >
       <nav
         className="relative mx-auto flex h-[var(--header-height)] max-w-content items-center justify-between px-4 sm:px-6 lg:px-10"

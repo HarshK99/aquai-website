@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { categories } from "@/data/catalog";
+import { CONTACT } from "@/lib/siteConfig";
 
 export default function Footer() {
   return (
@@ -57,23 +58,23 @@ export default function Footer() {
             <ul className="flex flex-col gap-1">
               <li>
                 <a
-                  href="tel:+919706041000"
+                  href={CONTACT.phoneHref}
                   className="inline-flex min-h-11 items-center text-sm text-porcelain/80 hover:text-porcelain transition-colors duration-200"
                 >
-                  +91 97060 41000
+                  {CONTACT.phone}
                 </a>
               </li>
               <li>
                 <a
-                  href="mailto:coregujarat@coreindia.co.in"
+                  href={`mailto:${CONTACT.email}`}
                   className="inline-flex min-h-11 items-center text-sm text-porcelain/80 hover:text-porcelain transition-colors duration-200 break-all"
                 >
-                  coregujarat@coreindia.co.in
+                  {CONTACT.email}
                 </a>
               </li>
               <li>
                 <a
-                  href="https://wa.me/919706041000?text=Hi%2C%20I%27d%20like%20to%20inquire%20about%20Aquai%20products"
+                  href={`https://wa.me/${CONTACT.whatsappNumber}?text=Hi%2C%20I%27d%20like%20to%20inquire%20about%20Aquai%20products`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex min-h-11 items-center gap-2 text-sm text-porcelain/70 hover:text-porcelain transition-colors duration-200"

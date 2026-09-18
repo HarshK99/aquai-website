@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import { CONTACT } from "@/lib/siteConfig";
 
 const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
 const canSendOnline = Boolean(WEB3FORMS_KEY && WEB3FORMS_KEY !== "YOUR_WEB3FORMS_ACCESS_KEY");
@@ -48,7 +49,7 @@ export default function ContactForm() {
         `Company: ${data.get("organization") || "Not provided"}`,
         "", String(data.get("message") || ""),
       ].join("\n");
-      window.location.href = `mailto:coregujarat@coreindia.co.in?subject=${encodeURIComponent(`Aquai enquiry: ${subject}`)}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(`Aquai enquiry: ${subject}`)}&body=${encodeURIComponent(body)}`;
       setEmailOpened(true);
       return;
     }
@@ -214,7 +215,7 @@ export default function ContactForm() {
       )}
       {emailOpened && (
         <p role="status" className="text-sm text-steel">
-          Finish sending in your email app. If it did not open, email coregujarat@coreindia.co.in or use WhatsApp above. Your details are still here.
+          Finish sending in your email app. If it did not open, email {CONTACT.email} or use WhatsApp above. Your details are still here.
         </p>
       )}
 

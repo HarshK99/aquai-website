@@ -1,6 +1,7 @@
 import Link from "next/link";
 import AnimateIn from "@/components/AnimateIn";
 import Container from "@/components/layout/Container";
+import { CONTACT } from "@/lib/siteConfig";
 
 export default function InquiryCTA() {
   return (
@@ -29,13 +30,13 @@ export default function InquiryCTA() {
               </svg>
             </Link>
             <a
-              href="tel:+919706041000"
+              href={CONTACT.phoneHref}
               className="inline-flex items-center gap-2 font-body text-sm text-porcelain/85 transition-colors duration-200 hover:text-porcelain"
             >
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
                 <path d="M3 2h2.5l1 3-1.5 1.5A9.5 9.5 0 009 10l1.5-1.5 3 1V12a1 1 0 01-1 1C6.268 13 3 9.732 3 5.5A2.5 2.5 0 013 2z" stroke="currentColor" strokeWidth="1.2" strokeLinejoin="round" />
               </svg>
-              +91 97060 41000
+              {CONTACT.phone}
             </a>
           </div>
         </AnimateIn>

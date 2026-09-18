@@ -13,6 +13,7 @@ import ProductCard from "@/components/products/ProductCard";
 import ProductShowcase from "@/components/products/ProductShowcase";
 import Container from "@/components/layout/Container";
 import AnimateIn from "@/components/AnimateIn";
+import { CONTACT } from "@/lib/siteConfig";
 
 interface Props {
   params: { slug: string };
@@ -93,10 +94,10 @@ export default function ProductDetailPage({ params }: Props) {
                   Enquire now
                 </Link>
                 <a
-                  href={`tel:+919706041000`}
+                  href={CONTACT.phoneHref}
                   className="rounded-sm border border-porcelain/40 px-8 py-3 text-sm font-semibold text-porcelain transition-colors duration-200 hover:border-porcelain hover:bg-porcelain/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-porcelain focus-visible:ring-offset-2 focus-visible:ring-offset-navy-deep"
                 >
-                  +91 97060 41000
+                  {CONTACT.phone}
                 </a>
               </div>
             </div>

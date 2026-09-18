@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ContactForm from "@/components/contact/ContactForm";
 import Container from "@/components/layout/Container";
 import AnimateIn from "@/components/AnimateIn";
+import { CONTACT } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -9,16 +10,11 @@ export const metadata: Metadata = {
     "Enquire about Aquai products - dealer partnerships, project specifications, or general information. Reach Core Entrade India Pvt. Ltd., authorised distributor.",
 };
 
-const PHONE = "+91 97060 41000";
-const PHONE_HREF = "tel:+919706041000";
-const WHATSAPP_HREF =
-  "https://wa.me/919706041000?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Aquai%20products.";
-const EMAIL = "coregujarat@coreindia.co.in";
-const ADDRESS_LINES = [
-  "Transport Nagar, Navagram",
-  "Rajkot – 360003",
-  "Gujarat, India",
-];
+const PHONE = CONTACT.phone;
+const PHONE_HREF = CONTACT.phoneHref;
+const WHATSAPP_HREF = `https://wa.me/${CONTACT.whatsappNumber}?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20Aquai%20products.`;
+const EMAIL = CONTACT.email;
+const ADDRESS_LINES = CONTACT.addressLines;
 
 export default function ContactPage() {
   return (
@@ -143,7 +139,7 @@ export default function ContactPage() {
         <div className="h-[360px] md:h-[440px] w-full overflow-hidden">
           <iframe
             title="Core Entrade India Pvt. Ltd. - Transport Nagar, Rajkot"
-            src="https://maps.google.com/maps?q=Transport+Nagar%2C+Navagram%2C+Rajkot%2C+Gujarat+360003%2C+India&t=&z=15&ie=UTF8&iwloc=&output=embed"
+            src={`https://maps.google.com/maps?q=${encodeURIComponent(CONTACT.mapsQuery)}&t=&z=15&ie=UTF8&iwloc=&output=embed`}
             width="100%"
             height="100%"
             style={{ border: 0, filter: "grayscale(0.2) contrast(1.05)" }}
@@ -154,7 +150,7 @@ export default function ContactPage() {
         </div>
         <div className="bg-mist px-6 py-5 text-center">
           <a
-            href="https://maps.google.com/?q=Transport+Nagar,+Navagram,+Rajkot,+Gujarat+360003,+India"
+            href={`https://maps.google.com/?q=${encodeURIComponent(CONTACT.mapsQuery)}`}
             target="_blank"
             rel="noopener noreferrer"
             className="text-xs font-medium text-steel hover:text-navy transition-colors duration-150 underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy rounded-sm"

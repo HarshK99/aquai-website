@@ -11,6 +11,7 @@ import {
   type ColorVariant,
 } from "@/lib/colorVariants";
 import type { PublicProduct } from "@/data/catalog";
+import { CONTACT } from "@/lib/siteConfig";
 import FinishBadge from "./FinishBadge";
 
 interface Props {
@@ -42,7 +43,7 @@ export default function ProductShowcase({
   const enquiryText = selected
     ? `Hi, I'd like to enquire about the Aquai ${product.product_name} (${selected}).`
     : `Hi, I'd like to enquire about the Aquai ${product.product_name}.`;
-  const whatsappUrl = `https://wa.me/919706041000?text=${encodeURIComponent(enquiryText)}`;
+  const whatsappUrl = `https://wa.me/${CONTACT.whatsappNumber}?text=${encodeURIComponent(enquiryText)}`;
 
   const imageAlt = selected
     ? `${product.product_name} — ${selected} finish (indicative)`

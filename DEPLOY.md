@@ -59,14 +59,23 @@ The `.htaccess` (from `public/.htaccess`) is automatically included and configur
 
 ---
 
-## Web3Forms (contact form)
+## Contact form (PHP mail)
 
-Before going live, replace the placeholder key in [`components/contact/ContactForm.tsx`](components/contact/ContactForm.tsx):
+The form POSTs to `public/contact.php`, a small self-contained PHP mail handler -
+deployed verbatim alongside the static export (no signup, no key, no extra setup).
+It runs automatically once live because Hostinger shared hosting supports PHP by
+default.
 
-1. Sign up free at [web3forms.com](https://web3forms.com)
-2. Create an access key for your email address
-3. Replace `YOUR_WEB3FORMS_ACCESS_KEY` on line 4 of `ContactForm.tsx`
-4. Rebuild and redeploy
+- If `/contact.php` is ever unreachable (e.g. testing locally with `next dev` or
+  `npx serve out`, neither of which execute PHP), the form falls back to opening
+  the visitor's email app with a pre-filled enquiry (`mailto:`) instead.
+- **Deliverability**: PHP's `mail()` sends through Hostinger's own mail transport.
+  If `info@aquaiworld.com` is hosted elsewhere (e.g. Google Workspace) rather than
+  by Hostinger, the domain's SPF record may not authorize Hostinger as a sender and
+  messages can land in spam or get rejected. After deploying, send a real test
+  enquiry through the live site and check the inbox (and spam folder).
+- To test the PHP handler itself before deploying, run a local PHP server against
+  the built export: `php -S localhost:8000 -t out` (requires PHP installed locally).
 
 ---
 

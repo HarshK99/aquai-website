@@ -2,9 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import { CONTACT } from "@/lib/siteConfig";
 
-const WEB3FORMS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_KEY;
-const canSendOnline = Boolean(WEB3FORMS_KEY && WEB3FORMS_KEY !== "YOUR_WEB3FORMS_ACCESS_KEY");
-
 const inputBase =
   "w-full rounded-sm border border-chrome bg-porcelain px-4 py-3 text-base text-navy placeholder:text-steel transition-colors duration-150 focus:border-navy/50 focus:outline-none focus:ring-2 focus:ring-navy/20";
 
@@ -21,9 +18,9 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [subject, setSubject] = useState("General enquiry");
   const [emailOpened, setEmailOpened] = useState(false);
-  const [status, setStatus] = useState<
-    "idle" | "submitting" | "success" | "error"
-  >("idle");
+  const [status, setStatus] = useState<"idle" | "submitting" | "success">(
+    "idle"
+  );
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
@@ -41,7 +38,23 @@ export default function ContactForm() {
     const form = e.currentTarget;
     if (!form.reportValidity()) return;
     const data = new FormData(form);
-    if (!canSendOnline) {
+    submitting.current = true;
+    setStatus("submitting");
+
+    try {
+      const res = await fetch("/contact.php", {
+        method: "POST",
+        body: data,
+      });
+      const json = await res.json().catch(() => null);
+      if (res.ok && json?.success) {
+        setStatus("success");
+        form.reset();
+        setMessage("");
+      } else {
+        throw new Error("submit failed");
+      }
+    } catch {
       const body = [
         `Name: ${data.get("name")}`,
         `Email: ${data.get("email")}`,
@@ -51,30 +64,7 @@ export default function ContactForm() {
       ].join("\n");
       window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent(`Aquai enquiry: ${subject}`)}&body=${encodeURIComponent(body)}`;
       setEmailOpened(true);
-      return;
-    }
-    submitting.current = true;
-    setStatus("submitting");
-
-    data.append("access_key", WEB3FORMS_KEY!);
-    data.append("subject", "New enquiry - Aquai website");
-    data.append("from_name", "Aquai Website");
-
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: data,
-      });
-      const json = await res.json();
-      if (res.ok && json.success) {
-        setStatus("success");
-        form.reset();
-        setMessage("");
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
+      setStatus("idle");
     } finally {
       submitting.current = false;
     }
@@ -104,11 +94,6 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-5" aria-busy={status === "submitting"}>
-      {!canSendOnline && (
-        <p className="text-sm text-steel">
-          Fill in your enquiry, then send it from your email app. You can also call or WhatsApp us above.
-        </p>
-      )}
       {/* Honeypot - hidden from humans, catches bots */}
       <input
         type="checkbox"
@@ -208,11 +193,6 @@ export default function ContactForm() {
         />
       </div>
 
-      {status === "error" && (
-        <p role="alert" className="text-sm text-accent-red">
-          Something went wrong. Please try again or reach us by phone.
-        </p>
-      )}
       {emailOpened && (
         <p role="status" className="text-sm text-steel">
           Finish sending in your email app. If it did not open, email {CONTACT.email} or use WhatsApp above. Your details are still here.
@@ -224,7 +204,7 @@ export default function ContactForm() {
         disabled={status === "submitting"}
         className="w-full rounded-sm bg-navy py-3.5 text-sm font-semibold text-porcelain transition-colors duration-200 hover:bg-navy-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-navy focus-visible:ring-offset-2 disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === "submitting" ? "Sending…" : canSendOnline ? "Send enquiry" : "Continue in email"}
+        {status === "submitting" ? "Sending…" : "Send enquiry"}
       </button>
     </form>
   );

@@ -16,7 +16,10 @@ The site deploys as plain HTML/CSS/JS to a shared server. No Node.js runtime.
 - `next.config.js` must have: `output: 'export'`, `images: { unoptimized: true }`, `trailingSlash: true`
 - NEVER use: API routes, server actions, middleware, `next/image` remote optimization,
   ISR/revalidate, dynamic routes without `generateStaticParams`, cookies/headers APIs
-- Contact form: Web3Forms/Formspree client-side POST - no backend
+- Contact form: POSTs to `public/contact.php`, a self-contained PHP mail handler
+  deployed verbatim alongside the static export (no Composer/framework, no Node
+  runtime added - PHP is a native Hostinger shared-hosting feature). Falls back to
+  `mailto:` if that endpoint is unreachable (e.g. local dev servers that don't run PHP).
 - All product/series pages statically generated via `generateStaticParams`
 - Verify every feature works after `next build` produces the `out/` folder
 

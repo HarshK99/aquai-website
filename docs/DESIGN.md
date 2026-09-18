@@ -112,6 +112,7 @@ background, product name in Prata (navy), series + finish in the eyebrow style
   and enquiry links that carry the product and selected finish into Contact.
 - Contact: phone/WhatsApp actions first, followed by the form, then distributor
   details on phones. Inputs use 16px text and native required-field validation.
-  Without `NEXT_PUBLIC_WEB3FORMS_KEY`, clearly offer Continue in email and retain
-  form entries; only report online success when the configured service confirms it.
+  The form POSTs to `public/contact.php`; only if that fails does it fall back to
+  opening the visitor's email app (`mailto:`), retaining form entries and clearly
+  prompting them to finish sending there.
 - Reduced motion also disables smooth scrolling and decorative CSS transitions.
